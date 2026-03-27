@@ -1,21 +1,56 @@
-# 🔢 量化金融八股文
+# 🔢 Awesome Quant Interview
 
-> 这是我在量化之路上整理的学习资料与面试笔记，涵盖了从基础知识到实战应用的方方面面。希望能帮助同样在这条路上探索的你。
+> 这是我在量化之路上整理的学习资料、面试笔记与工具集，涵盖从数学基础到实盘系统的方方面面。
 >
-> **考点为骨架，知识为血肉** —— 面试 + 学习两用指南
+> 希望能帮助同样在这条路上探索的你。
 >
-> 覆盖五大方向：数学/统计基础 · 编程（Python/C++） · 因子与Alpha策略 · 机器学习/深度学习在量化中的应用 · 量化策略方向与奠基性论文
+> **考点为骨架，知识为血肉，论文为灵魂，代码为武器。**
 
 ---
 
 ## 目录
 
-- [第一篇：数学与统计基础](#第一篇数学与统计基础)
-- [第二篇：编程（Python / C++）](#第二篇编程python--c)
-- [第三篇：因子与Alpha策略](#第三篇因子与alpha策略)
-- [第四篇：机器学习/深度学习在量化中的应用](#第四篇机器学习深度学习在量化中的应用)
-- [第五篇：量化策略方向与奠基性论文](#第五篇量化策略方向与奠基性论文)
-- [附录：推荐书单与资源](#附录推荐书单与资源)
+### 📐 第一篇：数学与统计基础
+- [1.1 概率论](#11-概率论) — 条件概率、贝叶斯、大数定律、鞅、常见分布
+- [1.2 数理统计与推断](#12-数理统计与推断) — 假设检验、MLE、回归、多重检验
+- [1.3 线性代数](#13-线性代数) — 特征分解、PCA、矩阵分解
+- [1.4 随机过程与时间序列](#14-随机过程与时间序列) — ARMA/GARCH、协整、平稳性
+- [1.5 随机微积分基础](#15-随机微积分基础) — 布朗运动、Itô引理、GBM、BS推导
+
+### 💻 第二篇：编程（Python / C++）
+- [2.1 Python基础与数据处理](#21-python基础与数据处理) — pandas、数据清洗、合并
+- [2.2 Python进阶](#22-python进阶) — 装饰器、GIL、异步、内存管理
+- [2.3 C++ 基础（量化面试高频）](#23-c-基础量化面试高频) — 智能指针、虚函数、模板、内存模型
+- [2.4 NumPy / 数值计算](#24-numpy--数值计算) — 向量化、广播、性能优化
+
+### 📊 第三篇：因子与Alpha策略
+- [3.1 因子投资基础](#31-因子投资基础) — 因子定义、Fama-French、因子衰减、多重共线性
+- [3.2 组合优化](#32-组合优化) — 均值方差、Black-Litterman、风险预算
+- [3.3 回测与策略评估](#33-回测与策略评估) — 过拟合检验、Sharpe、回撤、归因分析
+
+### 🤖 第四篇：机器学习 / 深度学习在量化中的应用
+- [4.1 机器学习基础](#41-机器学习基础) — 树模型、正则化、特征工程、交叉验证
+- [4.2 深度学习](#42-深度学习) — LSTM、Transformer、GAN、图神经网络
+- [4.3 强化学习](#43-强化学习) — DQN、PPO、执行优化
+- [4.4 实战问题](#44-实战问题) — 非平稳性、低信噪比、LLM在金融中的应用
+
+### 🏛️ 第五篇：量化策略方向与奠基性论文
+- [5.1 CTA / 管理期货](#51-cta--管理期货) — 时序动量、危机Alpha、趋势系统
+- [5.2 趋势跟踪](#52-趋势跟踪) — 动量效应、止损纪律、盈亏比
+- [5.3 高频交易（HFT）](#53-高频交易hft) — 市场微观结构、限价订单簿、延迟优化
+- [5.4 做市（Market Making）](#54-做市market-making) — 逆向选择、库存管理、最优报价
+- [5.5 统计套利](#55-统计套利statistical-arbitrage) — 配对交易、协整、PCA篮子
+- [5.6 期权与波动率交易](#56-期权与波动率交易) — BS模型、随机波动率、波动率曲面、Greeks
+
+### 🔧 第六篇：开源工具与项目推荐
+- [6.1 回测框架](#61-回测框架) — Backtrader、Zipline、VectorBT
+- [6.2 量化平台](#62-量化平台) — Qlib、vnpy、Hummingbot
+- [6.3 AI + Finance](#63-ai--finance) — FinRL、FinGPT、RD-Agent
+- [6.4 研报复现](#64-研报复现) — 华泰金工、券商研报策略复现
+- [6.5 Awesome Lists](#65-awesome-lists) — 社区精选资源合集
+
+### 📚 附录
+- [推荐书单与资源](#附录推荐书单与资源)
 
 ---
 
@@ -1255,6 +1290,64 @@ $$\text{Input} \xrightarrow{\text{Encoder}} \text{Latent} \xrightarrow{\text{Dec
 - Dupire (1994). *Pricing with a Smile.* Risk — 局部波动率模型，从市场价格反推波动率
 - Carr & Madan (1999). *Option Valuation Using the Fast Fourier Transform.* Journal of Computational Finance — FFT期权定价，现代计算方法的基础
 - Taleb (1997). 📖《Dynamic Hedging: Managing Vanilla and Exotic Options》 — 期权动态对冲的实战经典
+
+---
+
+# 第六篇：开源工具与项目推荐
+
+> 好的工具是生产力的放大器。以下是量化领域最值得关注的开源项目，从回测引擎到AI框架，从实盘系统到研报复现。
+
+---
+
+## 6.1 回测框架
+
+| 项目 | 简介 | 链接 |
+|------|------|------|
+| **Backtrader** | 功能丰富的事件驱动回测框架，社区活跃，支持实盘 | [mementum/backtrader](https://github.com/mementum/backtrader) |
+| **Zipline Reloaded** | Quantopian 经典回测引擎的社区维护版，兼容最新 Python | [stefan-jansen/zipline-reloaded](https://github.com/stefan-jansen/zipline-reloaded) |
+| **VectorBT** | 基于 NumPy/Numba 的向量化回测引擎，速度极快，适合大规模参数扫描 | [polakowo/vectorbt](https://github.com/polakowo/vectorbt) |
+
+---
+
+## 6.2 量化平台
+
+| 项目 | 简介 | 链接 |
+|------|------|------|
+| **Qlib** | 微软出品的 AI 量化投资平台，覆盖数据处理、模型训练、回测全流程 | [microsoft/qlib](https://github.com/microsoft/qlib) |
+| **vnpy** | 国内最流行的量化交易框架，支持股票、期货、期权、数字货币实盘 | [vnpy/vnpy](https://github.com/vnpy/vnpy) |
+| **Hummingbot** | 开源高频做市与套利机器人，支持 CEX (Binance, OKX) 和 DEX (Uniswap) | [hummingbot/hummingbot](https://github.com/hummingbot/hummingbot) |
+
+---
+
+## 6.3 AI + Finance
+
+| 项目 | 简介 | 链接 |
+|------|------|------|
+| **FinRL** | 金融强化学习框架，用 DRL agent 学习交易策略 | [AI4Finance-Foundation/FinRL](https://github.com/AI4Finance-Foundation/FinRL) |
+| **FinGPT** | 开源金融大语言模型，LoRA 微调，情感分析、研报解读 | [AI4Finance-Foundation/FinGPT](https://github.com/AI4Finance-Foundation/FinGPT) |
+| **FinRobot** | 基于 LLM 的金融分析 Agent 平台，多 Agent 协作完成研究任务 | [AI4Finance-Foundation/FinRobot](https://github.com/AI4Finance-Foundation/FinRobot) |
+| **RD-Agent** | 微软亚研院的自动化研发 Agent，集成 Qlib，自动读论文、做因子、跑实验 | [microsoft/RD-Agent](https://github.com/microsoft/RD-Agent) |
+
+---
+
+## 6.4 研报复现
+
+| 项目 | 简介 | 链接 |
+|------|------|------|
+| **QuantsPlaybook** | 券商金工研报复现合集（华泰、光大、招商、国信等），100+ 策略，覆盖择时、因子、组合优化 | [hugo2046/QuantsPlaybook](https://github.com/hugo2046/QuantsPlaybook) |
+| **华泰金工研报** | 华泰金工研究报告集合，涵盖 CNN 选股、时序交叉验证、ML 多因子等 | [industry-report/huatai-finengi-report](https://github.com/industry-report/huatai-finengi-report) |
+
+> **为什么要复现研报？** 券商金工报告是国内量化最重要的知识来源之一。华泰金工的「人工智能选股」系列、光大的「因子择时」系列等都是经典。复现研报能帮助你理解因子构建的细节、掌握回测的规范流程、培养独立研究的能力。
+
+---
+
+## 6.5 Awesome Lists
+
+| 项目 | 简介 | 链接 |
+|------|------|------|
+| **awesome-quant** | 量化金融资源大全：库、框架、数据源、书籍，覆盖 Python/R/Julia | [wilsonfreitas/awesome-quant](https://github.com/wilsonfreitas/awesome-quant) |
+| **awesome-ai-in-finance** | AI + 金融资源合集：LLM、深度学习策略、加密货币、RL 交易 | [georgezouq/awesome-ai-in-finance](https://github.com/georgezouq/awesome-ai-in-finance) |
+| **awesome-systematic-trading** | 系统化交易资源：策略、框架、数据，覆盖期货/期权/外汇/加密 | [wangzhe3224/awesome-systematic-trading](https://github.com/wangzhe3224/awesome-systematic-trading) |
 
 ---
 
