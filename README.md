@@ -28,6 +28,11 @@
 - [2.6 期权与波动率交易](#26-期权与波动率交易) — BS模型、随机波动率、波动率曲面、Greeks
 
 #### 📚 [第三篇：推荐书单与资源](#第三篇推荐书单与资源)
+- [书单](#面试必备) — 绿皮书、因子圣经、经典教材
+- [博主与公众号](#知名博主与公众号) — 石川/川总写量化、因子动物园、QIML、交易门
+- [量化社区](#量化社区与平台) — 聚宽、米筐、QuantConnect、知乎
+- [A股数据源](#a股数据源) — Tushare、AKShare、Wind
+- [券商金工研报](#券商金工研报重点关注) — 华泰、光大、天风、中金
 
 ---
 
@@ -136,6 +141,9 @@
 - Moskowitz, Ooi & Pedersen (2012). *Time Series Momentum.* Journal of Financial Economics — 系统性证明了跨资产类别的时序动量效应
 - Hurst, Ooi & Pedersen (2017). *A Century of Evidence on Trend-Following Investing.* AQR — 用百年数据验证趋势跟踪策略的长期有效性
 - Baltas & Kosowski (2013). *Momentum Strategies in Futures Markets and Trend-Following Funds.* — 期货动量策略的全面分析
+- Fung & Hsieh (2001). *The Risk in Hedge Fund Strategies: Theory and Evidence from Trend Followers.* Review of Financial Studies — 提出趋势跟踪回报的期权复制模型，奠定CTA业绩归因基础
+- Hamill, Rattray & Van Hemert (2016). *Trend Following: Equity and Bond Crisis Alpha.* AQR — 证明趋势跟踪在股债危机期间提供正向Alpha的机制
+- Levine & Pedersen (2016). *Which Trend Is Your Friend?* Financial Analysts Journal — 系统比较不同趋势信号构建方法（移动平均、突破、时序动量）的异同
 - 📖 Perry Kaufman.《Trading Systems and Methods》 — CTA系统化交易的百科全书
 
 ---
@@ -153,6 +161,9 @@
 - Jegadeesh & Titman (1993). *Returns to Buying Winners and Selling Losers.* Journal of Finance — 动量效应的开山之作
 - Asness, Moskowitz & Pedersen (2013). *Value and Momentum Everywhere.* Journal of Finance — 证明了动量在各资产类别中的普遍性
 - Baz et al. (2015). *Dissecting Investment Strategies in the Cross Section and Time Series.* — 时序动量与截面动量的关系
+- Faber (2007). *A Quantitative Approach to Tactical Asset Allocation.* Journal of Wealth Management — 用简单移动平均实现战术资产配置，趋势跟踪的极简实现
+- Lempérière et al. (2014). *Two Centuries of Trend Following.* Journal of Investment Strategies — 用两百年超长数据验证趋势跟踪的持久性与普遍性
+- Babu et al. (2020). *You Can't Always Trend When You Want.* Journal of Portfolio Management — 深入分析趋势策略失效期的特征及组合层面的应对方法
 - 📖 Andreas Clenow.《Following the Trend》 — 趋势跟踪策略的实操指南
 
 ---
@@ -171,6 +182,10 @@
 - Glosten & Milgrom (1985). *Bid, Ask and Transaction Prices in a Specialist Market.* Journal of Financial Economics — 逆向选择与买卖价差的理论基础
 - Avellaneda & Stoikov (2008). *High-Frequency Trading in a Limit Order Book.* Quantitative Finance — 高频做市的经典数学框架
 - Cartea, Jaimungal & Penalva (2015). *Algorithmic and High-Frequency Trading.* Cambridge University Press — HFT领域最权威的教科书
+- Bouchaud, Farmer & Lillo (2009). *How Markets Slowly Digest Changes in Supply and Demand.* Handbook of Financial Markets — 订单流如何驱动价格变动的物理学视角，market impact 理论基础
+- Cont, Stoikov & Talreja (2010). *A Stochastic Model for Order Book Dynamics.* Operations Research — 限价订单簿的随机建模，LOB研究的标杆论文
+- Menkveld (2013). *High Frequency Trading and the New Market Makers.* Journal of Financial Markets — 高频做市商角色的实证分析，首次刻画现代HFT做市商行为
+- 📖 Hasbrouck (2007).《Empirical Market Microstructure》Oxford University Press — 市场微观结构实证研究的权威教科书
 - 📖 Ernest Chan.《Quantitative Trading》 — 量化交易入门实操
 
 ---
@@ -189,6 +204,9 @@
 - Ho & Stoll (1981). *Optimal Dealer Pricing Under Transactions and Return Uncertainty.* Journal of Financial Economics — 最优做市定价的开创性模型
 - Guéant, Lehalle & Fernandez-Tapia (2013). *Dealing with the Inventory Risk: A Solution to the Market Making Problem.* Mathematics and Financial Economics — 库存风险管理的现代数学框架
 - Stoikov (2018). *The Micro-Price: A High-Frequency Estimator of Future Prices.* Quantitative Finance — 用微观价格信号优化做市策略
+- Amihud & Mendelson (1980). *Dealership Market: Market-Making with Inventory.* Journal of Financial Economics — 库存成本对做市商报价行为影响的早期模型
+- Glosten & Harris (1988). *Estimating the Components of the Bid-Ask Spread.* Journal of Financial Economics — 将买卖价差分解为逆向选择与库存成本两部分的经典方法
+- Guilbaud & Pham (2013). *Optimal High-Frequency Trading with Limit and Market Orders.* Quantitative Finance — 同时使用限价单和市价单的最优做市数学框架
 
 ---
 
@@ -206,6 +224,9 @@
 - Avellaneda & Lee (2010). *Statistical Arbitrage in the US Equities Market.* Quantitative Finance — 用PCA和均值回归构建统计套利策略
 - Pole (2007). 📖《Statistical Arbitrage: Algorithmic Trading Insights and Techniques》 — 统计套利的全面实战指南
 - Engle & Granger (1987). *Co-integration and Error Correction.* Econometrica — 协整理论的奠基之作，配对交易的理论基础
+- Kakushadze (2016). *101 Formulaic Alphas.* Wilmott — 提供101个可直接计算的Alpha公式，统计套利因子构建的实用参考
+- Krauss (2017). *Statistical Arbitrage Pairs Trading Strategies: Review and Outlook.* Journal of Economic Surveys — 配对交易文献的全面综述，涵盖距离法、协整法、随机控制法
+- 📖 Vidyamurthy (2004).《Pairs Trading: Quantitative Methods and Analysis》 — 配对交易方法论的系统性实操指南
 
 ---
 
@@ -225,6 +246,9 @@
 - Dupire (1994). *Pricing with a Smile.* Risk — 局部波动率模型，从市场价格反推波动率
 - Carr & Madan (1999). *Option Valuation Using the Fast Fourier Transform.* Journal of Computational Finance — FFT期权定价，现代计算方法的基础
 - Taleb (1997). 📖《Dynamic Hedging: Managing Vanilla and Exotic Options》 — 期权动态对冲的实战经典
+- Bates (1996). *Jumps and Stochastic Volatility: Exchange Rate Processes Implicit in Deutsche Mark Options.* Review of Financial Studies — 将跳跃过程与随机波动率结合的经典模型
+- Gatheral, Jaisson & Rosenbaum (2018). *Volatility Is Rough.* Quantitative Finance — 粗糙波动率模型，用分数布朗运动刻画波动率微观行为，近年最有影响力的突破
+- Bergomi (2005). *Smile Dynamics.* Risk — 波动率曲面动态建模的开创性工作，提出Bergomi模型框架
 
 ---
 
@@ -253,15 +277,65 @@
 - **深度学习**：《Deep Learning》(Goodfellow, Bengio, Courville)
 - **量化ML**：《Machine Learning for Asset Managers》(Marcos López de Prado)
 
-## 持续学习资源
-- **arXiv q-fin**：金融领域最新论文
-- **SSRN**：大量量化金融工作论文
-- **QuantConnect / Kaggle**：实践平台
-- **Risk.net / Journal of Portfolio Management**：行业期刊
+## 中文量化专著
+- **因子投资**：📖 石川、刘洋溢、连祥斌.《因子投资：方法与实践》 — 国内因子投资领域最系统的专著，中文因子圣经
+- **量化入门**：📖 丁鹏.《量化投资：策略与技术》 — 国内量化投资入门经典教材
+- **Python量化**：📖 杨博理、贾芳.《量化投资：以Python为工具》 — Python量化实操入门
+
+## 学术论文源
+- **arXiv q-fin**：金融领域最新论文预印本
+- **SSRN**：大量量化金融工作论文，券商研究员必看
+- **NBER Working Papers**：美国国家经济研究局工作论文
+- **Risk.net / Journal of Portfolio Management / Journal of Financial Economics**：行业顶级期刊
+
+## 知名博主与公众号
+
+| 名称 | 平台 | 简介 |
+|------|------|------|
+| **石川 / 川总写量化** | [知乎](https://www.zhihu.com/people/shi-chuan-97) / 公众号 | 国内因子投资领域最权威的中文写作者，文章兼具学术深度与实战价值 |
+| **因子动物园 (Factor Zoo)** | 公众号 | 石川团队出品，系统梳理学术因子文献，追踪因子研究前沿 |
+| **量化投资与机器学习 (QIML)** | 公众号 | 国内最大的量化公众号之一，覆盖ML策略、因子研究、行业动态 |
+| **数量经济学** | 知乎 / 公众号 | 偏学术向，计量经济学与金融实证方法 |
+| **交易门** | 播客 / 公众号 | 对话顶尖交易员和量化基金经理，深度访谈行业大咖 |
+| **大邓和他的Python** | 知乎 / B站 | Python量化编程教程，适合入门 |
+
+## 量化社区与平台
+
+| 平台 | 简介 | 链接 |
+|------|------|------|
+| **聚宽 (JoinQuant)** | 国内最大的量化投研平台之一，免费数据 + 回测 + 社区 | [joinquant.com](https://www.joinquant.com) |
+| **米筐 (RiceQuant)** | 专业量化研究平台，数据质量高，机构用户多 | [ricequant.com](https://www.ricequant.com) |
+| **优矿 (Uqer)** | 通联数据旗下，数据全面，适合研究 | [uqer.datayes.com](https://uqer.datayes.com) |
+| **BigQuant** | AI量化平台，低代码策略开发，内置深度学习模块 | [bigquant.com](https://bigquant.com) |
+| **发明者量化 (FMZ)** | 数字货币和期货量化交易平台，多语言支持 | [fmz.com](https://www.fmz.com) |
+| **QuantConnect** | 国际量化平台，支持多资产类别，Lean引擎开源 | [quantconnect.com](https://www.quantconnect.com) |
+| **Kaggle** | 数据科学竞赛平台，有大量金融相关数据集和比赛 | [kaggle.com](https://www.kaggle.com) |
+| **知乎：量化交易** | 高质量问答与专栏文章 | [知乎话题](https://www.zhihu.com/topic/19815465) |
+| **经管之家** | 老牌经济金融学术论坛（原人大经济论坛） | [bbs.pinggu.org](https://bbs.pinggu.org) |
+
+## A股数据源
+
+| 数据源 | 简介 | 链接 |
+|------|------|------|
+| **Tushare Pro** | 国内最流行的免费金融数据接口，覆盖股票/基金/期货/可转债 | [tushare.pro](https://tushare.pro) |
+| **AKShare** | 完全开源免费的 Python 数据接口库，数据源广泛 | [akfamily/akshare](https://github.com/akfamily/akshare) |
+| **BaoStock** | 免费开源A股数据接口，日K/分钟K/财报 | [baostock.com](http://baostock.com) |
+| **Wind 万得** | 机构级金融终端，数据最全面权威（付费） | [wind.com.cn](https://www.wind.com.cn) |
+| **东方财富 Choice** | 性价比较高的机构级数据终端（付费） | [choice.eastmoney.com](https://choice.eastmoney.com) |
+| **efinance** | 开源Python库，从东方财富等爬取数据 | [mpquant/efinance](https://github.com/mpquant/efinance) |
+
+## 券商金工研报（重点关注）
+
+> 券商金工报告是国内量化最重要的知识来源之一。以下是出产高质量研报的代表性团队：
+
+- **华泰金工** — 「人工智能选股」系列、因子体系研究，国内量化研报标杆
+- **光大金工** — 因子择时、事件驱动策略研究
+- **天风金工** — 基本面因子、另类数据研究
+- **中金量化** — 宏观量化、资产配置、因子研究
+- **开源证券金工** — 近年产出较多，覆盖面广
+- **招商金工** — 多因子模型、行业轮动
 
 ---
-
-> **最后的话**：量化是一个需要持续学习的领域。市场在变，技术在进化，Alpha在衰减。八股文是入门的钥匙，但真正的护城河来自于对市场的深刻理解、严谨的研究方法论、以及不断迭代的能力。祝每位量化人都能找到属于自己的Alpha。
 # 第四篇：数学与统计基础
 
 ## 4.1 概率论
