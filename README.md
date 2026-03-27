@@ -2,83 +2,87 @@
 
 [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 
-Quant interview prep, strategy papers, tools and resources.
+量化面试、策略论文、开源工具与学习资源。
 
-## Contents
+## 目录
 
-- [Open Source Tools](#open-source-tools)
-  - [Backtesting](#backtesting)
-  - [Trading Platforms](#trading-platforms)
+- [开源工具](#开源工具)
+  - [回测框架](#回测框架)
+  - [量化平台](#量化平台)
   - [AI + Finance](#ai--finance)
-  - [Research Report Reproduction](#research-report-reproduction)
+  - [研报复现](#研报复现)
+  - [量化库](#量化库)
   - [Awesome Lists](#awesome-lists)
-- [Strategy Directions & Papers](#strategy-directions--papers)
-  - [CTA / Managed Futures](#cta--managed-futures)
-  - [Trend Following](#trend-following)
-  - [High Frequency Trading](#high-frequency-trading)
-  - [Market Making](#market-making)
-  - [Statistical Arbitrage](#statistical-arbitrage)
-  - [Options & Volatility](#options--volatility)
-- [Books & Resources](#books--resources)
-  - [Books](#books)
-  - [Blogs & WeChat](#blogs--wechat)
-  - [Communities](#communities)
-  - [A-Share Data](#a-share-data)
-  - [Brokerage Research](#brokerage-research)
-- [Interview Questions](#interview-questions)
-  - [Math & Statistics](#第四篇数学与统计基础)
-  - [Programming (Python / C++)](#第五篇编程python--c)
-  - [Factor & Alpha](#第六篇因子与alpha策略)
-  - [ML / DL in Quant](#第七篇机器学习深度学习在量化中的应用)
+- [策略方向与论文](#策略方向与论文)
+  - [CTA / 管理期货](#cta--管理期货)
+  - [趋势跟踪](#趋势跟踪)
+  - [高频交易](#高频交易)
+  - [做市](#做市)
+  - [统计套利](#统计套利)
+  - [期权与波动率](#期权与波动率)
+- [书单与资源](#书单与资源)
+  - [书单](#书单)
+  - [面试备考](#面试备考)
+  - [竞赛](#竞赛)
+  - [博主与公众号](#博主与公众号)
+  - [社区与平台](#社区与平台)
+  - [A股数据源](#a股数据源)
+  - [券商金工研报](#券商金工研报)
+  - [学术论文源](#学术论文源)
+- [面试八股文](#面试八股文)
+  - [数学与统计基础](#第四篇数学与统计基础)
+  - [编程 (Python / C++)](#第五篇编程python--c)
+  - [因子与Alpha策略](#第六篇因子与alpha策略)
+  - [机器学习 / 深度学习](#第七篇机器学习深度学习在量化中的应用)
 
 ---
 
-## Open Source Tools
+## 开源工具
 
-### Backtesting
+### 回测框架
 
-- 🌟 [VectorBT](https://github.com/polakowo/vectorbt) - NumPy/Numba vectorized backtesting, extremely fast parameter sweeps.
-- 🌟 [Backtrader](https://github.com/mementum/backtrader) - Feature-rich event-driven backtesting framework with live trading support.
-- [Zipline Reloaded](https://github.com/stefan-jansen/zipline-reloaded) - Community-maintained fork of the classic Quantopian engine.
+- 🌟 [VectorBT](https://github.com/polakowo/vectorbt) - 向量化回测引擎，NumPy/Numba 加速，大规模参数扫描首选
+- 🌟 [Backtrader](https://github.com/mementum/backtrader) - 事件驱动回测框架，功能全面，支持实盘
+- [Zipline Reloaded](https://github.com/stefan-jansen/zipline-reloaded) - Quantopian 经典引擎的社区维护版
 
-### Trading Platforms
+### 量化平台
 
-- 🌟🌟 [Qlib](https://github.com/microsoft/qlib) - Microsoft's AI-oriented quant platform: data → model → backtest → analysis.
-- 🌟 [vnpy](https://github.com/vnpy/vnpy) - Most popular Chinese quant framework. Stocks, futures, options, crypto live trading.
-- 🌟 [Hummingbot](https://github.com/hummingbot/hummingbot) - Open source market making & arbitrage bot for CEX + DEX.
+- 🌟🌟 [Qlib](https://github.com/microsoft/qlib) - 微软 AI 量化平台，数据→模型→回测→分析全流程
+- 🌟 [vnpy](https://github.com/vnpy/vnpy) - 国内最流行的量化框架，股票/期货/期权/加密货币实盘
+- 🌟 [Hummingbot](https://github.com/hummingbot/hummingbot) - 开源做市与套利机器人，CEX + DEX 全覆盖
 
 ### AI + Finance
 
-- 🌟🌟 [RD-Agent](https://github.com/microsoft/RD-Agent) - MSRA automated R&D agent. Reads papers → builds factors → runs experiments. Integrated with Qlib.
-- 🌟 [FinRL](https://github.com/AI4Finance-Foundation/FinRL) - Deep reinforcement learning framework for trading.
-- [FinGPT](https://github.com/AI4Finance-Foundation/FinGPT) - Open source financial LLM, LoRA fine-tuned for sentiment & report analysis.
-- [FinRobot](https://github.com/AI4Finance-Foundation/FinRobot) - LLM-powered multi-agent platform for financial analysis.
+- 🌟🌟 [RD-Agent](https://github.com/microsoft/RD-Agent) - 微软亚研院自动化研发 Agent，读论文→做因子→跑实验，集成 Qlib
+- 🌟 [FinRL](https://github.com/AI4Finance-Foundation/FinRL) - 金融强化学习框架
+- [FinGPT](https://github.com/AI4Finance-Foundation/FinGPT) - 开源金融 LLM，LoRA 微调，情感分析/研报解读
+- [FinRobot](https://github.com/AI4Finance-Foundation/FinRobot) - 基于 LLM 的多 Agent 金融分析平台
 
-### Research Report Reproduction
+### 研报复现
 
-- 🌟🌟 [QuantsPlaybook](https://github.com/hugo2046/QuantsPlaybook) - 100+ strategy reproductions from Chinese brokerage research (Huatai, Everbright, CICC, etc.). Timing, factors, portfolio optimization.
-- [huatai-finengi-report](https://github.com/industry-report/huatai-finengi-report) - Huatai financial engineering research reports: CNN stock selection, ML multi-factor, etc.
+- 🌟🌟 [QuantsPlaybook](https://github.com/hugo2046/QuantsPlaybook) - 券商金工研报复现合集（华泰/光大/招商/国信），100+ 策略
+- [huatai-finengi-report](https://github.com/industry-report/huatai-finengi-report) - 华泰金工研报集合：CNN 选股、时序交叉验证、ML 多因子
 
-### Quant Libraries
+### 量化库
 
-- 🌟 [QuantLib](https://github.com/lballabio/QuantLib) - Industry-grade derivatives pricing library. C++ with Python bindings.
-- [cvxpy](https://github.com/cvxpy/cvxpy) - Convex optimization in Python. Portfolio optimization, risk budgeting.
-- [NautilusTrader](https://github.com/nautechsystems/nautilus_trader) - High-performance backtesting & live trading. Rust core, Python API.
-- [Polars](https://github.com/pola-rs/polars) - 10-50x faster than pandas on large datasets.
+- 🌟 [QuantLib](https://github.com/lballabio/QuantLib) - 工业级衍生品定价库，C++ 内核 + Python 绑定
+- [cvxpy](https://github.com/cvxpy/cvxpy) - Python 凸优化，组合优化/风险预算
+- [NautilusTrader](https://github.com/nautechsystems/nautilus_trader) - 高性能回测+实盘，Rust 内核 + Python API
+- [Polars](https://github.com/pola-rs/polars) - 比 pandas 快 10-50x 的数据处理库
 
 ### Awesome Lists
 
-- 🌟 [awesome-quant](https://github.com/wilsonfreitas/awesome-quant) - Curated list of quant finance libraries, frameworks, datasets and books.
-- [awesome-ai-in-finance](https://github.com/georgezouq/awesome-ai-in-finance) - AI + finance: LLM, deep learning strategies, RL trading.
-- [awesome-systematic-trading](https://github.com/wangzhe3224/awesome-systematic-trading) - Systematic trading resources across futures, options, FX, crypto.
+- 🌟 [awesome-quant](https://github.com/wilsonfreitas/awesome-quant) - 量化金融资源大全：库、框架、数据源、书籍
+- [awesome-ai-in-finance](https://github.com/georgezouq/awesome-ai-in-finance) - AI + 金融：LLM、深度学习策略、RL 交易
+- [awesome-systematic-trading](https://github.com/wangzhe3224/awesome-systematic-trading) - 系统化交易资源，覆盖期货/期权/外汇/加密
 
 ---
 
-## Strategy Directions & Papers
+## 策略方向与论文
 
-### CTA / Managed Futures
+### CTA / 管理期货
 
-> Multi-asset trend/momentum on futures & FX. Natural equity hedge. Crisis alpha.
+> 期货/外汇上的系统化趋势与动量。天然对冲股市 Beta，危机时期表现优异。
 
 - 🌟 Moskowitz, Ooi & Pedersen (2012). *Time Series Momentum.* JFE
 - 🌟 Hurst, Ooi & Pedersen (2017). *A Century of Evidence on Trend-Following Investing.* AQR
@@ -88,9 +92,9 @@ Quant interview prep, strategy papers, tools and resources.
 - Levine & Pedersen (2016). *Which Trend Is Your Friend?* FAJ
 - 📖 Perry Kaufman.《Trading Systems and Methods》
 
-### Trend Following
+### 趋势跟踪
 
-> Low win-rate, high payoff-ratio. Strict stop-loss discipline.
+> 胜率低但盈亏比高，依赖严格止损和仓位管理。
 
 - 🌟 Jegadeesh & Titman (1993). *Returns to Buying Winners and Selling Losers.* JF
 - 🌟 Asness, Moskowitz & Pedersen (2013). *Value and Momentum Everywhere.* JF
@@ -100,9 +104,9 @@ Quant interview prep, strategy papers, tools and resources.
 - Babu et al. (2020). *You Can't Always Trend When You Want.* JPM
 - 📖 Andreas Clenow.《Following the Trend》
 
-### High Frequency Trading
+### 高频交易
 
-> Millisecond-level holding periods. Infrastructure is the moat.
+> 毫秒级持仓，基础设施是核心壁垒。
 
 - 🌟 Kyle (1985). *Continuous Auctions and Insider Trading.* Econometrica
 - 🌟 Glosten & Milgrom (1985). *Bid, Ask and Transaction Prices in a Specialist Market.* JFE
@@ -114,9 +118,9 @@ Quant interview prep, strategy papers, tools and resources.
 - 📖 Hasbrouck (2007).《Empirical Market Microstructure》
 - 📖 Ernest Chan.《Quantitative Trading》
 
-### Market Making
+### 做市
 
-> Earn bid-ask spread, manage inventory risk. Adverse selection is the core challenge.
+> 赚取买卖价差，管理库存风险。逆向选择是核心挑战。
 
 - 🌟 Ho & Stoll (1981). *Optimal Dealer Pricing Under Transactions and Return Uncertainty.* JFE
 - 🌟 Guéant, Lehalle & Fernandez-Tapia (2013). *Dealing with the Inventory Risk.* MFE
@@ -126,9 +130,9 @@ Quant interview prep, strategy papers, tools and resources.
 - Amihud & Mendelson (1980). *Dealership Market: Market-Making with Inventory.* JFE
 - Guilbaud & Pham (2013). *Optimal High-Frequency Trading with Limit and Market Orders.* QF
 
-### Statistical Arbitrage
+### 统计套利
 
-> Market-neutral. Pairs trading, cointegration, PCA baskets.
+> 市场中性，配对交易、协整、PCA 篮子。
 
 - 🌟 Engle & Granger (1987). *Co-integration and Error Correction.* Econometrica
 - 🌟 Gatev, Goetzmann & Rouwenhorst (2006). *Pairs Trading: Performance of a Relative-Value Arbitrage Rule.* RFS
@@ -138,9 +142,9 @@ Quant interview prep, strategy papers, tools and resources.
 - 📖 Pole (2007).《Statistical Arbitrage》
 - 📖 Vidyamurthy (2004).《Pairs Trading: Quantitative Methods and Analysis》
 
-### Options & Volatility
+### 期权与波动率
 
-> Trade volatility, not direction. Vol surface modeling is key.
+> 交易波动率而非方向，波动率曲面建模是关键。
 
 - 🌟 Black & Scholes (1973). *The Pricing of Options and Corporate Liabilities.* JPE
 - 🌟 Heston (1993). *A Closed-Form Solution for Options with Stochastic Volatility.* RFS
@@ -154,21 +158,21 @@ Quant interview prep, strategy papers, tools and resources.
 
 ---
 
-## Books & Resources
+## 书单与资源
 
-### Books
+### 书单
 
-**Interview**
+**面试**
 
-| Book | Note |
+| 书名 | 说明 |
 |------|------|
 | 🌟《A Practical Guide to Quantitative Finance Interviews》(Xinfeng Zhou) | **绿皮书** |
 | 《Heard on the Street》(Timothy Crack) | 经典面试题集 |
 | 《Quant Job Interview Questions and Answers》(Mark Joshi) | 偏衍生品方向 |
 
-**Math & Statistics**
+**数学与统计**
 
-| Book | Note |
+| 书名 | 说明 |
 |------|------|
 | 🌟《Introduction to Probability》(Blitzstein & Hwang) | Harvard 概率论，有免费 PDF |
 | 《Probability and Statistics for Engineering and the Sciences》(Devore) | 概率统计 |
@@ -177,18 +181,18 @@ Quant interview prep, strategy papers, tools and resources.
 | 🌟《Stochastic Calculus for Finance I & II》(Shreve) | 随机微积分 |
 | 《Convex Optimization》(Boyd & Vandenberghe) | 凸优化，有免费 PDF |
 
-**Programming**
+**编程**
 
-| Book | Note |
+| 书名 | 说明 |
 |------|------|
 | 《Python for Data Analysis》(McKinney) | pandas 作者 |
 | 《Effective Modern C++》(Meyers) | 现代 C++ |
 | 《Python for Finance》(Hilpisch) | Python 量化 |
 | 《Introduction to Linear Algebra》(Strang) | 配合 MIT 18.06 |
 
-**Factor & Strategy**
+**因子与策略**
 
-| Book | Note |
+| 书名 | 说明 |
 |------|------|
 | 《Quantitative Equity Portfolio Management》(Chincarini & Kim) | 量化组合 |
 | 🌟《Advances in Financial Machine Learning》(de Prado) | 金融 ML 必读 |
@@ -196,9 +200,9 @@ Quant interview prep, strategy papers, tools and resources.
 | 《Options, Futures, and Other Derivatives》(Hull) | 衍生品入门标准 |
 | 《Option Volatility and Pricing》(Natenberg) | 期权交易实战 |
 
-**Machine Learning**
+**机器学习**
 
-| Book | Note |
+| 书名 | 说明 |
 |------|------|
 | 🌟《The Elements of Statistical Learning》(Hastie et al.) | 统计学习经典 |
 | 《Deep Learning》(Goodfellow et al.) | 花书 |
@@ -206,13 +210,13 @@ Quant interview prep, strategy papers, tools and resources.
 
 **中文**
 
-| Book | Note |
+| 书名 | 说明 |
 |------|------|
 | 🌟 石川 等.《因子投资：方法与实践》 | 中文因子圣经 |
 | 丁鹏.《量化投资：策略与技术》 | 国内量化入门 |
 | 杨博理 等.《量化投资：以Python为工具》 | Python 量化入门 |
 
-### Blogs & WeChat
+### 博主与公众号
 
 - 🌟 **石川 / 川总写量化** - [知乎](https://www.zhihu.com/people/shi-chuan-97) / 公众号. 因子投资最权威的中文写作者.
 - 🌟 **因子动物园 (Factor Zoo)** - 公众号. 石川团队，追踪因子研究前沿.
@@ -221,7 +225,7 @@ Quant interview prep, strategy papers, tools and resources.
 - **数量经济学** - 知乎/公众号. 计量经济学与金融实证.
 - **大邓和他的Python** - 知乎/B站. Python 量化教程.
 
-### Communities
+### 社区与平台
 
 - 🌟 [聚宽 JoinQuant](https://www.joinquant.com) - 国内最大量化投研平台，免费数据+回测+社区.
 - [米筐 RiceQuant](https://www.ricequant.com) - 专业量化研究平台.
@@ -231,9 +235,9 @@ Quant interview prep, strategy papers, tools and resources.
 - [知乎：量化交易](https://www.zhihu.com/topic/19815465) - 高质量问答.
 - [经管之家](https://bbs.pinggu.org) - 老牌经济金融论坛.
 
-### A-Share Data
+### A股数据源
 
-| Source | Type | Link |
+| 数据源 | 类型 | 链接 |
 |--------|------|------|
 | 🌟 Tushare Pro | 免费，股票/基金/期货/可转债 | [tushare.pro](https://tushare.pro) |
 | 🌟 AKShare | 开源免费 | [akfamily/akshare](https://github.com/akfamily/akshare) |
@@ -242,9 +246,9 @@ Quant interview prep, strategy papers, tools and resources.
 | 东方财富 Choice | 机构级（付费） | [choice.eastmoney.com](https://choice.eastmoney.com) |
 | efinance | 开源爬虫 | [mpquant/efinance](https://github.com/mpquant/efinance) |
 
-### Brokerage Research
+### 券商金工研报
 
-| Team | Focus |
+| 团队 | 研究方向 |
 |------|-------|
 | 🌟 华泰金工 | 「人工智能选股」系列、因子体系 |
 | 🌟 光大金工 | 因子择时、事件驱动 |
@@ -253,29 +257,29 @@ Quant interview prep, strategy papers, tools and resources.
 | 招商金工 | 多因子模型、行业轮动 |
 | 开源证券金工 | 覆盖面广 |
 
-### Interview Prep
+### 面试备考
 
-- 🌟 [QuantGuide.io](https://www.quantguide.io) - "LeetCode for quants", probability & math problems.
-- [Brainstellar](https://brainstellar.com) - Quant interview brain teasers.
-- [Jane Street Puzzles](https://www.janestreet.com/puzzles/) - Monthly puzzles, above interview difficulty.
-- [Zetamac](https://arithmetic.zetamac.com) - Mental math speed trainer. Target 50+.
+- 🌟 [QuantGuide.io](https://www.quantguide.io) - 量化版 LeetCode，概率与数学题库
+- [Brainstellar](https://brainstellar.com) - 量化面试脑筋急转弯
+- [Jane Street Puzzles](https://www.janestreet.com/puzzles/) - 月度谜题，高于面试难度
+- [Zetamac](https://arithmetic.zetamac.com) - 心算速度训练，目标 50+
 
-### Competitions
+### 竞赛
 
-- [Jane Street Kaggle](https://www.kaggle.com/c/jane-street-real-time-market-data-forecasting) - $100K prize, real market data.
-- [WorldQuant BRAIN](https://www.worldquantbrain.com) - 100K+ users, pays for alpha signals.
-- [Citadel Datathon](https://www.citadel.com/careers/the-data-open/) - Fast-track to interviews.
+- [Jane Street Kaggle](https://www.kaggle.com/c/jane-street-real-time-market-data-forecasting) - $100K 奖金，真实市场数据
+- [WorldQuant BRAIN](https://www.worldquantbrain.com) - 10万+ 用户，为 alpha 信号付费
+- [Citadel Datathon](https://www.citadel.com/careers/the-data-open/) - 直通面试
 
-### Academic Sources
+### 学术论文源
 
-- [SSRN](https://www.ssrn.com) - 量化金融工作论文.
-- [arXiv q-fin](https://arxiv.org/list/q-fin/recent) - 金融领域最新预印本.
+- [SSRN](https://www.ssrn.com) - 量化金融工作论文
+- [arXiv q-fin](https://arxiv.org/list/q-fin/recent) - 金融领域最新预印本
 - NBER Working Papers
 - Risk.net / Journal of Financial Economics / Journal of Portfolio Management
 
 ---
 
-## Interview Questions
+## 面试八股文
 # 第四篇：数学与统计基础
 
 ## 4.1 概率论
