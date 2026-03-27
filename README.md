@@ -80,9 +80,11 @@
 
 ## 策略方向与论文
 
+量化交易不是一条路，而是很多条。不同方向的底层逻辑、数据频率、持仓周期差异巨大，选方向比选策略更重要。下面按主流方向整理了奠基性论文和经典著作，每篇都是这个领域绕不开的工作。
+
 ### CTA / 管理期货
 
-> 期货/外汇上的系统化趋势与动量。天然对冲股市 Beta，危机时期表现优异。
+> 在期货和外汇市场上做系统化趋势与动量。天然多空双向，对冲股市 Beta，08 年金融危机期间不少 CTA 基金逆势盈利，所以也叫"危机 Alpha"。国内 CTA 私募近年发展很快，是量化求职的热门方向之一。
 
 - 🌟 Moskowitz, Ooi & Pedersen (2012). *Time Series Momentum.* JFE
 - 🌟 Hurst, Ooi & Pedersen (2017). *A Century of Evidence on Trend-Following Investing.* AQR
@@ -94,7 +96,7 @@
 
 ### 趋势跟踪
 
-> 胜率低但盈亏比高，依赖严格止损和仓位管理。
+> 和 CTA 高度重叠，但更纯粹地聚焦方向性信号。胜率通常只有 30%-40%，靠盈亏比赚钱。核心不是预测，而是跟随——趋势来了跟上，反转了止损走人。纪律比模型重要。
 
 - 🌟 Jegadeesh & Titman (1993). *Returns to Buying Winners and Selling Losers.* JF
 - 🌟 Asness, Moskowitz & Pedersen (2013). *Value and Momentum Everywhere.* JF
@@ -106,7 +108,7 @@
 
 ### 高频交易
 
-> 毫秒级持仓，基础设施是核心壁垒。
+> 毫秒甚至微秒级持仓，通过速度优势和微观结构信息赚取微小但高频的利润。基础设施（co-location、FPGA、网络延迟）是真正的壁垒，策略容量有限但利润率极高。面试中微观结构的论文是必考内容。
 
 - 🌟 Kyle (1985). *Continuous Auctions and Insider Trading.* Econometrica
 - 🌟 Glosten & Milgrom (1985). *Bid, Ask and Transaction Prices in a Specialist Market.* JFE
@@ -120,7 +122,7 @@
 
 ### 做市
 
-> 赚取买卖价差，管理库存风险。逆向选择是核心挑战。
+> 在买卖两端持续报价，赚取 bid-ask spread。听起来简单，难点在于逆向选择——和知情交易者成交就是亏钱。做市的数学框架非常优美，Avellaneda-Stoikov 模型几乎是所有做市面试的起点。Hummingbot 等开源项目让你可以在加密市场上实际跑做市策略。
 
 - 🌟 Ho & Stoll (1981). *Optimal Dealer Pricing Under Transactions and Return Uncertainty.* JFE
 - 🌟 Guéant, Lehalle & Fernandez-Tapia (2013). *Dealing with the Inventory Risk.* MFE
@@ -132,7 +134,7 @@
 
 ### 统计套利
 
-> 市场中性，配对交易、协整、PCA 篮子。
+> 利用资产间的统计关系（协整、相关性、因子结构），在偏离时建仓、回归时平仓。市场中性，不赌方向。配对交易是最经典的入门，但现代统计套利早已进化到 PCA 驱动的篮子交易和机器学习信号。需要警惕相关性崩溃的尾部风险。
 
 - 🌟 Engle & Granger (1987). *Co-integration and Error Correction.* Econometrica
 - 🌟 Gatev, Goetzmann & Rouwenhorst (2006). *Pairs Trading: Performance of a Relative-Value Arbitrage Rule.* RFS
@@ -144,7 +146,7 @@
 
 ### 期权与波动率
 
-> 交易波动率而非方向，波动率曲面建模是关键。
+> 不赌涨跌，赌波动率。利用期权的非线性特性和隐含波动率的错误定价获利。策略包括波动率套利、gamma scalping、dispersion trading、尾部对冲等。Black-Scholes 是起点，但真正赚钱靠的是对波动率曲面的理解——Gatheral 的书是业界圣经，粗糙波动率（Rough Vol）是近年最大的理论突破。
 
 - 🌟 Black & Scholes (1973). *The Pricing of Options and Corporate Liabilities.* JPE
 - 🌟 Heston (1993). *A Closed-Form Solution for Options with Stochastic Volatility.* RFS
@@ -166,74 +168,74 @@
 
 | 书名 | 说明 |
 |------|------|
-| 🌟《A Practical Guide to Quantitative Finance Interviews》(Xinfeng Zhou) | **绿皮书** |
-| 《Heard on the Street》(Timothy Crack) | 经典面试题集 |
-| 《Quant Job Interview Questions and Answers》(Mark Joshi) | 偏衍生品方向 |
+| 🌟《A Practical Guide to Quantitative Finance Interviews》(Xinfeng Zhou) | **绿皮书**，量化面试人手一本，概率/数学/脑筋急转弯全覆盖 |
+| 《Heard on the Street》(Timothy Crack) | 华尔街经典面试题集，偏概率和智力题 |
+| 《Quant Job Interview Questions and Answers》(Mark Joshi) | 偏衍生品定价方向，适合期权岗 |
 
 **数学与统计**
 
 | 书名 | 说明 |
 |------|------|
-| 🌟《Introduction to Probability》(Blitzstein & Hwang) | Harvard 概率论，有免费 PDF |
-| 《Probability and Statistics for Engineering and the Sciences》(Devore) | 概率统计 |
-| 《All of Statistics》(Wasserman) | 统计学速成，适合 CS 背景 |
-| 🌟《Analysis of Financial Time Series》(Tsay) | 金融时间序列 |
-| 🌟《Stochastic Calculus for Finance I & II》(Shreve) | 随机微积分 |
-| 《Convex Optimization》(Boyd & Vandenberghe) | 凸优化，有免费 PDF |
+| 🌟《Introduction to Probability》(Blitzstein & Hwang) | Harvard 概率论教材，有免费 PDF，例题极好，面试前刷完前 6 章 |
+| 《Probability and Statistics for Engineering and the Sciences》(Devore) | 概率统计标准教材，覆盖面广 |
+| 《All of Statistics》(Wasserman) | 统计学速成，写给 CS 背景的人看的，紧凑高效 |
+| 🌟《Analysis of Financial Time Series》(Tsay) | 金融时间序列的权威教材，ARMA/GARCH/协整全覆盖 |
+| 🌟《Stochastic Calculus for Finance I & II》(Shreve) | 随机微积分的金标准，I 是离散，II 是连续，推导 Black-Scholes 的必经之路 |
+| 《Convex Optimization》(Boyd & Vandenberghe) | 凸优化经典，有免费 PDF，组合优化和风控都离不开 |
 
 **编程**
 
 | 书名 | 说明 |
 |------|------|
-| 《Python for Data Analysis》(McKinney) | pandas 作者 |
-| 《Effective Modern C++》(Meyers) | 现代 C++ |
-| 《Python for Finance》(Hilpisch) | Python 量化 |
-| 《Introduction to Linear Algebra》(Strang) | 配合 MIT 18.06 |
+| 《Python for Data Analysis》(McKinney) | pandas 作者亲著，数据清洗的工具书 |
+| 《Effective Modern C++》(Meyers) | 现代 C++ 最佳实践，低延迟系统岗必读 |
+| 《Python for Finance》(Hilpisch) | 从零到量化系统的 Python 实战 |
+| 《Introduction to Linear Algebra》(Strang) | 配合 MIT 18.06 公开课食用，PCA/因子模型的数学基础 |
 
 **因子与策略**
 
 | 书名 | 说明 |
 |------|------|
-| 《Quantitative Equity Portfolio Management》(Chincarini & Kim) | 量化组合 |
-| 🌟《Advances in Financial Machine Learning》(de Prado) | 金融 ML 必读 |
-| 🌟《Active Portfolio Management》(Grinold & Kahn) | 主动管理圣经 |
-| 《Options, Futures, and Other Derivatives》(Hull) | 衍生品入门标准 |
-| 《Option Volatility and Pricing》(Natenberg) | 期权交易实战 |
+| 《Quantitative Equity Portfolio Management》(Chincarini & Kim) | 量化股票组合从因子到实盘的全流程 |
+| 🌟《Advances in Financial Machine Learning》(de Prado) | 金融 ML 实战圣经，数据结构化/防过拟合/回测方法论，业界人手一本 |
+| 🌟《Active Portfolio Management》(Grinold & Kahn) | 主动管理的理论框架，信息比率、alpha 转移，基金公司研究员必读 |
+| 《Options, Futures, and Other Derivatives》(Hull) | 衍生品入门标准教材，覆盖期货/互换/期权，适合建立全局观 |
+| 《Option Volatility and Pricing》(Natenberg) | 期权交易实战视角，Greeks 直觉讲得很好 |
 
 **机器学习**
 
 | 书名 | 说明 |
 |------|------|
-| 🌟《The Elements of Statistical Learning》(Hastie et al.) | 统计学习经典 |
-| 《Deep Learning》(Goodfellow et al.) | 花书 |
-| 《Machine Learning for Asset Managers》(de Prado) | 资管 ML |
+| 🌟《The Elements of Statistical Learning》(Hastie et al.) | 统计学习理论经典，有免费 PDF，树模型/正则化/集成学习讲得最透彻 |
+| 《Deep Learning》(Goodfellow et al.) | "花书"，深度学习理论基础，CNN/RNN/GAN/优化全覆盖 |
+| 《Machine Learning for Asset Managers》(de Prado) | 资管视角的 ML，聚类/特征重要性/组合构建，薄但密度极高 |
 
 **中文**
 
 | 书名 | 说明 |
 |------|------|
-| 🌟 石川 等.《因子投资：方法与实践》 | 中文因子圣经 |
-| 丁鹏.《量化投资：策略与技术》 | 国内量化入门 |
-| 杨博理 等.《量化投资：以Python为工具》 | Python 量化入门 |
+| 🌟 石川 等.《因子投资：方法与实践》 | 中文因子投资圣经，从因子定义到组合构建到陷阱规避，系统性最强 |
+| 丁鹏.《量化投资：策略与技术》 | 国内量化入门经典，适合建立全局认知 |
+| 杨博理 等.《量化投资：以Python为工具》 | Python 量化实操入门，有代码可跑 |
 
 ### 博主与公众号
 
-- 🌟 **石川 / 川总写量化** - [知乎](https://www.zhihu.com/people/shi-chuan-97) / 公众号. 因子投资最权威的中文写作者.
-- 🌟 **因子动物园 (Factor Zoo)** - 公众号. 石川团队，追踪因子研究前沿.
-- 🌟 **量化投资与机器学习 (QIML)** - 公众号. 国内最大量化公众号.
-- **交易门** - 播客/公众号. 对话顶尖交易员和量化基金经理.
-- **数量经济学** - 知乎/公众号. 计量经济学与金融实证.
-- **大邓和他的Python** - 知乎/B站. Python 量化教程.
+- 🌟 **石川 / 川总写量化** - [知乎](https://www.zhihu.com/people/shi-chuan-97) / 公众号. 国内因子投资写得最好的人，没有之一。每篇文章都有学术论文支撑，但写得让非科班也能看懂。做因子方向必须关注。
+- 🌟 **因子动物园 (Factor Zoo)** - 公众号. 石川团队出品，系统梳理学术因子文献，追踪前沿论文，比自己翻 SSRN 效率高十倍。
+- 🌟 **量化投资与机器学习 (QIML)** - 公众号. 国内最大的量化公众号，覆盖 ML 策略、因子研究、行业招聘动态，信息密度高。
+- **交易门** - 播客/公众号. 对话国内外顶尖交易员和量化基金经理，听行业里的人怎么想问题。
+- **数量经济学** - 知乎/公众号. 偏学术向，计量经济学与金融实证方法，适合想打扎实理论基础的人。
+- **大邓和他的Python** - 知乎/B站. Python 量化编程教程，适合零基础入门。
 
 ### 社区与平台
 
-- 🌟 [聚宽 JoinQuant](https://www.joinquant.com) - 国内最大量化投研平台，免费数据+回测+社区.
-- [米筐 RiceQuant](https://www.ricequant.com) - 专业量化研究平台.
-- [优矿 Uqer](https://uqer.datayes.com) - 通联数据旗下.
-- [QuantConnect](https://www.quantconnect.com) - 国际量化平台，Lean 引擎开源.
-- [发明者量化 FMZ](https://www.fmz.com) - 数字货币/期货量化.
-- [知乎：量化交易](https://www.zhihu.com/topic/19815465) - 高质量问答.
-- [经管之家](https://bbs.pinggu.org) - 老牌经济金融论坛.
+- 🌟 [聚宽 JoinQuant](https://www.joinquant.com) - 国内最大量化投研平台，免费数据、回测引擎、社区策略分享，入门首选。
+- [米筐 RiceQuant](https://www.ricequant.com) - 专业量化研究平台，数据质量高，机构用户多。
+- [优矿 Uqer](https://uqer.datayes.com) - 通联数据旗下，数据全面，API 友好。
+- [QuantConnect](https://www.quantconnect.com) - 国际量化平台，Lean 引擎开源，支持多资产多市场。
+- [发明者量化 FMZ](https://www.fmz.com) - 数字货币/期货量化，支持多语言策略，社区活跃。
+- [知乎：量化交易](https://www.zhihu.com/topic/19815465) - 高质量问答和专栏，搜具体问题经常能找到好答案。
+- [经管之家](https://bbs.pinggu.org) - 老牌经济金融学术论坛，有不少历史沉淀的好帖。
 
 ### A股数据源
 
