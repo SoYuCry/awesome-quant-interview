@@ -4,7 +4,7 @@
 >
 > **考点为骨架，知识为血肉** —— 面试 + 学习两用指南
 >
-> 覆盖四大方向：数学/统计基础 · 编程（Python/C++） · 因子与Alpha策略 · 机器学习/深度学习在量化中的应用
+> 覆盖五大方向：数学/统计基础 · 编程（Python/C++） · 因子与Alpha策略 · 机器学习/深度学习在量化中的应用 · 量化策略方向与奠基性论文
 
 ---
 
@@ -14,6 +14,7 @@
 - [第二篇：编程（Python / C++）](#第二篇编程python--c)
 - [第三篇：因子与Alpha策略](#第三篇因子与alpha策略)
 - [第四篇：机器学习/深度学习在量化中的应用](#第四篇机器学习深度学习在量化中的应用)
+- [第五篇：量化策略方向与奠基性论文](#第五篇量化策略方向与奠基性论文)
 - [附录：推荐书单与资源](#附录推荐书单与资源)
 
 ---
@@ -1143,6 +1144,117 @@ $$\text{Input} \xrightarrow{\text{Encoder}} \text{Latent} \xrightarrow{\text{Dec
 - 幻觉问题——LLM可能自信地给出错误的金融分析
 - 训练数据截止日期导致的信息滞后
 - 不适合需要精确数值计算的场景
+
+---
+
+# 第五篇：量化策略方向与奠基性论文
+
+> 量化交易并非铁板一块，不同方向的底层逻辑、数据频率、持仓周期差异巨大。本篇梳理主流策略方向，并为每个方向推荐奠基性的论文与经典著作。
+
+---
+
+## 5.1 CTA / 管理期货
+
+**核心思路**：在期货、外汇等衍生品市场上，通过系统化模型捕捉趋势、均值回归或截面动量等信号。
+
+**特点**：
+- 多空双向，天然对冲股市Beta
+- 以中低频为主（日线到周线），部分CTA涉及日内
+- 危机时期往往表现优异（"危机Alpha"）
+
+**奠基性论文与经典著作**：
+- Moskowitz, Ooi & Pedersen (2012). *Time Series Momentum.* Journal of Financial Economics — 系统性证明了跨资产类别的时序动量效应
+- Hurst, Ooi & Pedersen (2017). *A Century of Evidence on Trend-Following Investing.* AQR — 用百年数据验证趋势跟踪策略的长期有效性
+- Baltas & Kosowski (2013). *Momentum Strategies in Futures Markets and Trend-Following Funds.* — 期货动量策略的全面分析
+- 📖 Perry Kaufman.《Trading Systems and Methods》 — CTA系统化交易的百科全书
+
+---
+
+## 5.2 趋势跟踪
+
+**核心思路**：价格存在持续性（momentum），识别趋势方向并跟随，直到趋势反转时退出。
+
+**特点**：
+- 胜率通常较低（30%-40%），但盈亏比高
+- 依赖严格的止损纪律和仓位管理
+- 与CTA高度重叠，但趋势跟踪更侧重纯方向性信号
+
+**奠基性论文与经典著作**：
+- Jegadeesh & Titman (1993). *Returns to Buying Winners and Selling Losers.* Journal of Finance — 动量效应的开山之作
+- Asness, Moskowitz & Pedersen (2013). *Value and Momentum Everywhere.* Journal of Finance — 证明了动量在各资产类别中的普遍性
+- Baz et al. (2015). *Dissecting Investment Strategies in the Cross Section and Time Series.* — 时序动量与截面动量的关系
+- 📖 Andreas Clenow.《Following the Trend》 — 趋势跟踪策略的实操指南
+
+---
+
+## 5.3 高频交易（HFT）
+
+**核心思路**：利用极短持仓周期（毫秒到秒级），通过速度优势和微观结构信息获取微小但高频的利润。
+
+**特点**：
+- 对延迟极其敏感，基础设施是核心壁垒
+- 利润来源：做市价差、短期价格预测、套利
+- 策略容量有限，规模扩展困难
+
+**奠基性论文与经典著作**：
+- Kyle (1985). *Continuous Auctions and Insider Trading.* Econometrica — 市场微观结构的基石，定义了信息交易者如何影响价格
+- Glosten & Milgrom (1985). *Bid, Ask and Transaction Prices in a Specialist Market.* Journal of Financial Economics — 逆向选择与买卖价差的理论基础
+- Avellaneda & Stoikov (2008). *High-Frequency Trading in a Limit Order Book.* Quantitative Finance — 高频做市的经典数学框架
+- Cartea, Jaimungal & Penalva (2015). *Algorithmic and High-Frequency Trading.* Cambridge University Press — HFT领域最权威的教科书
+- 📖 Ernest Chan.《Quantitative Trading》 — 量化交易入门实操
+
+---
+
+## 5.4 做市（Market Making）
+
+**核心思路**：在买卖两端持续报价，通过赚取买卖价差（bid-ask spread）获利，同时管理库存风险。
+
+**特点**：
+- 核心挑战是逆向选择（adverse selection）—— 与知情交易者成交导致亏损
+- 需要精确的库存管理和动态定价
+- 对速度和风控要求极高
+
+**奠基性论文与经典著作**：
+- Grossman & Miller (1988). *Liquidity and Market Structure.* Journal of Finance — 做市商作为流动性提供者的经济学基础
+- Ho & Stoll (1981). *Optimal Dealer Pricing Under Transactions and Return Uncertainty.* Journal of Financial Economics — 最优做市定价的开创性模型
+- Guéant, Lehalle & Fernandez-Tapia (2013). *Dealing with the Inventory Risk: A Solution to the Market Making Problem.* Mathematics and Financial Economics — 库存风险管理的现代数学框架
+- Stoikov (2018). *The Micro-Price: A High-Frequency Estimator of Future Prices.* Quantitative Finance — 用微观价格信号优化做市策略
+
+---
+
+## 5.5 统计套利（Statistical Arbitrage）
+
+**核心思路**：利用资产间的统计关系（协整、相关性、因子结构），在价格偏离均衡时建立多空头寸，等待回归获利。
+
+**特点**：
+- 市场中性，不承担方向性Beta风险
+- 经典方法：配对交易、PCA/因子模型驱动的篮子交易
+- 需要关注相关性崩溃（correlation breakdown）风险
+
+**奠基性论文与经典著作**：
+- Gatev, Goetzmann & Rouwenhorst (2006). *Pairs Trading: Performance of a Relative-Value Arbitrage Rule.* Review of Financial Studies — 配对交易的经典实证研究
+- Avellaneda & Lee (2010). *Statistical Arbitrage in the US Equities Market.* Quantitative Finance — 用PCA和均值回归构建统计套利策略
+- Pole (2007). 📖《Statistical Arbitrage: Algorithmic Trading Insights and Techniques》 — 统计套利的全面实战指南
+- Engle & Granger (1987). *Co-integration and Error Correction.* Econometrica — 协整理论的奠基之作，配对交易的理论基础
+
+---
+
+## 5.6 期权与波动率交易
+
+**核心思路**：交易波动率本身而非方向，利用期权的非线性特性和隐含波动率的错误定价获利。
+
+**特点**：
+- 核心是波动率曲面的建模与交易
+- 策略类型：波动率套利、gamma scalping、dispersion trading、尾部对冲
+- 对Greeks（Delta, Gamma, Vega, Theta）的精确计算和动态对冲至关重要
+
+**奠基性论文与经典著作**：
+- Black & Scholes (1973). *The Pricing of Options and Corporate Liabilities.* Journal of Political Economy — 期权定价的奠基之作
+- Heston (1993). *A Closed-Form Solution for Options with Stochastic Volatility.* Review of Financial Studies — 随机波动率模型的标杆
+- Gatheral (2006). 📖《The Volatility Surface: A Practitioner's Guide》 — 波动率曲面建模的业界圣经
+- Dupire (1994). *Pricing with a Smile.* Risk — 局部波动率模型，从市场价格反推波动率
+- Carr & Madan (1999). *Option Valuation Using the Fast Fourier Transform.* Journal of Computational Finance — FFT期权定价，现代计算方法的基础
+- Taleb (1997). 📖《Dynamic Hedging: Managing Vanilla and Exotic Options》 — 期权动态对冲的实战经典
 
 ---
 
