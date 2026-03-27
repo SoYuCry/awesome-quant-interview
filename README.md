@@ -1,339 +1,388 @@
+<div align="center">
+
 # Awesome Quant Interview
 
-> 这是我在量化之路上整理的学习资料、面试笔记与工具集。
->
-> 从论文到代码，从理论到实盘，从八股到认知——希望能帮助同样在这条路上探索的你。
->
-> **考点为骨架，知识为血肉，论文为灵魂，代码为武器。**
+**量化之路上的学习资料、面试笔记与工具集**
+
+从论文到代码，从理论到实盘，从八股到认知
+
+*考点为骨架，知识为血肉，论文为灵魂，代码为武器。*
+
+[![Stars](https://img.shields.io/github/stars/SoYuCry/awesome-quant-interview?style=social)](https://github.com/SoYuCry/awesome-quant-interview)
+
+</div>
 
 ---
 
 ## 目录
 
-### Part I — 资源与工具
+<table>
+<tr><td colspan="2"><strong>Part I — 资源与工具</strong></td></tr>
+<tr>
+<td>
 
-#### 🔧 [第一篇：开源工具与项目推荐](#第一篇开源工具与项目推荐)
-- [1.1 回测框架](#11-回测框架) — Backtrader、Zipline、VectorBT
-- [1.2 量化平台](#12-量化平台) — Qlib、vnpy、Hummingbot
-- [1.3 AI + Finance](#13-ai--finance) — FinRL、FinGPT、RD-Agent
-- [1.4 研报复现](#14-研报复现) — 华泰金工、券商研报策略复现
-- [1.5 Awesome Lists](#15-awesome-lists) — 社区精选资源合集
+**[🔧 开源工具与项目](#-第一篇开源工具与项目推荐)**
+- [回测框架](#-11-回测框架)
+- [量化平台](#-12-量化平台)
+- [AI + Finance](#-13-ai--finance)
+- [研报复现](#-14-研报复现)
+- [Awesome Lists](#-15-awesome-lists)
 
-#### 🏛️ [第二篇：量化策略方向与奠基性论文](#第二篇量化策略方向与奠基性论文)
-- [2.1 CTA / 管理期货](#21-cta--管理期货) — 时序动量、危机Alpha、趋势系统
-- [2.2 趋势跟踪](#22-趋势跟踪) — 动量效应、止损纪律、盈亏比
-- [2.3 高频交易（HFT）](#23-高频交易hft) — 市场微观结构、限价订单簿、延迟优化
-- [2.4 做市（Market Making）](#24-做市market-making) — 逆向选择、库存管理、最优报价
-- [2.5 统计套利](#25-统计套利statistical-arbitrage) — 配对交易、协整、PCA篮子
-- [2.6 期权与波动率交易](#26-期权与波动率交易) — BS模型、随机波动率、波动率曲面、Greeks
+</td>
+<td>
 
-#### 📚 [第三篇：推荐书单与资源](#第三篇推荐书单与资源)
-- [书单](#面试必备) — 绿皮书、因子圣经、经典教材
-- [博主与公众号](#知名博主与公众号) — 石川/川总写量化、因子动物园、QIML、交易门
-- [量化社区](#量化社区与平台) — 聚宽、米筐、QuantConnect、知乎
-- [A股数据源](#a股数据源) — Tushare、AKShare、Wind
-- [券商金工研报](#券商金工研报重点关注) — 华泰、光大、天风、中金
+**[🏛️ 策略方向与论文](#-第二篇量化策略方向与奠基性论文)**
+- [CTA / 管理期货](#21-cta--管理期货)
+- [趋势跟踪](#22-趋势跟踪)
+- [高频交易](#23-高频交易hft)
+- [做市](#24-做市market-making)
+- [统计套利](#25-统计套利statistical-arbitrage)
+- [期权与波动率](#26-期权与波动率交易)
 
----
+</td>
+</tr>
+<tr>
+<td colspan="2">
 
-### Part II — 面试八股文
+**[📚 书单、社区与数据](#-第三篇推荐书单社区与数据)**
+&nbsp;&nbsp;[书单](#-推荐书单) · [博主与公众号](#-知名博主与公众号) · [社区平台](#-量化社区与平台) · [A股数据源](#-a股数据源) · [券商金工研报](#-券商金工研报)
 
-#### 📐 [第四篇：数学与统计基础](#第四篇数学与统计基础)
-- [4.1 概率论](#41-概率论) — 条件概率、贝叶斯、大数定律、鞅、常见分布
-- [4.2 数理统计与推断](#42-数理统计与推断) — 假设检验、MLE、回归、多重检验
-- [4.3 线性代数](#43-线性代数) — 特征分解、PCA、矩阵分解
-- [4.4 随机过程与时间序列](#44-随机过程与时间序列) — ARMA/GARCH、协整、平稳性
-- [4.5 随机微积分基础](#45-随机微积分基础) — 布朗运动、Itô引理、GBM、BS推导
+</td>
+</tr>
+<tr><td colspan="2"><strong>Part II — 面试八股文</strong></td></tr>
+<tr>
+<td>
 
-#### 💻 [第五篇：编程（Python / C++）](#第五篇编程python--c)
-- [5.1 Python基础与数据处理](#51-python基础与数据处理) — pandas、数据清洗、合并
-- [5.2 Python进阶](#52-python进阶) — 装饰器、GIL、异步、内存管理
-- [5.3 C++ 基础（量化面试高频）](#53-c-基础量化面试高频) — 智能指针、虚函数、模板、内存模型
-- [5.4 NumPy / 数值计算](#54-numpy--数值计算) — 向量化、广播、性能优化
+**[📐 数学与统计基础](#第四篇数学与统计基础)**
+- 概率论 · 数理统计 · 线性代数
+- 随机过程 · 随机微积分
 
-#### 📊 [第六篇：因子与Alpha策略](#第六篇因子与alpha策略)
-- [6.1 因子投资基础](#61-因子投资基础) — 因子定义、Fama-French、因子衰减、多重共线性
-- [6.2 组合优化](#62-组合优化) — 均值方差、Black-Litterman、风险预算
-- [6.3 回测与策略评估](#63-回测与策略评估) — 过拟合检验、Sharpe、回撤、归因分析
+**[💻 编程 (Python / C++)](#第五篇编程python--c)**
+- Python基础与进阶 · C++高频考点
+- NumPy / 数值计算
 
-#### 🤖 [第七篇：机器学习 / 深度学习在量化中的应用](#第七篇机器学习深度学习在量化中的应用)
-- [7.1 机器学习基础](#71-机器学习基础) — 树模型、正则化、特征工程、交叉验证
-- [7.2 深度学习](#72-深度学习) — LSTM、Transformer、GAN、图神经网络
-- [7.3 强化学习](#73-强化学习) — DQN、PPO、执行优化
-- [7.4 实战问题](#74-实战问题) — 非平稳性、低信噪比、LLM在金融中的应用
+</td>
+<td>
 
----
+**[📊 因子与Alpha策略](#第六篇因子与alpha策略)**
+- 因子投资 · 组合优化
+- 回测与策略评估
 
-# 第一篇：开源工具与项目推荐
+**[🤖 ML / DL 在量化中的应用](#第七篇机器学习深度学习在量化中的应用)**
+- 机器学习 · 深度学习
+- 强化学习 · 实战问题
 
-> 好的工具是生产力的放大器。以下是量化领域最值得关注的开源项目，从回测引擎到AI框架，从实盘系统到研报复现。
-
----
-
-## 1.1 回测框架
-
-| 项目 | 简介 | 链接 |
-|------|------|------|
-| **Backtrader** | 功能丰富的事件驱动回测框架，社区活跃，支持实盘 | [mementum/backtrader](https://github.com/mementum/backtrader) |
-| **Zipline Reloaded** | Quantopian 经典回测引擎的社区维护版，兼容最新 Python | [stefan-jansen/zipline-reloaded](https://github.com/stefan-jansen/zipline-reloaded) |
-| **VectorBT** | 基于 NumPy/Numba 的向量化回测引擎，速度极快，适合大规模参数扫描 | [polakowo/vectorbt](https://github.com/polakowo/vectorbt) |
+</td>
+</tr>
+</table>
 
 ---
 
-## 1.2 量化平台
+# 🔧 第一篇：开源工具与项目推荐
 
-| 项目 | 简介 | 链接 |
-|------|------|------|
-| **Qlib** | 微软出品的 AI 量化投资平台，覆盖数据处理、模型训练、回测全流程 | [microsoft/qlib](https://github.com/microsoft/qlib) |
-| **vnpy** | 国内最流行的量化交易框架，支持股票、期货、期权、数字货币实盘 | [vnpy/vnpy](https://github.com/vnpy/vnpy) |
-| **Hummingbot** | 开源高频做市与套利机器人，支持 CEX (Binance, OKX) 和 DEX (Uniswap) | [hummingbot/hummingbot](https://github.com/hummingbot/hummingbot) |
+> 好的工具是生产力的放大器。
+
+### ⚡ 1.1 回测框架
+
+> [!TIP]
+> 推荐指数：⭐ = 了解即可 | ⭐⭐ = 值得一试 | ⭐⭐⭐ = 强烈推荐 | ⭐⭐⭐⭐ = 必备神器
+
+| 推荐 | 项目 | 简介 | 链接 |
+|:---:|------|------|------|
+| ⭐⭐⭐ | **Backtrader** | 功能最全的事件驱动回测框架，社区活跃，支持实盘对接 | [`mementum/backtrader`](https://github.com/mementum/backtrader) |
+| ⭐⭐ | **Zipline Reloaded** | Quantopian 经典引擎的社区维护版，兼容最新 Python | [`stefan-jansen/zipline-reloaded`](https://github.com/stefan-jansen/zipline-reloaded) |
+| ⭐⭐⭐⭐ | **VectorBT** | NumPy/Numba 向量化回测，速度极快，大规模参数扫描首选 | [`polakowo/vectorbt`](https://github.com/polakowo/vectorbt) |
+
+### 🖥️ 1.2 量化平台
+
+| 推荐 | 项目 | 简介 | 链接 |
+|:---:|------|------|------|
+| ⭐⭐⭐⭐ | **Qlib** | 微软出品，AI 量化全流程：数据 → 模型 → 回测 → 分析 | [`microsoft/qlib`](https://github.com/microsoft/qlib) |
+| ⭐⭐⭐ | **vnpy** | 国内最流行的量化框架，股票/期货/期权/加密货币实盘 | [`vnpy/vnpy`](https://github.com/vnpy/vnpy) |
+| ⭐⭐⭐ | **Hummingbot** | 开源高频做市与套利机器人，CEX + DEX 全覆盖 | [`hummingbot/hummingbot`](https://github.com/hummingbot/hummingbot) |
+
+### 🧠 1.3 AI + Finance
+
+| 推荐 | 项目 | 简介 | 链接 |
+|:---:|------|------|------|
+| ⭐⭐⭐ | **FinRL** | 金融强化学习框架，DRL agent 学习交易策略 | [`AI4Finance-Foundation/FinRL`](https://github.com/AI4Finance-Foundation/FinRL) |
+| ⭐⭐ | **FinGPT** | 开源金融 LLM，LoRA 微调，情感分析 / 研报解读 | [`AI4Finance-Foundation/FinGPT`](https://github.com/AI4Finance-Foundation/FinGPT) |
+| ⭐⭐ | **FinRobot** | LLM 金融分析 Agent 平台，多 Agent 协作 | [`AI4Finance-Foundation/FinRobot`](https://github.com/AI4Finance-Foundation/FinRobot) |
+| ⭐⭐⭐⭐ | **RD-Agent** | 微软亚研院，集成 Qlib，自动读论文 → 做因子 → 跑实验 | [`microsoft/RD-Agent`](https://github.com/microsoft/RD-Agent) |
+
+### 📑 1.4 研报复现
+
+| 推荐 | 项目 | 简介 | 链接 |
+|:---:|------|------|------|
+| ⭐⭐⭐⭐ | **QuantsPlaybook** | 券商金工研报复现（华泰/光大/招商/国信），100+ 策略 | [`hugo2046/QuantsPlaybook`](https://github.com/hugo2046/QuantsPlaybook) |
+| ⭐⭐⭐ | **华泰金工研报** | 华泰研报集合：CNN 选股、时序交叉验证、ML 多因子 | [`industry-report/huatai-finengi-report`](https://github.com/industry-report/huatai-finengi-report) |
+
+> [!NOTE]
+> **为什么要复现研报？** 券商金工研报是国内量化最核心的知识源头。复现它们能帮你理解因子构建细节、掌握回测规范、培养独立研究能力。华泰「人工智能选股」系列、光大「因子择时」系列都是经典中的经典。
+
+### 🌐 1.5 Awesome Lists
+
+| 推荐 | 项目 | 简介 | 链接 |
+|:---:|------|------|------|
+| ⭐⭐⭐⭐ | **awesome-quant** | 量化金融资源大全，Python/R/Julia，框架/数据/书籍 | [`wilsonfreitas/awesome-quant`](https://github.com/wilsonfreitas/awesome-quant) |
+| ⭐⭐⭐ | **awesome-ai-in-finance** | AI + 金融：LLM、DL 策略、加密货币、RL 交易 | [`georgezouq/awesome-ai-in-finance`](https://github.com/georgezouq/awesome-ai-in-finance) |
+| ⭐⭐⭐ | **awesome-systematic-trading** | 系统化交易：策略/框架/数据，期货/期权/外汇/加密 | [`wangzhe3224/awesome-systematic-trading`](https://github.com/wangzhe3224/awesome-systematic-trading) |
 
 ---
 
-## 1.3 AI + Finance
+# 🏛️ 第二篇：量化策略方向与奠基性论文
 
-| 项目 | 简介 | 链接 |
-|------|------|------|
-| **FinRL** | 金融强化学习框架，用 DRL agent 学习交易策略 | [AI4Finance-Foundation/FinRL](https://github.com/AI4Finance-Foundation/FinRL) |
-| **FinGPT** | 开源金融大语言模型，LoRA 微调，情感分析、研报解读 | [AI4Finance-Foundation/FinGPT](https://github.com/AI4Finance-Foundation/FinGPT) |
-| **FinRobot** | 基于 LLM 的金融分析 Agent 平台，多 Agent 协作完成研究任务 | [AI4Finance-Foundation/FinRobot](https://github.com/AI4Finance-Foundation/FinRobot) |
-| **RD-Agent** | 微软亚研院的自动化研发 Agent，集成 Qlib，自动读论文、做因子、跑实验 | [microsoft/RD-Agent](https://github.com/microsoft/RD-Agent) |
-
----
-
-## 1.4 研报复现
-
-| 项目 | 简介 | 链接 |
-|------|------|------|
-| **QuantsPlaybook** | 券商金工研报复现合集（华泰、光大、招商、国信等），100+ 策略，覆盖择时、因子、组合优化 | [hugo2046/QuantsPlaybook](https://github.com/hugo2046/QuantsPlaybook) |
-| **华泰金工研报** | 华泰金工研究报告集合，涵盖 CNN 选股、时序交叉验证、ML 多因子等 | [industry-report/huatai-finengi-report](https://github.com/industry-report/huatai-finengi-report) |
-
-> **为什么要复现研报？** 券商金工报告是国内量化最重要的知识来源之一。华泰金工的「人工智能选股」系列、光大的「因子择时」系列等都是经典。复现研报能帮助你理解因子构建的细节、掌握回测的规范流程、培养独立研究的能力。
-
----
-
-## 1.5 Awesome Lists
-
-| 项目 | 简介 | 链接 |
-|------|------|------|
-| **awesome-quant** | 量化金融资源大全：库、框架、数据源、书籍，覆盖 Python/R/Julia | [wilsonfreitas/awesome-quant](https://github.com/wilsonfreitas/awesome-quant) |
-| **awesome-ai-in-finance** | AI + 金融资源合集：LLM、深度学习策略、加密货币、RL 交易 | [georgezouq/awesome-ai-in-finance](https://github.com/georgezouq/awesome-ai-in-finance) |
-| **awesome-systematic-trading** | 系统化交易资源：策略、框架、数据，覆盖期货/期权/外汇/加密 | [wangzhe3224/awesome-systematic-trading](https://github.com/wangzhe3224/awesome-systematic-trading) |
-
----
-
-# 第二篇：量化策略方向与奠基性论文
-
-> 量化交易并非铁板一块，不同方向的底层逻辑、数据频率、持仓周期差异巨大。本篇梳理主流策略方向，并为每个方向推荐奠基性的论文与经典著作。
-
----
+> 不同方向的底层逻辑、数据频率、持仓周期差异巨大。选方向比选策略更重要。
 
 ## 2.1 CTA / 管理期货
 
-**核心思路**：在期货、外汇等衍生品市场上，通过系统化模型捕捉趋势、均值回归或截面动量等信号。
+<details>
+<summary><b>核心特点</b>（点击展开）</summary>
 
-**特点**：
-- 多空双向，天然对冲股市Beta
-- 以中低频为主（日线到周线），部分CTA涉及日内
-- 危机时期往往表现优异（"危机Alpha"）
+- 多空双向，天然对冲股市 Beta
+- 以中低频为主（日线到周线），部分涉及日内
+- 危机时期往往表现优异（"危机 Alpha"）
+</details>
 
-**奠基性论文与经典著作**：
-- Moskowitz, Ooi & Pedersen (2012). *Time Series Momentum.* Journal of Financial Economics — 系统性证明了跨资产类别的时序动量效应
-- Hurst, Ooi & Pedersen (2017). *A Century of Evidence on Trend-Following Investing.* AQR — 用百年数据验证趋势跟踪策略的长期有效性
-- Baltas & Kosowski (2013). *Momentum Strategies in Futures Markets and Trend-Following Funds.* — 期货动量策略的全面分析
-- Fung & Hsieh (2001). *The Risk in Hedge Fund Strategies: Theory and Evidence from Trend Followers.* Review of Financial Studies — 提出趋势跟踪回报的期权复制模型，奠定CTA业绩归因基础
-- Hamill, Rattray & Van Hemert (2016). *Trend Following: Equity and Bond Crisis Alpha.* AQR — 证明趋势跟踪在股债危机期间提供正向Alpha的机制
-- Levine & Pedersen (2016). *Which Trend Is Your Friend?* Financial Analysts Journal — 系统比较不同趋势信号构建方法（移动平均、突破、时序动量）的异同
-- 📖 Perry Kaufman.《Trading Systems and Methods》 — CTA系统化交易的百科全书
+**奠基性论文：**
 
----
+| 推荐 | 论文 | 意义 |
+|:---:|------|------|
+| ⭐⭐⭐⭐ | Moskowitz, Ooi & Pedersen (2012). *Time Series Momentum.* JFE | 系统性证明跨资产类别的时序动量效应 |
+| ⭐⭐⭐⭐ | Hurst, Ooi & Pedersen (2017). *A Century of Evidence on Trend-Following.* AQR | 百年数据验证趋势跟踪的长期有效性 |
+| ⭐⭐⭐ | Fung & Hsieh (2001). *The Risk in Hedge Fund Strategies.* RFS | 趋势跟踪回报的期权复制模型，奠定 CTA 归因基础 |
+| ⭐⭐⭐ | Hamill, Rattray & Van Hemert (2016). *Trend Following: Crisis Alpha.* AQR | 趋势跟踪在股债危机期间提供正向 Alpha |
+| ⭐⭐ | Baltas & Kosowski (2013). *Momentum Strategies in Futures Markets.* | 期货动量策略的全面分析 |
+| ⭐⭐ | Levine & Pedersen (2016). *Which Trend Is Your Friend?* FAJ | 比较移动平均、突破、时序动量等信号构建方法 |
+| ⭐⭐⭐ | 📖 Perry Kaufman.《Trading Systems and Methods》 | CTA 系统化交易的百科全书 |
 
 ## 2.2 趋势跟踪
 
-**核心思路**：价格存在持续性（momentum），识别趋势方向并跟随，直到趋势反转时退出。
+<details>
+<summary><b>核心特点</b>（点击展开）</summary>
 
-**特点**：
 - 胜率通常较低（30%-40%），但盈亏比高
 - 依赖严格的止损纪律和仓位管理
-- 与CTA高度重叠，但趋势跟踪更侧重纯方向性信号
+- 与 CTA 高度重叠，但更侧重纯方向性信号
+</details>
 
-**奠基性论文与经典著作**：
-- Jegadeesh & Titman (1993). *Returns to Buying Winners and Selling Losers.* Journal of Finance — 动量效应的开山之作
-- Asness, Moskowitz & Pedersen (2013). *Value and Momentum Everywhere.* Journal of Finance — 证明了动量在各资产类别中的普遍性
-- Baz et al. (2015). *Dissecting Investment Strategies in the Cross Section and Time Series.* — 时序动量与截面动量的关系
-- Faber (2007). *A Quantitative Approach to Tactical Asset Allocation.* Journal of Wealth Management — 用简单移动平均实现战术资产配置，趋势跟踪的极简实现
-- Lempérière et al. (2014). *Two Centuries of Trend Following.* Journal of Investment Strategies — 用两百年超长数据验证趋势跟踪的持久性与普遍性
-- Babu et al. (2020). *You Can't Always Trend When You Want.* Journal of Portfolio Management — 深入分析趋势策略失效期的特征及组合层面的应对方法
-- 📖 Andreas Clenow.《Following the Trend》 — 趋势跟踪策略的实操指南
+**奠基性论文：**
 
----
+| 推荐 | 论文 | 意义 |
+|:---:|------|------|
+| ⭐⭐⭐⭐ | Jegadeesh & Titman (1993). *Returns to Buying Winners and Selling Losers.* JF | 动量效应的开山之作 |
+| ⭐⭐⭐⭐ | Asness, Moskowitz & Pedersen (2013). *Value and Momentum Everywhere.* JF | 动量在各资产类别中的普遍性 |
+| ⭐⭐⭐ | Lempérière et al. (2014). *Two Centuries of Trend Following.* JIS | 两百年超长数据验证趋势跟踪的持久性 |
+| ⭐⭐⭐ | Faber (2007). *A Quantitative Approach to Tactical Asset Allocation.* JWM | 用简单移动平均实现 TAA，极简实现 |
+| ⭐⭐ | Baz et al. (2015). *Dissecting Investment Strategies in the Cross Section and Time Series.* | 时序动量与截面动量的关系 |
+| ⭐⭐ | Babu et al. (2020). *You Can't Always Trend When You Want.* JPM | 趋势策略失效期的特征及组合应对 |
+| ⭐⭐⭐ | 📖 Andreas Clenow.《Following the Trend》 | 趋势跟踪策略的实操指南 |
 
 ## 2.3 高频交易（HFT）
 
-**核心思路**：利用极短持仓周期（毫秒到秒级），通过速度优势和微观结构信息获取微小但高频的利润。
+<details>
+<summary><b>核心特点</b>（点击展开）</summary>
 
-**特点**：
 - 对延迟极其敏感，基础设施是核心壁垒
 - 利润来源：做市价差、短期价格预测、套利
 - 策略容量有限，规模扩展困难
+</details>
 
-**奠基性论文与经典著作**：
-- Kyle (1985). *Continuous Auctions and Insider Trading.* Econometrica — 市场微观结构的基石，定义了信息交易者如何影响价格
-- Glosten & Milgrom (1985). *Bid, Ask and Transaction Prices in a Specialist Market.* Journal of Financial Economics — 逆向选择与买卖价差的理论基础
-- Avellaneda & Stoikov (2008). *High-Frequency Trading in a Limit Order Book.* Quantitative Finance — 高频做市的经典数学框架
-- Cartea, Jaimungal & Penalva (2015). *Algorithmic and High-Frequency Trading.* Cambridge University Press — HFT领域最权威的教科书
-- Bouchaud, Farmer & Lillo (2009). *How Markets Slowly Digest Changes in Supply and Demand.* Handbook of Financial Markets — 订单流如何驱动价格变动的物理学视角，market impact 理论基础
-- Cont, Stoikov & Talreja (2010). *A Stochastic Model for Order Book Dynamics.* Operations Research — 限价订单簿的随机建模，LOB研究的标杆论文
-- Menkveld (2013). *High Frequency Trading and the New Market Makers.* Journal of Financial Markets — 高频做市商角色的实证分析，首次刻画现代HFT做市商行为
-- 📖 Hasbrouck (2007).《Empirical Market Microstructure》Oxford University Press — 市场微观结构实证研究的权威教科书
-- 📖 Ernest Chan.《Quantitative Trading》 — 量化交易入门实操
+**奠基性论文：**
 
----
+| 推荐 | 论文 | 意义 |
+|:---:|------|------|
+| ⭐⭐⭐⭐ | Kyle (1985). *Continuous Auctions and Insider Trading.* Econometrica | 市场微观结构的基石 |
+| ⭐⭐⭐⭐ | Glosten & Milgrom (1985). *Bid, Ask and Transaction Prices.* JFE | 逆向选择与买卖价差的理论基础 |
+| ⭐⭐⭐⭐ | Avellaneda & Stoikov (2008). *HFT in a Limit Order Book.* QF | 高频做市的经典数学框架 |
+| ⭐⭐⭐ | Cont, Stoikov & Talreja (2010). *A Stochastic Model for Order Book Dynamics.* OR | 限价订单簿随机建模，LOB 研究标杆 |
+| ⭐⭐⭐ | Bouchaud, Farmer & Lillo (2009). *How Markets Slowly Digest Changes in Supply and Demand.* | Market impact 理论基础 |
+| ⭐⭐⭐ | Menkveld (2013). *HFT and the New Market Makers.* JFM | 首次刻画现代 HFT 做市商行为 |
+| ⭐⭐⭐ | 📖 Cartea, Jaimungal & Penalva (2015).《Algorithmic and High-Frequency Trading》 | HFT 领域最权威的教科书 |
+| ⭐⭐⭐ | 📖 Hasbrouck (2007).《Empirical Market Microstructure》 | 微观结构实证的权威教科书 |
+| ⭐⭐ | 📖 Ernest Chan.《Quantitative Trading》 | 量化交易入门实操 |
 
 ## 2.4 做市（Market Making）
 
-**核心思路**：在买卖两端持续报价，通过赚取买卖价差（bid-ask spread）获利，同时管理库存风险。
+<details>
+<summary><b>核心特点</b>（点击展开）</summary>
 
-**特点**：
-- 核心挑战是逆向选择（adverse selection）—— 与知情交易者成交导致亏损
+- 核心挑战是逆向选择（adverse selection）
 - 需要精确的库存管理和动态定价
 - 对速度和风控要求极高
+</details>
 
-**奠基性论文与经典著作**：
-- Grossman & Miller (1988). *Liquidity and Market Structure.* Journal of Finance — 做市商作为流动性提供者的经济学基础
-- Ho & Stoll (1981). *Optimal Dealer Pricing Under Transactions and Return Uncertainty.* Journal of Financial Economics — 最优做市定价的开创性模型
-- Guéant, Lehalle & Fernandez-Tapia (2013). *Dealing with the Inventory Risk: A Solution to the Market Making Problem.* Mathematics and Financial Economics — 库存风险管理的现代数学框架
-- Stoikov (2018). *The Micro-Price: A High-Frequency Estimator of Future Prices.* Quantitative Finance — 用微观价格信号优化做市策略
-- Amihud & Mendelson (1980). *Dealership Market: Market-Making with Inventory.* Journal of Financial Economics — 库存成本对做市商报价行为影响的早期模型
-- Glosten & Harris (1988). *Estimating the Components of the Bid-Ask Spread.* Journal of Financial Economics — 将买卖价差分解为逆向选择与库存成本两部分的经典方法
-- Guilbaud & Pham (2013). *Optimal High-Frequency Trading with Limit and Market Orders.* Quantitative Finance — 同时使用限价单和市价单的最优做市数学框架
+**奠基性论文：**
 
----
+| 推荐 | 论文 | 意义 |
+|:---:|------|------|
+| ⭐⭐⭐⭐ | Ho & Stoll (1981). *Optimal Dealer Pricing Under Transactions and Return Uncertainty.* JFE | 最优做市定价的开创性模型 |
+| ⭐⭐⭐⭐ | Guéant, Lehalle & Fernandez-Tapia (2013). *Dealing with the Inventory Risk.* MFE | 库存风险管理的现代数学框架 |
+| ⭐⭐⭐ | Grossman & Miller (1988). *Liquidity and Market Structure.* JF | 做市商作为流动性提供者的经济学基础 |
+| ⭐⭐⭐ | Stoikov (2018). *The Micro-Price.* QF | 用微观价格信号优化做市策略 |
+| ⭐⭐⭐ | Glosten & Harris (1988). *Estimating the Components of the Bid-Ask Spread.* JFE | 价差分解为逆向选择与库存成本 |
+| ⭐⭐ | Amihud & Mendelson (1980). *Dealership Market: Market-Making with Inventory.* JFE | 库存成本影响报价的早期模型 |
+| ⭐⭐ | Guilbaud & Pham (2013). *Optimal HFT with Limit and Market Orders.* QF | 限价单 + 市价单联合最优做市 |
 
 ## 2.5 统计套利（Statistical Arbitrage）
 
-**核心思路**：利用资产间的统计关系（协整、相关性、因子结构），在价格偏离均衡时建立多空头寸，等待回归获利。
+<details>
+<summary><b>核心特点</b>（点击展开）</summary>
 
-**特点**：
-- 市场中性，不承担方向性Beta风险
-- 经典方法：配对交易、PCA/因子模型驱动的篮子交易
-- 需要关注相关性崩溃（correlation breakdown）风险
+- 市场中性，不承担方向性 Beta 风险
+- 经典方法：配对交易、PCA / 因子模型驱动的篮子交易
+- 需关注相关性崩溃（correlation breakdown）风险
+</details>
 
-**奠基性论文与经典著作**：
-- Gatev, Goetzmann & Rouwenhorst (2006). *Pairs Trading: Performance of a Relative-Value Arbitrage Rule.* Review of Financial Studies — 配对交易的经典实证研究
-- Avellaneda & Lee (2010). *Statistical Arbitrage in the US Equities Market.* Quantitative Finance — 用PCA和均值回归构建统计套利策略
-- Pole (2007). 📖《Statistical Arbitrage: Algorithmic Trading Insights and Techniques》 — 统计套利的全面实战指南
-- Engle & Granger (1987). *Co-integration and Error Correction.* Econometrica — 协整理论的奠基之作，配对交易的理论基础
-- Kakushadze (2016). *101 Formulaic Alphas.* Wilmott — 提供101个可直接计算的Alpha公式，统计套利因子构建的实用参考
-- Krauss (2017). *Statistical Arbitrage Pairs Trading Strategies: Review and Outlook.* Journal of Economic Surveys — 配对交易文献的全面综述，涵盖距离法、协整法、随机控制法
-- 📖 Vidyamurthy (2004).《Pairs Trading: Quantitative Methods and Analysis》 — 配对交易方法论的系统性实操指南
+**奠基性论文：**
 
----
+| 推荐 | 论文 | 意义 |
+|:---:|------|------|
+| ⭐⭐⭐⭐ | Engle & Granger (1987). *Co-integration and Error Correction.* Econometrica | 协整理论奠基之作，配对交易理论基础 |
+| ⭐⭐⭐⭐ | Gatev, Goetzmann & Rouwenhorst (2006). *Pairs Trading.* RFS | 配对交易的经典实证研究 |
+| ⭐⭐⭐ | Avellaneda & Lee (2010). *Statistical Arbitrage in the US Equities Market.* QF | PCA + 均值回归构建统计套利策略 |
+| ⭐⭐⭐ | Kakushadze (2016). *101 Formulaic Alphas.* Wilmott | 101 个可直接计算的 Alpha 公式 |
+| ⭐⭐⭐ | Krauss (2017). *Stat Arb Pairs Trading Strategies: Review and Outlook.* JES | 配对交易文献全面综述 |
+| ⭐⭐ | 📖 Pole (2007).《Statistical Arbitrage》 | 统计套利全面实战指南 |
+| ⭐⭐ | 📖 Vidyamurthy (2004).《Pairs Trading》 | 配对交易方法论的系统性指南 |
 
 ## 2.6 期权与波动率交易
 
-**核心思路**：交易波动率本身而非方向，利用期权的非线性特性和隐含波动率的错误定价获利。
+<details>
+<summary><b>核心特点</b>（点击展开）</summary>
 
-**特点**：
 - 核心是波动率曲面的建模与交易
 - 策略类型：波动率套利、gamma scalping、dispersion trading、尾部对冲
-- 对Greeks（Delta, Gamma, Vega, Theta）的精确计算和动态对冲至关重要
+- Greeks 的精确计算和动态对冲至关重要
+</details>
 
-**奠基性论文与经典著作**：
-- Black & Scholes (1973). *The Pricing of Options and Corporate Liabilities.* Journal of Political Economy — 期权定价的奠基之作
-- Heston (1993). *A Closed-Form Solution for Options with Stochastic Volatility.* Review of Financial Studies — 随机波动率模型的标杆
-- Gatheral (2006). 📖《The Volatility Surface: A Practitioner's Guide》 — 波动率曲面建模的业界圣经
-- Dupire (1994). *Pricing with a Smile.* Risk — 局部波动率模型，从市场价格反推波动率
-- Carr & Madan (1999). *Option Valuation Using the Fast Fourier Transform.* Journal of Computational Finance — FFT期权定价，现代计算方法的基础
-- Taleb (1997). 📖《Dynamic Hedging: Managing Vanilla and Exotic Options》 — 期权动态对冲的实战经典
-- Bates (1996). *Jumps and Stochastic Volatility: Exchange Rate Processes Implicit in Deutsche Mark Options.* Review of Financial Studies — 将跳跃过程与随机波动率结合的经典模型
-- Gatheral, Jaisson & Rosenbaum (2018). *Volatility Is Rough.* Quantitative Finance — 粗糙波动率模型，用分数布朗运动刻画波动率微观行为，近年最有影响力的突破
-- Bergomi (2005). *Smile Dynamics.* Risk — 波动率曲面动态建模的开创性工作，提出Bergomi模型框架
+**奠基性论文：**
+
+| 推荐 | 论文 | 意义 |
+|:---:|------|------|
+| ⭐⭐⭐⭐ | Black & Scholes (1973). *The Pricing of Options and Corporate Liabilities.* JPE | 期权定价的奠基之作 |
+| ⭐⭐⭐⭐ | Heston (1993). *A Closed-Form Solution for Options with Stochastic Volatility.* RFS | 随机波动率模型的标杆 |
+| ⭐⭐⭐⭐ | Gatheral, Jaisson & Rosenbaum (2018). *Volatility Is Rough.* QF | 粗糙波动率模型，近年最有影响力的突破 |
+| ⭐⭐⭐ | Dupire (1994). *Pricing with a Smile.* Risk | 局部波动率模型，从市场价格反推波动率 |
+| ⭐⭐⭐ | Carr & Madan (1999). *Option Valuation Using the FFT.* JCF | FFT 期权定价，现代计算方法基础 |
+| ⭐⭐⭐ | Bates (1996). *Jumps and Stochastic Volatility.* RFS | 跳跃 + 随机波动率的经典模型 |
+| ⭐⭐ | Bergomi (2005). *Smile Dynamics.* Risk | 波动率曲面动态建模，Bergomi 框架 |
+| ⭐⭐⭐⭐ | 📖 Gatheral (2006).《The Volatility Surface》 | 波动率曲面建模的业界圣经 |
+| ⭐⭐⭐ | 📖 Taleb (1997).《Dynamic Hedging》 | 期权动态对冲的实战经典 |
 
 ---
 
-# 第三篇：推荐书单与资源
+# 📚 第三篇：推荐书单、社区与数据
 
-## 面试必备
-- **绿皮书**：《A Practical Guide to Quantitative Finance Interviews》(Xinfeng Zhou) —— 量化面试经典中的经典，涵盖概率、数学、脑筋急转弯等高频考点
+### 📖 推荐书单
 
-## 数学与统计
-- **概率论**：《Probability and Statistics for Engineering and the Sciences》(Jay Devore)
-- **时间序列**：《Analysis of Financial Time Series》(Ruey S. Tsay)
-- **随机微积分**：《Stochastic Calculus for Finance I & II》(Steven Shreve)
+> [!TIP]
+> ⭐⭐⭐⭐ = 必读 | ⭐⭐⭐ = 强烈推荐 | ⭐⭐ = 值得一读 | ⭐ = 参考
 
-## 编程
-- **Python**：《Python for Data Analysis》(Wes McKinney)
-- **C++**：《Effective Modern C++》(Scott Meyers)
-- **量化编程**：《Python for Finance》(Yves Hilpisch)
+**面试必备**
 
-## 因子与策略
-- **因子投资**：《Quantitative Equity Portfolio Management》(Chincarini & Kim)
-- **Alpha策略**：《Advances in Financial Machine Learning》(Marcos López de Prado)
-- **组合优化**：《Active Portfolio Management》(Grinold & Kahn)
+| 推荐 | 书名 | 说明 |
+|:---:|------|------|
+| ⭐⭐⭐⭐ | 《A Practical Guide to Quantitative Finance Interviews》(Xinfeng Zhou) | **绿皮书**，量化面试经典中的经典 |
 
-## 机器学习
-- **基础**：《The Elements of Statistical Learning》(Hastie, Tibshirani, Friedman)
-- **深度学习**：《Deep Learning》(Goodfellow, Bengio, Courville)
-- **量化ML**：《Machine Learning for Asset Managers》(Marcos López de Prado)
+**数学与统计**
 
-## 中文量化专著
-- **因子投资**：📖 石川、刘洋溢、连祥斌.《因子投资：方法与实践》 — 国内因子投资领域最系统的专著，中文因子圣经
-- **量化入门**：📖 丁鹏.《量化投资：策略与技术》 — 国内量化投资入门经典教材
-- **Python量化**：📖 杨博理、贾芳.《量化投资：以Python为工具》 — Python量化实操入门
+| 推荐 | 书名 | 说明 |
+|:---:|------|------|
+| ⭐⭐⭐ | 《Probability and Statistics for Engineering and the Sciences》(Devore) | 概率统计标准教材 |
+| ⭐⭐⭐⭐ | 《Analysis of Financial Time Series》(Tsay) | 金融时间序列的权威 |
+| ⭐⭐⭐⭐ | 《Stochastic Calculus for Finance I & II》(Shreve) | 随机微积分从入门到进阶 |
 
-## 学术论文源
-- **arXiv q-fin**：金融领域最新论文预印本
-- **SSRN**：大量量化金融工作论文，券商研究员必看
-- **NBER Working Papers**：美国国家经济研究局工作论文
-- **Risk.net / Journal of Portfolio Management / Journal of Financial Economics**：行业顶级期刊
+**编程**
 
-## 知名博主与公众号
+| 推荐 | 书名 | 说明 |
+|:---:|------|------|
+| ⭐⭐⭐ | 《Python for Data Analysis》(McKinney) | pandas 作者亲著 |
+| ⭐⭐⭐ | 《Effective Modern C++》(Meyers) | 现代 C++ 最佳实践 |
+| ⭐⭐⭐ | 《Python for Finance》(Hilpisch) | Python 量化编程实战 |
 
-| 名称 | 平台 | 简介 |
-|------|------|------|
-| **石川 / 川总写量化** | [知乎](https://www.zhihu.com/people/shi-chuan-97) / 公众号 | 国内因子投资领域最权威的中文写作者，文章兼具学术深度与实战价值 |
-| **因子动物园 (Factor Zoo)** | 公众号 | 石川团队出品，系统梳理学术因子文献，追踪因子研究前沿 |
-| **量化投资与机器学习 (QIML)** | 公众号 | 国内最大的量化公众号之一，覆盖ML策略、因子研究、行业动态 |
-| **数量经济学** | 知乎 / 公众号 | 偏学术向，计量经济学与金融实证方法 |
-| **交易门** | 播客 / 公众号 | 对话顶尖交易员和量化基金经理，深度访谈行业大咖 |
-| **大邓和他的Python** | 知乎 / B站 | Python量化编程教程，适合入门 |
+**因子与策略**
 
-## 量化社区与平台
+| 推荐 | 书名 | 说明 |
+|:---:|------|------|
+| ⭐⭐⭐ | 《Quantitative Equity Portfolio Management》(Chincarini & Kim) | 量化股票组合管理 |
+| ⭐⭐⭐⭐ | 《Advances in Financial Machine Learning》(de Prado) | 金融 ML 实战，业界必读 |
+| ⭐⭐⭐⭐ | 《Active Portfolio Management》(Grinold & Kahn) | 主动投资管理的圣经 |
 
-| 平台 | 简介 | 链接 |
-|------|------|------|
-| **聚宽 (JoinQuant)** | 国内最大的量化投研平台之一，免费数据 + 回测 + 社区 | [joinquant.com](https://www.joinquant.com) |
-| **米筐 (RiceQuant)** | 专业量化研究平台，数据质量高，机构用户多 | [ricequant.com](https://www.ricequant.com) |
-| **优矿 (Uqer)** | 通联数据旗下，数据全面，适合研究 | [uqer.datayes.com](https://uqer.datayes.com) |
-| **BigQuant** | AI量化平台，低代码策略开发，内置深度学习模块 | [bigquant.com](https://bigquant.com) |
-| **发明者量化 (FMZ)** | 数字货币和期货量化交易平台，多语言支持 | [fmz.com](https://www.fmz.com) |
-| **QuantConnect** | 国际量化平台，支持多资产类别，Lean引擎开源 | [quantconnect.com](https://www.quantconnect.com) |
-| **Kaggle** | 数据科学竞赛平台，有大量金融相关数据集和比赛 | [kaggle.com](https://www.kaggle.com) |
-| **知乎：量化交易** | 高质量问答与专栏文章 | [知乎话题](https://www.zhihu.com/topic/19815465) |
-| **经管之家** | 老牌经济金融学术论坛（原人大经济论坛） | [bbs.pinggu.org](https://bbs.pinggu.org) |
+**机器学习**
 
-## A股数据源
+| 推荐 | 书名 | 说明 |
+|:---:|------|------|
+| ⭐⭐⭐⭐ | 《The Elements of Statistical Learning》(Hastie et al.) | 统计学习理论经典 |
+| ⭐⭐⭐ | 《Deep Learning》(Goodfellow et al.) | 深度学习的"花书" |
+| ⭐⭐⭐ | 《Machine Learning for Asset Managers》(de Prado) | 资管视角的 ML |
 
-| 数据源 | 简介 | 链接 |
-|------|------|------|
-| **Tushare Pro** | 国内最流行的免费金融数据接口，覆盖股票/基金/期货/可转债 | [tushare.pro](https://tushare.pro) |
-| **AKShare** | 完全开源免费的 Python 数据接口库，数据源广泛 | [akfamily/akshare](https://github.com/akfamily/akshare) |
-| **BaoStock** | 免费开源A股数据接口，日K/分钟K/财报 | [baostock.com](http://baostock.com) |
-| **Wind 万得** | 机构级金融终端，数据最全面权威（付费） | [wind.com.cn](https://www.wind.com.cn) |
-| **东方财富 Choice** | 性价比较高的机构级数据终端（付费） | [choice.eastmoney.com](https://choice.eastmoney.com) |
-| **efinance** | 开源Python库，从东方财富等爬取数据 | [mpquant/efinance](https://github.com/mpquant/efinance) |
+**中文量化专著**
 
-## 券商金工研报（重点关注）
+| 推荐 | 书名 | 说明 |
+|:---:|------|------|
+| ⭐⭐⭐⭐ | 石川 等.《因子投资：方法与实践》 | 中文因子投资圣经 |
+| ⭐⭐⭐ | 丁鹏.《量化投资：策略与技术》 | 国内量化入门经典 |
+| ⭐⭐ | 杨博理 等.《量化投资：以Python为工具》 | Python 量化实操入门 |
 
-> 券商金工报告是国内量化最重要的知识来源之一。以下是出产高质量研报的代表性团队：
+### 📡 学术论文源
 
-- **华泰金工** — 「人工智能选股」系列、因子体系研究，国内量化研报标杆
-- **光大金工** — 因子择时、事件驱动策略研究
-- **天风金工** — 基本面因子、另类数据研究
-- **中金量化** — 宏观量化、资产配置、因子研究
-- **开源证券金工** — 近年产出较多，覆盖面广
-- **招商金工** — 多因子模型、行业轮动
+| 推荐 | 来源 | 说明 |
+|:---:|------|------|
+| ⭐⭐⭐⭐ | **SSRN** | 量化金融工作论文，券商研究员必看 |
+| ⭐⭐⭐⭐ | **arXiv q-fin** | 金融领域最新预印本 |
+| ⭐⭐⭐ | **NBER Working Papers** | 美国国家经济研究局 |
+| ⭐⭐⭐ | **Risk.net / JFE / JPM** | 行业顶级期刊 |
+
+### 🎙️ 知名博主与公众号
+
+| 推荐 | 名称 | 平台 | 简介 |
+|:---:|------|------|------|
+| ⭐⭐⭐⭐ | **石川 / 川总写量化** | [知乎](https://www.zhihu.com/people/shi-chuan-97) / 公众号 | 因子投资最权威的中文写作者，学术深度 + 实战价值 |
+| ⭐⭐⭐⭐ | **因子动物园 (Factor Zoo)** | 公众号 | 石川团队出品，追踪因子研究前沿 |
+| ⭐⭐⭐⭐ | **量化投资与机器学习 (QIML)** | 公众号 | 国内最大量化公众号，ML 策略 / 因子 / 行业动态 |
+| ⭐⭐⭐ | **交易门** | 播客 / 公众号 | 对话顶尖交易员和量化基金经理 |
+| ⭐⭐⭐ | **数量经济学** | 知乎 / 公众号 | 偏学术，计量经济学与金融实证 |
+| ⭐⭐ | **大邓和他的Python** | 知乎 / B站 | Python 量化编程教程，适合入门 |
+
+### 🏠 量化社区与平台
+
+| 推荐 | 平台 | 简介 | 链接 |
+|:---:|------|------|------|
+| ⭐⭐⭐⭐ | **聚宽 (JoinQuant)** | 国内最大量化投研平台，免费数据 + 回测 + 社区 | [joinquant.com](https://www.joinquant.com) |
+| ⭐⭐⭐ | **米筐 (RiceQuant)** | 专业量化研究平台，数据质量高 | [ricequant.com](https://www.ricequant.com) |
+| ⭐⭐⭐ | **优矿 (Uqer)** | 通联数据旗下，数据全面 | [uqer.datayes.com](https://uqer.datayes.com) |
+| ⭐⭐ | **BigQuant** | AI 量化平台，低代码 + 深度学习 | [bigquant.com](https://bigquant.com) |
+| ⭐⭐⭐ | **发明者量化 (FMZ)** | 数字货币 / 期货量化平台 | [fmz.com](https://www.fmz.com) |
+| ⭐⭐⭐ | **QuantConnect** | 国际量化平台，Lean 引擎开源 | [quantconnect.com](https://www.quantconnect.com) |
+| ⭐⭐ | **Kaggle** | 金融数据集和比赛 | [kaggle.com](https://www.kaggle.com) |
+| ⭐⭐⭐ | **知乎：量化交易** | 高质量问答与专栏 | [知乎话题](https://www.zhihu.com/topic/19815465) |
+| ⭐⭐ | **经管之家** | 老牌经济金融学术论坛 | [bbs.pinggu.org](https://bbs.pinggu.org) |
+
+### 💾 A股数据源
+
+| 推荐 | 数据源 | 简介 | 链接 |
+|:---:|------|------|------|
+| ⭐⭐⭐⭐ | **Tushare Pro** | 最流行的免费接口，股票/基金/期货/可转债 | [tushare.pro](https://tushare.pro) |
+| ⭐⭐⭐⭐ | **AKShare** | 完全开源免费，数据源广泛 | [`akfamily/akshare`](https://github.com/akfamily/akshare) |
+| ⭐⭐⭐ | **BaoStock** | 免费开源，日K/分钟K/财报 | [baostock.com](http://baostock.com) |
+| ⭐⭐⭐⭐ | **Wind 万得** | 机构级终端，数据最全最权威（付费） | [wind.com.cn](https://www.wind.com.cn) |
+| ⭐⭐⭐ | **东方财富 Choice** | 性价比较高的机构级终端（付费） | [choice.eastmoney.com](https://choice.eastmoney.com) |
+| ⭐⭐ | **efinance** | 开源 Python 库，爬取东方财富等 | [`mpquant/efinance`](https://github.com/mpquant/efinance) |
+
+### 🏦 券商金工研报
+
+> [!NOTE]
+> 券商金工研报是国内量化最核心的知识源头。以下是出产高质量研报的代表性团队：
+
+| 推荐 | 团队 | 代表研究方向 |
+|:---:|------|------------|
+| ⭐⭐⭐⭐ | **华泰金工** | 「人工智能选股」系列、因子体系，国内研报标杆 |
+| ⭐⭐⭐⭐ | **光大金工** | 因子择时、事件驱动策略 |
+| ⭐⭐⭐ | **天风金工** | 基本面因子、另类数据 |
+| ⭐⭐⭐ | **中金量化** | 宏观量化、资产配置 |
+| ⭐⭐⭐ | **招商金工** | 多因子模型、行业轮动 |
+| ⭐⭐ | **开源证券金工** | 近年产出多，覆盖面广 |
 
 ---
 # 第四篇：数学与统计基础
