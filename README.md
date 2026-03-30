@@ -73,6 +73,7 @@
 ### Awesome Lists
 
 - 🌟 [awesome-quant](https://github.com/wilsonfreitas/awesome-quant) - 量化金融资源大全：库、框架、数据源、书籍
+- 🌟 [quant-wiki](https://github.com/LLMQuant/quant-wiki) - 量化知识开源与汉化，打破国内外量化金融行业信息差
 - [awesome-ai-in-finance](https://github.com/georgezouq/awesome-ai-in-finance) - AI + 金融：LLM、深度学习策略、RL 交易
 - [awesome-systematic-trading](https://github.com/wangzhe3224/awesome-systematic-trading) - 系统化交易资源，覆盖期货/期权/外汇/加密
 
