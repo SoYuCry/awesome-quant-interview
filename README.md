@@ -572,9 +572,13 @@ $$df = \left(\frac{\partial f}{\partial t} + \mu \frac{\partial f}{\partial x} +
 
 **标准答案：**
 
-GBM模型：$dS_t = \mu S_t \, dt + \sigma S_t \, dW_t$
+GBM模型：
 
-解为：$S_t = S_0 \exp\left[(\mu - \frac{\sigma^2}{2})t + \sigma W_t\right]$
+$$dS_t = \mu S_t \, dt + \sigma S_t \, dW_t$$
+
+解为：
+
+$$S_t = S_0 \exp\left[\left(\mu - \frac{\sigma^2}{2}\right)t + \sigma W_t\right]$$
 
 **假设**：
 - 对数收益率独立同分布且服从正态
