@@ -19,7 +19,14 @@
   - [高频交易](#高频交易)
   - [做市](#做市)
   - [统计套利](#统计套利)
+  - [市场中性 / 股票对冲](#市场中性--股票对冲)
   - [期权与波动率](#期权与波动率)
+  - [截面选股](#截面选股)
+- [研究前沿](#研究前沿)
+  - [时序预测](#时序预测)
+  - [机器学习与资产定价](#机器学习与资产定价)
+  - [深度学习与量价建模](#深度学习与量价建模)
+  - [因子工厂与 Alpha 挖掘](#因子工厂与-alpha-挖掘)
 - [书单与资源](#书单与资源)
   - [书单](#书单)
   - [面试备考](#面试备考)
@@ -81,7 +88,7 @@
 
 ## 策略方向与论文
 
-量化交易不是一条路，而是很多条。不同方向的底层逻辑、数据频率、持仓周期差异巨大，选方向比选策略更重要。下面按主流方向整理了奠基性论文和经典著作，每篇都是这个领域绕不开的工作。
+量化的本质就是在搞清楚什么是 Alpha——市场回报中无法被已知风险因子解释的那部分超额收益。不同方向的底层逻辑、数据频率、持仓周期差异巨大，选方向比选策略更重要。下面按主流方向整理了奠基性论文和经典著作，每篇都是这个领域绕不开的工作。
 
 ### CTA / 管理期货
 
@@ -140,10 +147,20 @@
 - 🌟 Engle & Granger (1987). *Co-integration and Error Correction.* Econometrica
 - 🌟 Gatev, Goetzmann & Rouwenhorst (2006). *Pairs Trading: Performance of a Relative-Value Arbitrage Rule.* RFS
 - Avellaneda & Lee (2010). *Statistical Arbitrage in the US Equities Market.* QF
-- Kakushadze (2016). *101 Formulaic Alphas.* Wilmott
 - Krauss (2017). *Statistical Arbitrage Pairs Trading Strategies: Review and Outlook.* JES
 - 📖 Pole (2007).《Statistical Arbitrage》
 - 📖 Vidyamurthy (2004).《Pairs Trading: Quantitative Methods and Analysis》
+
+### 市场中性 / 股票对冲
+
+> 国内量化私募最主流的产品形态。做法是：用因子模型或机器学习选出一篮子 Alpha 股票做多，同时用股指期货（IF/IC/IM）做空对冲市场 Beta，只赚选股能力带来的超额收益。理论上不受大盘涨跌影响，但实际面临基差成本、风格暴露、极端行情下的 Alpha 回撤等问题。2024 年 2 月的量化踩踏事件就是这个策略集中度过高的后果。
+
+- 🌟 Black & Litterman (1992). *Global Portfolio Optimization.* FAJ
+- 🌟 Grinold & Kahn (2000). *Active Portfolio Management.* McGraw-Hill
+- Jacobs & Levy (1993). *Long-Short Equity Investing.* JPM
+- Asness, Frazzini & Pedersen (2019). *Quality Minus Junk.* RAP
+- Frazzini & Pedersen (2014). *Betting Against Beta.* JFE
+- 📖 Qian, Hua & Sorensen.《Quantitative Equity Portfolio Management》
 
 ### 期权与波动率
 
@@ -158,6 +175,64 @@
 - Bergomi (2005). *Smile Dynamics.* Risk
 - 📖 Gatheral (2006).《The Volatility Surface: A Practitioner's Guide》
 - 📖 Taleb (1997).《Dynamic Hedging: Managing Vanilla and Exotic Options》
+
+### 截面选股
+
+> 量化选股是国内公募和私募最主流的策略方向。核心思路是在截面上（同一时间点比较所有股票）寻找能预测未来收益的因子，构建多空或纯多头组合。从 Fama-French 三因子到现在的数百个因子，学术界和业界一直在争论：哪些因子代表了真正的超额收益，哪些只是数据挖掘？
+
+- 🌟 Fama & French (1993). *Common Risk Factors in the Returns on Stocks and Bonds.* JFE
+- 🌟 Fama & French (2015). *A Five-Factor Asset Pricing Model.* JFE
+- 🌟 Harvey, Liu & Zhu (2016). *…and the Cross-Section of Expected Returns.* RFS
+- Hou, Xue & Zhang (2015). *Digesting Anomalies: An Investment Approach.* RFS
+- Novy-Marx (2013). *The Other Side of Value: The Gross Profitability Premium.* JFE
+- McLean & Pontiff (2016). *Does Academic Research Destroy Stock Return Predictability?* JF
+- 📖 Chincarini & Kim.《Quantitative Equity Portfolio Management》
+- 📖 石川 等.《因子投资：方法与实践》
+
+---
+
+## 研究前沿
+
+方法论层面的前沿方向。和上面"策略方向"的区别是：策略方向告诉你赚什么钱，研究前沿告诉你怎么更高效地找到 Alpha。
+
+### 时序预测
+
+> 和截面选股相对的另一个研究视角。截面是同一时间比较不同股票，时序是看单个资产自身的历史规律——过去涨了还会不会继续涨？波动放大了该不该减仓？时序动量（Time Series Momentum）是最经典的信号，本质上和趋势跟踪同源，但学术上更关注收益的可预测性和风险管理。
+
+- 🌟 Moskowitz, Ooi & Pedersen (2012). *Time Series Momentum.* JFE
+- 🌟 Lim, Zohren & Roberts (2019). *Enhancing Time Series Momentum Strategies Using Deep Neural Networks.* QF
+- Goyal & Jegadeesh (2018). *Cross-Sectional and Time-Series Tests of Return Predictability.* RFS
+- Baz et al. (2015). *Dissecting Investment Strategies in the Cross Section and Time Series.*
+- 📖 Tsay.《Analysis of Financial Time Series》
+
+### 机器学习与资产定价
+
+> 用机器学习重新审视资产定价问题。核心问题是：传统线性因子模型遗漏了哪些非线性关系？Gu, Kelly & Xiu (2020) 是这个方向的里程碑，证明了神经网络和树模型在截面收益预测上显著优于线性模型。
+
+- 🌟 Gu, Kelly & Xiu (2020). *Empirical Asset Pricing via Machine Learning.* RFS
+- 🌟 Bryan Kelly, Pruitt & Su (2019). *Characteristics Are Covariances: A Unified Model of Risk and Return.* JFE
+- 🌟 Bryan Kelly & Xiu (2023). *Financial Machine Learning.* NBER
+- Feng, Giglio & Xiu (2020). *Taming the Factor Zoo: A Test of New Factors.* JF
+- Freyberger, Neuhierl & Weber (2020). *Dissecting Characteristics Nonparametrically.* RFS
+- 📖 de Prado (2018).《Advances in Financial Machine Learning》
+
+### 深度学习与量价建模
+
+> 从手工因子到端到端学习。用 LSTM、Transformer、GNN 等网络结构直接从量价数据中提取信号，替代传统因子工程。挑战在于金融数据的低信噪比和非平稳性——过拟合是最大的敌人。
+
+- 🌟 Chen, Pelger & Zhu (2024). *Deep Learning in Asset Pricing.* Management Science
+- Zhang, Zohren & Roberts (2020). *Deep Learning for Portfolio Optimization.* JFE
+- Feng, He & Polson (2018). *Deep Learning for Predicting Asset Returns.* arXiv
+- Xu et al. (2021). *Stock Movement Prediction from Tweets and Historical Prices.* ACL
+
+### 因子工厂与 Alpha 挖掘
+
+> 从人工构造因子到程序化批量生成。WorldQuant 的 101 Alphas 开创了因子工厂模式——用表达式模板自动生成海量因子候选，再通过统计检验筛选。核心挑战是多重检验问题：测了一万个因子，总有几个"显著"的，但可能全是噪音。
+
+- 🌟 Kakushadze (2016). *101 Formulaic Alphas.* Wilmott
+- Harvey & Liu (2020). *Lucky Factors.* JFE
+- Chordia, Goyal & Saretto (2020). *Anomalies and False Rejections.* RFS
+- Chen & Zimmermann (2022). *Open Source Cross-Sectional Asset Pricing.* Critical Finance Review
 
 ---
 
