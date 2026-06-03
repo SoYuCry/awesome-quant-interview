@@ -227,15 +227,15 @@ QR 岗位的核心，是在不确定环境里反复**提出假设、验证信号
 
 ### 量化库
 
-- [QuantLib](https://github.com/lballabio/QuantLib) - 工业级衍生品定价库，C++ 内核 + Python 绑定
+- 🌟 [QuantLib](https://github.com/lballabio/QuantLib) - 工业级衍生品定价库，C++ 内核 + Python 绑定
 - [cvxpy](https://github.com/cvxpy/cvxpy) - Python 凸优化，组合优化/风险预算
 - [NautilusTrader](https://github.com/nautechsystems/nautilus_trader) - 高性能回测+实盘，Rust 内核 + Python API
 - [Polars](https://github.com/pola-rs/polars) - 比 pandas 快 10-50x 的数据处理库
 
 ### 资源合集
 
-- [awesome-quant](https://github.com/wilsonfreitas/awesome-quant) - 量化金融资源大全：库、框架、数据源、书籍
-- [quant-wiki](https://github.com/LLMQuant/quant-wiki) - 量化知识开源与汉化，打破国内外量化金融行业信息差
+- 🌟 [awesome-quant](https://github.com/wilsonfreitas/awesome-quant) - 量化金融资源大全：库、框架、数据源、书籍
+- 🌟 [quant-wiki](https://github.com/LLMQuant/quant-wiki) - 量化知识开源与汉化，打破国内外量化金融行业信息差
 - [awesome-ai-in-finance](https://github.com/georgezouq/awesome-ai-in-finance) - AI + 金融：LLM、深度学习策略、RL 交易
 - [awesome-systematic-trading](https://github.com/wangzhe3224/awesome-systematic-trading) - 系统化交易资源，覆盖期货/期权/外汇/加密
 
@@ -250,14 +250,16 @@ QR 岗位的核心，是在不确定环境里反复**提出假设、验证信号
 
 ## 📄 策略方向与论文：按 CTA、截面、期权等方向展开
 
+> 🌟 表示经典推荐：优先看、反复用，或者在对应方向里绕不开。
+
 量化的本质就是在搞清楚什么是 Alpha——市场回报中无法被已知风险因子解释的那部分超额收益。不同方向的底层逻辑、数据频率、持仓周期差异巨大，选方向比选策略更重要。下面按主流方向整理了奠基性论文和经典著作，每篇都是这个领域绕不开的工作。
 
 ### CTA / 管理期货
 
 > 在期货和外汇市场上做系统化趋势与动量。天然多空双向，对冲股市 Beta，08 年金融危机期间不少 CTA 基金逆势盈利，所以也叫"危机 Alpha"。国内 CTA 私募近年发展很快，是量化求职的热门方向之一。
 
-- Moskowitz, Ooi & Pedersen (2012). *Time Series Momentum.* JFE
-- Hurst, Ooi & Pedersen (2017). *A Century of Evidence on Trend-Following Investing.* AQR
+- 🌟 Moskowitz, Ooi & Pedersen (2012). *Time Series Momentum.* JFE
+- 🌟 Hurst, Ooi & Pedersen (2017). *A Century of Evidence on Trend-Following Investing.* AQR
 - Fung & Hsieh (2001). *The Risk in Hedge Fund Strategies: Theory and Evidence from Trend Followers.* RFS
 - Hamill, Rattray & Van Hemert (2016). *Trend Following: Equity and Bond Crisis Alpha.* AQR
 - Baltas & Kosowski (2013). *Momentum Strategies in Futures Markets and Trend-Following Funds.*
@@ -268,8 +270,8 @@ QR 岗位的核心，是在不确定环境里反复**提出假设、验证信号
 
 > 和 CTA 高度重叠，但更纯粹地聚焦方向性信号。胜率通常只有 30%-40%，靠盈亏比赚钱。核心在于跟随纪律：趋势来了跟上，反转了止损走人；预测能力反而不是重点。
 
-- Jegadeesh & Titman (1993). *Returns to Buying Winners and Selling Losers.* JF
-- Asness, Moskowitz & Pedersen (2013). *Value and Momentum Everywhere.* JF
+- 🌟 Jegadeesh & Titman (1993). *Returns to Buying Winners and Selling Losers.* JF
+- 🌟 Asness, Moskowitz & Pedersen (2013). *Value and Momentum Everywhere.* JF
 - Lempérière et al. (2014). *Two Centuries of Trend Following.* JIS
 - Faber (2007). *A Quantitative Approach to Tactical Asset Allocation.* JWM
 - Baz et al. (2015). *Dissecting Investment Strategies in the Cross Section and Time Series.*
@@ -280,9 +282,9 @@ QR 岗位的核心，是在不确定环境里反复**提出假设、验证信号
 
 > 毫秒甚至微秒级持仓，通过速度优势和微观结构信息赚取微小但高频的利润。基础设施（co-location、FPGA、网络延迟）是重要壁垒，策略容量有限但利润率极高。对 Quant Research 来说，微观结构论文更适合作为进阶背景，不是本仓库主线。
 
-- Kyle (1985). *Continuous Auctions and Insider Trading.* Econometrica
-- Glosten & Milgrom (1985). *Bid, Ask and Transaction Prices in a Specialist Market.* JFE
-- Avellaneda & Stoikov (2008). *High-Frequency Trading in a Limit Order Book.* QF
+- 🌟 Kyle (1985). *Continuous Auctions and Insider Trading.* Econometrica
+- 🌟 Glosten & Milgrom (1985). *Bid, Ask and Transaction Prices in a Specialist Market.* JFE
+- 🌟 Avellaneda & Stoikov (2008). *High-Frequency Trading in a Limit Order Book.* QF
 - Cont, Stoikov & Talreja (2010). *A Stochastic Model for Order Book Dynamics.* OR
 - Bouchaud, Farmer & Lillo (2009). *How Markets Slowly Digest Changes in Supply and Demand.*
 - Menkveld (2013). *High Frequency Trading and the New Market Makers.* JFM
@@ -294,8 +296,8 @@ QR 岗位的核心，是在不确定环境里反复**提出假设、验证信号
 
 > 在买卖两端持续报价，赚取 bid-ask spread。听起来简单，难点在于逆向选择——和知情交易者成交就是亏钱。Avellaneda-Stoikov 模型是理解做市问题的经典起点，但在本仓库中只作为 Quant Research 微观结构延伸阅读。
 
-- Ho & Stoll (1981). *Optimal Dealer Pricing Under Transactions and Return Uncertainty.* JFE
-- Guéant, Lehalle & Fernandez-Tapia (2013). *Dealing with the Inventory Risk.* MFE
+- 🌟 Ho & Stoll (1981). *Optimal Dealer Pricing Under Transactions and Return Uncertainty.* JFE
+- 🌟 Guéant, Lehalle & Fernandez-Tapia (2013). *Dealing with the Inventory Risk.* MFE
 - Grossman & Miller (1988). *Liquidity and Market Structure.* JF
 - Stoikov (2018). *The Micro-Price: A High-Frequency Estimator of Future Prices.* QF
 - Glosten & Harris (1988). *Estimating the Components of the Bid-Ask Spread.* JFE
@@ -306,8 +308,8 @@ QR 岗位的核心，是在不确定环境里反复**提出假设、验证信号
 
 > 利用资产间的统计关系（协整、相关性、因子结构），在偏离时建仓、回归时平仓。市场中性，不赌方向。配对交易是最经典的入门，但现代统计套利早已进化到 PCA 驱动的篮子交易和机器学习信号。需要警惕相关性崩溃的尾部风险。
 
-- Engle & Granger (1987). *Co-integration and Error Correction.* Econometrica
-- Gatev, Goetzmann & Rouwenhorst (2006). *Pairs Trading: Performance of a Relative-Value Arbitrage Rule.* RFS
+- 🌟 Engle & Granger (1987). *Co-integration and Error Correction.* Econometrica
+- 🌟 Gatev, Goetzmann & Rouwenhorst (2006). *Pairs Trading: Performance of a Relative-Value Arbitrage Rule.* RFS
 - Avellaneda & Lee (2010). *Statistical Arbitrage in the US Equities Market.* QF
 - Krauss (2017). *Statistical Arbitrage Pairs Trading Strategies: Review and Outlook.* JES
 - 📖 Pole (2007).《Statistical Arbitrage》
@@ -317,8 +319,8 @@ QR 岗位的核心，是在不确定环境里反复**提出假设、验证信号
 
 > 国内量化私募最主流的产品形态。做法是：用因子模型或机器学习选出一篮子 Alpha 股票做多，同时用股指期货（IF/IC/IM）做空对冲市场 Beta，只赚选股能力带来的超额收益。理论上不受大盘涨跌影响，但实际面临基差成本、风格暴露、极端行情下的 Alpha 回撤等问题。2024 年 2 月的量化踩踏事件就是这个策略集中度过高的后果。
 
-- Black & Litterman (1992). *Global Portfolio Optimization.* FAJ
-- Grinold & Kahn (2000). *Active Portfolio Management.* McGraw-Hill
+- 🌟 Black & Litterman (1992). *Global Portfolio Optimization.* FAJ
+- 🌟 Grinold & Kahn (2000). *Active Portfolio Management.* McGraw-Hill
 - Jacobs & Levy (1993). *Long-Short Equity Investing.* JPM
 - Asness, Frazzini & Pedersen (2019). *Quality Minus Junk.* RAP
 - Frazzini & Pedersen (2014). *Betting Against Beta.* JFE
@@ -328,9 +330,9 @@ QR 岗位的核心，是在不确定环境里反复**提出假设、验证信号
 
 > 不赌涨跌，赌波动率。利用期权的非线性特性和隐含波动率的错误定价获利。策略包括波动率套利、gamma scalping、dispersion trading、尾部对冲等。Black-Scholes 是起点，但真正赚钱靠的是对波动率曲面的理解——Gatheral 的书是业界圣经，粗糙波动率（Rough Vol）是近年最大的理论突破。
 
-- Black & Scholes (1973). *The Pricing of Options and Corporate Liabilities.* JPE
-- Heston (1993). *A Closed-Form Solution for Options with Stochastic Volatility.* RFS
-- Gatheral, Jaisson & Rosenbaum (2018). *Volatility Is Rough.* QF
+- 🌟 Black & Scholes (1973). *The Pricing of Options and Corporate Liabilities.* JPE
+- 🌟 Heston (1993). *A Closed-Form Solution for Options with Stochastic Volatility.* RFS
+- 🌟 Gatheral, Jaisson & Rosenbaum (2018). *Volatility Is Rough.* QF
 - Dupire (1994). *Pricing with a Smile.* Risk
 - Carr & Madan (1999). *Option Valuation Using the Fast Fourier Transform.* JCF
 - Bates (1996). *Jumps and Stochastic Volatility.* RFS
@@ -342,14 +344,14 @@ QR 岗位的核心，是在不确定环境里反复**提出假设、验证信号
 
 > 量化选股是国内公募和私募常见的策略方向之一。核心思路是在截面上（同一时间点比较股票）寻找能预测未来收益的因子，构建多空或纯多头组合。从 Fama-French 三因子到现在的数百个因子，学术界和业界一直在争论：哪些因子代表了有效超额收益，哪些只是数据挖掘？
 
-- Fama & French (1993). *Common Risk Factors in the Returns on Stocks and Bonds.* JFE
-- Fama & French (2015). *A Five-Factor Asset Pricing Model.* JFE
-- Harvey, Liu & Zhu (2016). *…and the Cross-Section of Expected Returns.* RFS
+- 🌟 Fama & French (1993). *Common Risk Factors in the Returns on Stocks and Bonds.* JFE
+- 🌟 Fama & French (2015). *A Five-Factor Asset Pricing Model.* JFE
+- 🌟 Harvey, Liu & Zhu (2016). *…and the Cross-Section of Expected Returns.* RFS
 - Hou, Xue & Zhang (2015). *Digesting Anomalies: An Investment Approach.* RFS
 - Novy-Marx (2013). *The Other Side of Value: The Gross Profitability Premium.* JFE
 - McLean & Pontiff (2016). *Does Academic Research Destroy Stock Return Predictability?* JF
 - 📖 Chincarini & Kim.《Quantitative Equity Portfolio Management》
-- 📖 石川 等.《因子投资：方法与实践》
+- 🌟 📖 石川 等.《因子投资：方法与实践》
 
 </details>
 
@@ -368,8 +370,8 @@ QR 岗位的核心，是在不确定环境里反复**提出假设、验证信号
 
 > 和截面选股相对的另一个研究视角。截面是同一时间比较不同股票，时序是看单个资产自身的历史规律——过去涨了还会不会继续涨？波动放大了该不该减仓？时序动量（Time Series Momentum）是最经典的信号，本质上和趋势跟踪同源，但学术上更关注收益的可预测性和风险管理。
 
-- Moskowitz, Ooi & Pedersen (2012). *Time Series Momentum.* JFE
-- Lim, Zohren & Roberts (2019). *Enhancing Time Series Momentum Strategies Using Deep Neural Networks.* QF
+- 🌟 Moskowitz, Ooi & Pedersen (2012). *Time Series Momentum.* JFE
+- 🌟 Lim, Zohren & Roberts (2019). *Enhancing Time Series Momentum Strategies Using Deep Neural Networks.* QF
 - Goyal & Jegadeesh (2018). *Cross-Sectional and Time-Series Tests of Return Predictability.* RFS
 - Baz et al. (2015). *Dissecting Investment Strategies in the Cross Section and Time Series.*
 - 📖 Tsay.《Analysis of Financial Time Series》
@@ -378,12 +380,12 @@ QR 岗位的核心，是在不确定环境里反复**提出假设、验证信号
 
 > 用机器学习重新审视资产定价问题。核心问题是：传统线性因子模型遗漏了哪些非线性关系？Gu, Kelly & Xiu (2020) 是这个方向的里程碑，证明了神经网络和树模型在截面收益预测上显著优于线性模型。
 
-- Gu, Kelly & Xiu (2020). *Empirical Asset Pricing via Machine Learning.* RFS
-- Bryan Kelly, Pruitt & Su (2019). *Characteristics Are Covariances: A Unified Model of Risk and Return.* JFE
-- Bryan Kelly & Xiu (2023). *Financial Machine Learning.* NBER
+- 🌟 Gu, Kelly & Xiu (2020). *Empirical Asset Pricing via Machine Learning.* RFS
+- 🌟 Bryan Kelly, Pruitt & Su (2019). *Characteristics Are Covariances: A Unified Model of Risk and Return.* JFE
+- 🌟 Bryan Kelly & Xiu (2023). *Financial Machine Learning.* NBER
 - Feng, Giglio & Xiu (2020). *Taming the Factor Zoo: A Test of New Factors.* JF
 - Freyberger, Neuhierl & Weber (2020). *Dissecting Characteristics Nonparametrically.* RFS
-- 📖 de Prado (2018).《Advances in Financial Machine Learning》
+- 🌟 📖 de Prado (2018).《Advances in Financial Machine Learning》
 
 ### 深度学习与量价建模
 
@@ -420,7 +422,7 @@ QR 岗位的核心，是在不确定环境里反复**提出假设、验证信号
 
 | 书名 | 说明 |
 |------|------|
-| 优先读：《A Practical Guide to Quantitative Finance Interviews》(Xinfeng Zhou) | **绿皮书**，量化面试人手一本，概率/数学/脑筋急转弯全覆盖 |
+| 🌟 《A Practical Guide to Quantitative Finance Interviews》(Xinfeng Zhou) | **绿皮书**，量化面试人手一本，概率/数学/脑筋急转弯全覆盖 |
 | 《Heard on the Street》(Timothy Crack) | 华尔街经典面试题集，偏概率和智力题 |
 | 《Quant Job Interview Questions and Answers》(Mark Joshi) | 偏衍生品定价方向，适合期权岗 |
 
@@ -428,11 +430,11 @@ QR 岗位的核心，是在不确定环境里反复**提出假设、验证信号
 
 | 书名 | 说明 |
 |------|------|
-| 优先读：《Introduction to Probability》(Blitzstein & Hwang) | Harvard 概率论教材，有免费 PDF，例题极好，面试前刷完前 6 章 |
+| 🌟 《Introduction to Probability》(Blitzstein & Hwang) | Harvard 概率论教材，有免费 PDF，例题极好，面试前刷完前 6 章 |
 | 《Probability and Statistics for Engineering and the Sciences》(Devore) | 概率统计标准教材，覆盖面广 |
 | 《All of Statistics》(Wasserman) | 统计学速成，写给 CS 背景的人看的，紧凑高效 |
-| 优先读：《Analysis of Financial Time Series》(Tsay) | 金融时间序列的权威教材，ARMA/GARCH/协整全覆盖 |
-| 优先读：《Stochastic Calculus for Finance I & II》(Shreve) | 随机微积分的金标准，I 是离散，II 是连续，推导 Black-Scholes 的必经之路 |
+| 🌟 《Analysis of Financial Time Series》(Tsay) | 金融时间序列的权威教材，ARMA/GARCH/协整全覆盖 |
+| 🌟 《Stochastic Calculus for Finance I & II》(Shreve) | 随机微积分的金标准，I 是离散，II 是连续，推导 Black-Scholes 的必经之路 |
 | 《Convex Optimization》(Boyd & Vandenberghe) | 凸优化经典，有免费 PDF，组合优化和风控都离不开 |
 
 **编程**
@@ -449,8 +451,8 @@ QR 岗位的核心，是在不确定环境里反复**提出假设、验证信号
 | 书名 | 说明 |
 |------|------|
 | 《Quantitative Equity Portfolio Management》(Chincarini & Kim) | 量化股票组合从因子到实盘的全流程 |
-| 优先读：《Advances in Financial Machine Learning》(de Prado) | 金融 ML 实战圣经，数据结构化/防过拟合/回测方法论，业界人手一本 |
-| 优先读：《Active Portfolio Management》(Grinold & Kahn) | 主动管理的理论框架，信息比率、alpha 转移，基金公司研究员必读 |
+| 🌟 《Advances in Financial Machine Learning》(de Prado) | 金融 ML 实战圣经，数据结构化/防过拟合/回测方法论，业界人手一本 |
+| 🌟 《Active Portfolio Management》(Grinold & Kahn) | 主动管理的理论框架，信息比率、alpha 转移，基金公司研究员必读 |
 | 《Options, Futures, and Other Derivatives》(Hull) | 衍生品入门标准教材，覆盖期货/互换/期权，适合建立全局观 |
 | 《Option Volatility and Pricing》(Natenberg) | 期权交易实战视角，Greeks 直觉讲得很好 |
 
@@ -458,7 +460,7 @@ QR 岗位的核心，是在不确定环境里反复**提出假设、验证信号
 
 | 书名 | 说明 |
 |------|------|
-| 优先读：《The Elements of Statistical Learning》(Hastie et al.) | 统计学习理论经典，有免费 PDF，树模型/正则化/集成学习讲得最透彻 |
+| 🌟 《The Elements of Statistical Learning》(Hastie et al.) | 统计学习理论经典，有免费 PDF，树模型/正则化/集成学习讲得最透彻 |
 | 《Deep Learning》(Goodfellow et al.) | "花书"，深度学习理论基础，CNN/RNN/GAN/优化全覆盖 |
 | 《Machine Learning for Asset Managers》(de Prado) | 资管视角的 ML，聚类/特征重要性/组合构建，薄但密度极高 |
 
@@ -466,22 +468,22 @@ QR 岗位的核心，是在不确定环境里反复**提出假设、验证信号
 
 | 书名 | 说明 |
 |------|------|
-| 石川 等.《因子投资：方法与实践》 | 中文因子投资圣经，从因子定义到组合构建到陷阱规避，系统性最强 |
+| 🌟 石川 等.《因子投资：方法与实践》 | 中文因子投资圣经，从因子定义到组合构建到陷阱规避，系统性最强 |
 | 丁鹏.《量化投资：策略与技术》 | 国内量化入门经典，适合建立全局认知 |
 | 杨博理 等.《量化投资：以Python为工具》 | Python 量化实操入门，有代码可跑 |
 
 ### 博主与公众号
 
-- **石川 / 川总写量化** - [知乎](https://www.zhihu.com/people/shi-chuan-97) / 公众号. 国内因子投资写得最好的人，没有之一。每篇文章都有学术论文支撑，但写得让非科班也能看懂。做因子方向必须关注。
-- **因子动物园 (Factor Zoo)** - 公众号. 石川团队出品，系统梳理学术因子文献，追踪前沿论文，比自己翻 SSRN 效率高十倍。
-- **量化投资与机器学习 (QIML)** - 公众号. 国内最大的量化公众号，覆盖 ML 策略、因子研究、行业招聘动态，信息密度高。
+- 🌟 **石川 / 川总写量化** - [知乎](https://www.zhihu.com/people/shi-chuan-97) / 公众号. 国内因子投资写得最好的人，没有之一。每篇文章都有学术论文支撑，但写得让非科班也能看懂。做因子方向必须关注。
+- 🌟 **因子动物园 (Factor Zoo)** - 公众号. 石川团队出品，系统梳理学术因子文献，追踪前沿论文，比自己翻 SSRN 效率高十倍。
+- 🌟 **量化投资与机器学习 (QIML)** - 公众号. 国内最大的量化公众号，覆盖 ML 策略、因子研究、行业招聘动态，信息密度高。
 - **交易门** - 播客/公众号. 对话国内外顶尖交易员和量化基金经理，听行业里的人怎么想问题。
 - **数量经济学** - 知乎/公众号. 偏学术向，计量经济学与金融实证方法，适合想打扎实理论基础的人。
 - **大邓和他的Python** - 知乎/B站. Python 量化编程教程，适合零基础入门。
 
 ### 社区与平台
 
-- [聚宽 JoinQuant](https://www.joinquant.com) - 国内最大量化投研平台，免费数据、回测引擎、社区策略分享，入门首选。
+- 🌟 [聚宽 JoinQuant](https://www.joinquant.com) - 国内最大量化投研平台，免费数据、回测引擎、社区策略分享，入门首选。
 - [米筐 RiceQuant](https://www.ricequant.com) - 专业量化研究平台，数据质量高，机构用户多。
 - [优矿 Uqer](https://uqer.datayes.com) - 通联数据旗下，数据全面，API 友好。
 - [QuantConnect](https://www.quantconnect.com) - 国际量化平台，Lean 引擎开源，支持多资产多市场。
@@ -493,8 +495,8 @@ QR 岗位的核心，是在不确定环境里反复**提出假设、验证信号
 
 | 数据源 | 类型 | 链接 |
 |--------|------|------|
-| Tushare Pro | 免费，股票/基金/期货/可转债 | [tushare.pro](https://tushare.pro) |
-| AKShare | 开源免费 | [akfamily/akshare](https://github.com/akfamily/akshare) |
+| 🌟 Tushare Pro | 免费，股票/基金/期货/可转债 | [tushare.pro](https://tushare.pro) |
+| 🌟 AKShare | 开源免费 | [akfamily/akshare](https://github.com/akfamily/akshare) |
 | BaoStock | 免费，日K/分钟K/财报 | [baostock.com](http://baostock.com) |
 | Wind 万得 | 机构级，最全（付费） | [wind.com.cn](https://www.wind.com.cn) |
 | 东方财富 Choice | 机构级（付费） | [choice.eastmoney.com](https://choice.eastmoney.com) |
@@ -504,8 +506,8 @@ QR 岗位的核心，是在不确定环境里反复**提出假设、验证信号
 
 | 团队 | 研究方向 |
 |------|-------|
-| 华泰金工 | 「人工智能选股」系列、因子体系 |
-| 光大金工 | 因子择时、事件驱动 |
+| 🌟 华泰金工 | 「人工智能选股」系列、因子体系 |
+| 🌟 光大金工 | 因子择时、事件驱动 |
 | 天风金工 | 基本面因子、另类数据 |
 | 中金量化 | 宏观量化、资产配置 |
 | 招商金工 | 多因子模型、行业轮动 |
@@ -513,7 +515,7 @@ QR 岗位的核心，是在不确定环境里反复**提出假设、验证信号
 
 ### 面试备考
 
-- [QuantGuide.io](https://www.quantguide.io) - 量化版 LeetCode，概率与数学题库
+- 🌟 [QuantGuide.io](https://www.quantguide.io) - 量化版 LeetCode，概率与数学题库
 - [Brainstellar](https://brainstellar.com) - 量化面试脑筋急转弯
 - [Jane Street Puzzles](https://www.janestreet.com/puzzles/) - 月度谜题，高于面试难度
 - [Zetamac](https://arithmetic.zetamac.com) - 心算速度训练，目标 50+
