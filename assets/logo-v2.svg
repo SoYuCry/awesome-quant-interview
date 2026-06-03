@@ -1,23 +1,11 @@
 <svg width="96" height="96" viewBox="0 0 96 96" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
   <title id="title">Quant Research Interview Notes Logo</title>
-  <desc id="desc">A minimal upward net value curve inside a soft rounded square.</desc>
-  <defs>
-    <linearGradient id="bg" x1="16" y1="12" x2="84" y2="88" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#1E293B"/>
-      <stop offset="1" stop-color="#111827"/>
-    </linearGradient>
-    <linearGradient id="curve" x1="22" y1="66" x2="78" y2="30" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#38BDF8"/>
-      <stop offset="1" stop-color="#A78BFA"/>
-    </linearGradient>
-  </defs>
-  <rect x="8" y="8" width="80" height="80" rx="22" fill="url(#bg)"/>
-  <rect x="8.75" y="8.75" width="78.5" height="78.5" rx="21.25" stroke="#CBD5E1" stroke-opacity="0.14" stroke-width="1.5"/>
-  <path d="M22 66H78" stroke="#94A3B8" stroke-opacity="0.35" stroke-width="3" stroke-linecap="round"/>
-  <path d="M22 66C30 62 34 57 40 58C47 59 49 47 56 48C64 49 67 36 78 30" stroke="url(#curve)" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M68 30H78V40" stroke="#A78BFA" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
-  <circle cx="22" cy="66" r="3" fill="#E0F2FE"/>
-  <circle cx="40" cy="58" r="3" fill="#E0F2FE"/>
-  <circle cx="56" cy="48" r="3" fill="#EDE9FE"/>
-  <circle cx="78" cy="30" r="3" fill="#EDE9FE"/>
+  <desc id="desc">A minimal upward net value curve.</desc>
+  <path d="M18 70H80" stroke="#FDBA74" stroke-opacity="0.32" stroke-width="3" stroke-linecap="round"/>
+  <path d="M18 70C28 64 33 58 40 60C48 62 51 48 58 49C67 50 70 36 82 28" stroke="#F97316" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M72 28H82V38" stroke="#F97316" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="18" cy="70" r="3" fill="#F97316"/>
+  <circle cx="40" cy="60" r="3" fill="#F97316"/>
+  <circle cx="58" cy="49" r="3" fill="#F97316"/>
+  <circle cx="82" cy="28" r="3" fill="#F97316"/>
 </svg>
