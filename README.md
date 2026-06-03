@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="./assets/logo.svg?v=2" width="88" alt="Quant Research Interview Notes logo" />
+<img src="./assets/logo-v2.svg" width="88" alt="Quant Research Interview Notes logo" />
 
 # Quant Research Interview Notes
 
