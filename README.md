@@ -1,5 +1,7 @@
 <div align="center">
 
+<img src="./assets/logo.svg" width="88" alt="Quant Research Interview Notes logo" />
+
 # Quant Research Interview Notes
 
 **中文 Quant Research 准备笔记：面试题、项目复盘、论文路线与真实追问。**

@@ -1,0 +1,12 @@
+﻿<svg width="96" height="96" viewBox="0 0 96 96" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Quant Research Interview Notes Logo</title>
+  <desc id="desc">A minimal upward net value curve inside a rounded square.</desc>
+  <rect x="8" y="8" width="80" height="80" rx="20" fill="#111827"/>
+  <path d="M22 66H78" stroke="#475569" stroke-width="3" stroke-linecap="round"/>
+  <path d="M22 66C30 62 34 57 40 58C47 59 49 47 56 48C64 49 67 36 78 30" stroke="#8B5CF6" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M68 30H78V40" stroke="#8B5CF6" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="22" cy="66" r="3" fill="#DDD6FE"/>
+  <circle cx="40" cy="58" r="3" fill="#DDD6FE"/>
+  <circle cx="56" cy="48" r="3" fill="#DDD6FE"/>
+  <circle cx="78" cy="30" r="3" fill="#DDD6FE"/>
+</svg>
