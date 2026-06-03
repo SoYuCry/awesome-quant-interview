@@ -4,17 +4,19 @@
 
 **中文 Quant Research 准备笔记：面试题、项目复盘、论文路线与真实追问。**
 
-[🚀 字多不看](#字多不看) · [📚 目录](#目录) · [🧭 先看哪块](#你现在处在哪种状态) · [🔥 高频速查](#高频-qr-面试题速查) · [🧪 项目复盘](#项目复盘时最该准备的-8-个问题) · [💬 联系/贡献](#联系与贡献)
+[🚀 字多不看](#字多不看) · [📚 目录](#目录) · [🧭 先看哪块](#你现在处在哪种状态) · [🔥 高频速查](#高频-qr-面试题速查) · [🧪 项目复盘](#项目复盘时最该准备的-8-个问题) · [💬 参与贡献](#联系与贡献)
 
 </div>
 
-> README 只保留可迁移的准备方法、公开资料和抽象后的通用追问，不含公司原题、未脱敏材料或任何非公开信息。
+## 前言
 
-本项目来自社招面试 30+ 家量化私募、拿到数家百亿级私募 QR offer 的经历，也来自创业做过实盘产品后，对量化全链路的经验体感。QR 岗位是“在不确定环境中反复提出假设、验证信号、解释失败”的研究工作。喜欢从数据中提出假设、愿意接受大量无效实验、能把直觉拆成可验证问题、愿意长期补数学/统计/编程短板。享受失败和守住寂寞甚至也是工作职能的一部分。
+本项目来自**社招面试 30+ 家量化私募**、拿到**数家百亿级私募 QR offer** 的经历，也来自**创业做过实盘产品**后，对量化全链路的经验体感。
+
+QR 岗位的核心，是在不确定环境里反复**提出假设、验证信号、解释失败**。如果你喜欢从数据中提出假设，愿意接受大量无效实验，能把直觉拆成可验证问题，也愿意长期补数学 / 统计 / 编程短板，这份笔记会更适合你。
 
 <a id="适合谁"></a>
 
-涵盖概率统计、线性代数、时间序列、因子研究、机器学习、回测评估、组合优化、经典论文与高频问答，希望给这些读者一些帮助：
+内容覆盖概率统计、线性代数、时间序列、因子研究、机器学习、回测评估、组合优化、经典论文与高频问答。适合这些读者：
 
 - 准备 QR 面试的人
 - 金融工程、数学、统计、计算机背景，想系统补齐量化研究方法论的人
@@ -35,11 +37,9 @@
 
 ## 📚 目录 / 跳转导航
 
-不用从头读。先看自己要解决什么问题，再点到对应块；大部分内容都折叠起来了，点每块标题行就能展开/收起。
-
 <a id="范围说明"></a>
 
-> 范围：主线只做 **Quant Research**，覆盖因子研究、资产定价、时间序列、机器学习、回测评估、组合优化和论文阅读；QD / Trader 只作为延伸背景。
+范围：主线只做 **Quant Research**，覆盖因子研究、资产定价、时间序列、机器学习、回测评估、组合优化和论文阅读；QD / Trader 只作为延伸背景。
 
 | 你现在想做什么 | 建议入口 |
 | --- | --- |
@@ -54,6 +54,7 @@
 ---
 
 <a id="国内量化面试的一些现实情况"></a>
+<a id="是否适合-qr"></a>
 
 <details>
 <summary><strong>🧩 国内量化面试的一些现实情况（点击展开/收起）</strong></summary>
@@ -540,6 +541,9 @@
 <summary><strong>🧠 面试八股文：数学、编程、因子、机器学习（点击展开/收起）</strong></summary>
 
 ## 🧠 面试八股文：数学、编程、因子、机器学习
+
+<a id="第四篇数学与统计基础"></a>
+
 ### 第四篇：数学与统计基础
 
 #### 4.1 概率论
@@ -1104,6 +1108,8 @@ pd.Series(prices).rolling(20).mean()
 
 ---
 
+<a id="第六篇因子与-alpha-策略"></a>
+
 ### 第六篇：因子与 Alpha 策略
 
 #### 6.1 因子投资基础
@@ -1350,6 +1356,8 @@ $$\text{Impact} \approx \sigma \cdot \sqrt{\frac{V}{ADV}}$$
 **重要性**：高换手策略（如短期反转）的收益可能被冲击成本完全吃掉。策略开发时必须将冲击成本纳入回测。
 
 ---
+
+<a id="第七篇机器学习--深度学习在量化中的应用"></a>
 
 ### 第七篇：机器学习 / 深度学习在量化中的应用
 
@@ -1680,7 +1688,6 @@ $$\text{Input} \xrightarrow{\text{Encoder}} \text{Latent} \xrightarrow{\text{Dec
 
 <a id="维护说明"></a>
 
-
 ## 🛠️ 维护说明
 
 - Last reviewed: 2026-06
@@ -1690,10 +1697,34 @@ $$\text{Input} \xrightarrow{\text{Encoder}} \text{Latent} \xrightarrow{\text{Dec
 
 <a id="联系与贡献"></a>
 
+## 💬 参与贡献
 
-## 💬 联系与贡献
+欢迎任何形式的补充和建议。如果你发现错字、失效链接、表达不准确，或者有可公开讨论的 QR 面试复盘，欢迎开启 [Issue](https://github.com/SoYuCry/awesome-quant-interview/issues) 或提交 [Pull Request](https://github.com/SoYuCry/awesome-quant-interview/pulls)。
 
-- X：[@0xYuCry](https://x.com/0xYuCry)
-- 有错字、失效链接、表达不准的地方，欢迎直接提 Issue / PR。
-- 如果你有可公开讨论的 QR 面试复盘，可以只保留问题形态和考察点，去掉公司、面试官、未脱敏材料和个人项目细节后再贡献。
-- 暂不收集任何非公开题库或带公司指向性的原题。
+也可以在 X 上联系我：[@0xYuCry](https://x.com/0xYuCry)。
+
+## 免责声明 / 侵删说明
+
+本 README 只保留可迁移的准备方法、公开资料和抽象后的通用追问，不含公司原题、未脱敏材料或任何非公开信息。若内容引用或整理存在不妥，欢迎通过 Issue / X 联系我，我会及时修改或删除。
+
+## 许可证
+
+本项目采用 [MIT](LICENSE) 许可证。
+
+---
+
+<div align="center">
+
+**如果这个项目对你有帮助，欢迎点亮一颗 Star ⭐**
+
+## Star History
+
+<a href="https://www.star-history.com/#SoYuCry/awesome-quant-interview&type=date&legend=top-left">
+ <picture>
+   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=SoYuCry/awesome-quant-interview&type=date&theme=dark&legend=top-left" />
+   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=SoYuCry/awesome-quant-interview&type=date&legend=top-left" />
+   <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=SoYuCry/awesome-quant-interview&type=date&legend=top-left" />
+ </picture>
+</a>
+
+</div>
