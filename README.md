@@ -627,7 +627,9 @@ $$P(A \mid B) = \frac{P(B \mid A) \cdot P(A)}{P(B)}$$
 
 **MLE**：寻找使观测数据出现概率最大的参数值，常写作：
 
-$$\hat{\theta}_{\mathrm{MLE}} = \arg\max_{\theta} \prod_i f(x_i \mid \theta)$$
+$$
+\hat{\theta}_{MLE} = \arg \max_{\theta} \prod_{i=1}^{n} f(x_i \mid \theta)
+$$
 
 **GMM（广义矩估计）**：利用总体矩条件与样本矩的匹配来估计参数，不需要假定完整的分布形式
 
