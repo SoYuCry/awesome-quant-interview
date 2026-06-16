@@ -206,6 +206,7 @@ QR 的核心是在不确定环境里反复**提出假设、验证信号、解释
 ### 回测框架
 
 - 🌟 [Backtrader](https://github.com/mementum/backtrader) - 事件驱动回测框架，功能全面，支持实盘
+- 🌟 [NautilusTrader](https://github.com/nautechsystems/nautilus_trader) - 高性能事件驱动回测与实盘交易框架，Rust 内核 + Python API
 - [VectorBT](https://github.com/polakowo/vectorbt) - 向量化回测引擎，NumPy/Numba 加速，大规模参数扫描首选
 - [Zipline Reloaded](https://github.com/stefan-jansen/zipline-reloaded) - Quantopian 经典引擎的社区维护版
 
@@ -227,11 +228,10 @@ QR 的核心是在不确定环境里反复**提出假设、验证信号、解释
 - [QuantsPlaybook](https://github.com/hugo2046/QuantsPlaybook) - 券商金工研报复现合集（华泰/光大/招商/国信），100+ 策略
 - [huatai-finengi-report](https://github.com/industry-report/huatai-finengi-report) - 华泰金工研报集合：CNN 选股、时序交叉验证、ML 多因子
 
-### 量化库
+### 金融工程、优化与数据处理库
 
 - 🌟 [QuantLib](https://github.com/lballabio/QuantLib) - 工业级衍生品定价库，C++ 内核 + Python 绑定
 - [cvxpy](https://github.com/cvxpy/cvxpy) - Python 凸优化，组合优化/风险预算
-- [NautilusTrader](https://github.com/nautechsystems/nautilus_trader) - 高性能回测+实盘，Rust 内核 + Python API
 - [Polars](https://github.com/pola-rs/polars) - 比 pandas 快 10-50x 的数据处理库
 
 ### 资源合集
