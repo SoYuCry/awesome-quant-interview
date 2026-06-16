@@ -205,14 +205,14 @@ QR 的核心是在不确定环境里反复**提出假设、验证信号、解释
 
 ### 回测框架
 
+- 🌟 [Backtrader](https://github.com/mementum/backtrader) - 事件驱动回测框架，功能全面，支持实盘
 - [VectorBT](https://github.com/polakowo/vectorbt) - 向量化回测引擎，NumPy/Numba 加速，大规模参数扫描首选
-- [Backtrader](https://github.com/mementum/backtrader) - 事件驱动回测框架，功能全面，支持实盘
 - [Zipline Reloaded](https://github.com/stefan-jansen/zipline-reloaded) - Quantopian 经典引擎的社区维护版
 
 ### 量化平台
 
+- 🌟 [vnpy](https://github.com/vnpy/vnpy) - 国内最流行的量化框架，股票/期货/期权/加密货币实盘
 - [Qlib](https://github.com/microsoft/qlib) - 微软 AI 量化平台，数据→模型→回测→分析全流程
-- [vnpy](https://github.com/vnpy/vnpy) - 国内最流行的量化框架，股票/期货/期权/加密货币实盘
 - [Hummingbot](https://github.com/hummingbot/hummingbot) - 开源做市与套利机器人，CEX + DEX 全覆盖
 
 ### AI + Finance
@@ -248,9 +248,9 @@ QR 的核心是在不确定环境里反复**提出假设、验证信号、解释
 <a id="papers"></a>
 
 <details>
-<summary><strong>📄 策略方向与论文：按 CTA、截面、期权等方向展开（点击展开/收起）</strong></summary>
+<summary><strong>📄 策略方向与论文：按 CTA、选股、统计套利等方向展开（点击展开/收起）</strong></summary>
 
-## 📄 策略方向与论文：按 CTA、截面、期权等方向展开
+## 📄 策略方向与论文：按 CTA、选股、统计套利等方向展开
 
 > 🌟 表示经典推荐：优先看、反复用，或者在对应方向里绕不开。
 
@@ -268,9 +268,9 @@ QR 的核心是在不确定环境里反复**提出假设、验证信号、解释
 - Levine & Pedersen (2016). *Which Trend Is Your Friend?* FAJ
 - 📖 Perry Kaufman.《Trading Systems and Methods》
 
-### 趋势跟踪
+### 中低频趋势跟踪
 
-> 和 CTA 高度重叠，但更纯粹地聚焦方向性信号。胜率通常只有 30%-40%，靠盈亏比赚钱。核心在于跟随纪律：趋势来了跟上，反转了止损走人；预测能力反而不是重点。
+> 和 CTA 高度重叠，但更纯粹地聚焦中低频方向性信号。胜率通常只有 30%-40%，靠盈亏比赚钱。核心在于跟随纪律：趋势来了跟上，反转了止损走人；预测能力反而不是重点。
 
 - 🌟 Jegadeesh & Titman (1993). *Returns to Buying Winners and Selling Losers.* JF
 - 🌟 Asness, Moskowitz & Pedersen (2013). *Value and Momentum Everywhere.* JF
@@ -279,6 +279,52 @@ QR 的核心是在不确定环境里反复**提出假设、验证信号、解释
 - Baz et al. (2015). *Dissecting Investment Strategies in the Cross Section and Time Series.*
 - Babu et al. (2020). *You Can't Always Trend When You Want.* JPM
 - 📖 Andreas Clenow.《Following the Trend》
+
+### 截面选股
+
+> 量化选股是国内公募和私募常见的策略方向之一。核心思路是在截面上（同一时间点比较股票）寻找能预测未来收益的因子，构建多空或纯多头组合。从 Fama-French 三因子到现在的数百个因子，学术界和业界一直在争论：哪些因子代表了有效超额收益，哪些只是数据挖掘？
+
+- 🌟 Fama & French (1993). *Common Risk Factors in the Returns on Stocks and Bonds.* JFE
+- 🌟 Fama & French (2015). *A Five-Factor Asset Pricing Model.* JFE
+- 🌟 Harvey, Liu & Zhu (2016). *…and the Cross-Section of Expected Returns.* RFS
+- Hou, Xue & Zhang (2015). *Digesting Anomalies: An Investment Approach.* RFS
+- Novy-Marx (2013). *The Other Side of Value: The Gross Profitability Premium.* JFE
+- McLean & Pontiff (2016). *Does Academic Research Destroy Stock Return Predictability?* JF
+- 📖 Chincarini & Kim.《Quantitative Equity Portfolio Management》
+- 🌟 📖 石川 等.《因子投资：方法与实践》
+
+### 基本面量化
+
+> 用财报、估值、盈利质量、分析师预期等低频基本面数据构建 Alpha。它和截面选股关系很近，但更强调财务报表、企业经营质量和估值修复逻辑；优点是经济含义清楚，难点是数据更新慢、会计口径复杂、拥挤后衰减明显。
+
+- 🌟 Piotroski (2000). *Value Investing: The Use of Historical Financial Statement Information to Separate Winners from Losers.* JAR
+- 🌟 Sloan (1996). *Do Stock Prices Fully Reflect Information in Accruals and Cash Flows about Future Earnings?* TAR
+- Ou & Penman (1989). *Financial Statement Analysis and the Prediction of Stock Returns.* JAE
+- Lakonishok, Shleifer & Vishny (1994). *Contrarian Investment, Extrapolation, and Risk.* JF
+- Chan, Lakonishok & Sougiannis (2001). *The Stock Market Valuation of Research and Development Expenditures.* JF
+- 📖 Penman.《Financial Statement Analysis and Security Valuation》
+
+### 统计套利
+
+> 利用资产间的统计关系（协整、相关性、因子结构），在偏离时建仓、回归时平仓。市场中性，不赌方向。配对交易是最经典的入门，但现代统计套利早已进化到 PCA 驱动的篮子交易和机器学习信号。需要警惕相关性崩溃的尾部风险。
+
+- 🌟 Engle & Granger (1987). *Co-integration and Error Correction.* Econometrica
+- 🌟 Gatev, Goetzmann & Rouwenhorst (2006). *Pairs Trading: Performance of a Relative-Value Arbitrage Rule.* RFS
+- Avellaneda & Lee (2010). *Statistical Arbitrage in the US Equities Market.* QF
+- Krauss (2017). *Statistical Arbitrage Pairs Trading Strategies: Review and Outlook.* JES
+- 📖 Pole (2007).《Statistical Arbitrage》
+- 📖 Vidyamurthy (2004).《Pairs Trading: Quantitative Methods and Analysis》
+
+### 市场中性 / 股票对冲
+
+> 国内量化私募最主流的产品形态。做法是：用因子模型或机器学习选出一篮子 Alpha 股票做多，同时用股指期货（IF/IC/IM）做空对冲市场 Beta，只赚选股能力带来的超额收益。理论上不受大盘涨跌影响，但实际面临基差成本、风格暴露、极端行情下的 Alpha 回撤等问题。2024 年 2 月的量化踩踏事件就是这个策略集中度过高的后果。
+
+- 🌟 Black & Litterman (1992). *Global Portfolio Optimization.* FAJ
+- 🌟 Grinold & Kahn (2000). *Active Portfolio Management.* McGraw-Hill
+- Jacobs & Levy (1993). *Long-Short Equity Investing.* JPM
+- Asness, Frazzini & Pedersen (2019). *Quality Minus Junk.* RAP
+- Frazzini & Pedersen (2014). *Betting Against Beta.* JFE
+- 📖 Qian, Hua & Sorensen.《Quantitative Equity Portfolio Management》
 
 ### 高频交易（QR 延伸阅读）
 
@@ -306,28 +352,6 @@ QR 的核心是在不确定环境里反复**提出假设、验证信号、解释
 - Amihud & Mendelson (1980). *Dealership Market: Market-Making with Inventory.* JFE
 - Guilbaud & Pham (2013). *Optimal High-Frequency Trading with Limit and Market Orders.* QF
 
-### 统计套利
-
-> 利用资产间的统计关系（协整、相关性、因子结构），在偏离时建仓、回归时平仓。市场中性，不赌方向。配对交易是最经典的入门，但现代统计套利早已进化到 PCA 驱动的篮子交易和机器学习信号。需要警惕相关性崩溃的尾部风险。
-
-- 🌟 Engle & Granger (1987). *Co-integration and Error Correction.* Econometrica
-- 🌟 Gatev, Goetzmann & Rouwenhorst (2006). *Pairs Trading: Performance of a Relative-Value Arbitrage Rule.* RFS
-- Avellaneda & Lee (2010). *Statistical Arbitrage in the US Equities Market.* QF
-- Krauss (2017). *Statistical Arbitrage Pairs Trading Strategies: Review and Outlook.* JES
-- 📖 Pole (2007).《Statistical Arbitrage》
-- 📖 Vidyamurthy (2004).《Pairs Trading: Quantitative Methods and Analysis》
-
-### 市场中性 / 股票对冲
-
-> 国内量化私募最主流的产品形态。做法是：用因子模型或机器学习选出一篮子 Alpha 股票做多，同时用股指期货（IF/IC/IM）做空对冲市场 Beta，只赚选股能力带来的超额收益。理论上不受大盘涨跌影响，但实际面临基差成本、风格暴露、极端行情下的 Alpha 回撤等问题。2024 年 2 月的量化踩踏事件就是这个策略集中度过高的后果。
-
-- 🌟 Black & Litterman (1992). *Global Portfolio Optimization.* FAJ
-- 🌟 Grinold & Kahn (2000). *Active Portfolio Management.* McGraw-Hill
-- Jacobs & Levy (1993). *Long-Short Equity Investing.* JPM
-- Asness, Frazzini & Pedersen (2019). *Quality Minus Junk.* RAP
-- Frazzini & Pedersen (2014). *Betting Against Beta.* JFE
-- 📖 Qian, Hua & Sorensen.《Quantitative Equity Portfolio Management》
-
 ### 期权与波动率
 
 > 不赌涨跌，赌波动率。利用期权的非线性特性和隐含波动率的错误定价获利。策略包括波动率套利、gamma scalping、dispersion trading、尾部对冲等。Black-Scholes 是起点，但真正赚钱靠的是对波动率曲面的理解——Gatheral 的书是业界圣经，粗糙波动率（Rough Vol）是近年最大的理论突破。
@@ -341,20 +365,6 @@ QR 的核心是在不确定环境里反复**提出假设、验证信号、解释
 - Bergomi (2005). *Smile Dynamics.* Risk
 - 📖 Gatheral (2006).《The Volatility Surface: A Practitioner's Guide》
 - 📖 Taleb (1997).《Dynamic Hedging: Managing Vanilla and Exotic Options》
-
-### 截面选股
-
-> 量化选股是国内公募和私募常见的策略方向之一。核心思路是在截面上（同一时间点比较股票）寻找能预测未来收益的因子，构建多空或纯多头组合。从 Fama-French 三因子到现在的数百个因子，学术界和业界一直在争论：哪些因子代表了有效超额收益，哪些只是数据挖掘？
-
-- 🌟 Fama & French (1993). *Common Risk Factors in the Returns on Stocks and Bonds.* JFE
-- 🌟 Fama & French (2015). *A Five-Factor Asset Pricing Model.* JFE
-- 🌟 Harvey, Liu & Zhu (2016). *…and the Cross-Section of Expected Returns.* RFS
-- Hou, Xue & Zhang (2015). *Digesting Anomalies: An Investment Approach.* RFS
-- Novy-Marx (2013). *The Other Side of Value: The Gross Profitability Premium.* JFE
-- McLean & Pontiff (2016). *Does Academic Research Destroy Stock Return Predictability?* JF
-- 📖 Chincarini & Kim.《Quantitative Equity Portfolio Management》
-- 🌟 📖 石川 等.《因子投资：方法与实践》
-
 </details>
 
 ---
@@ -481,15 +491,14 @@ QR 的核心是在不确定环境里反复**提出假设、验证信号、解释
 - 🌟 **量化投资与机器学习 (QIML)** - 公众号. 国内最大的量化公众号，覆盖 ML 策略、因子研究、行业招聘动态，信息密度高。
 - **交易门** - 播客/公众号. 对话国内外顶尖交易员和量化基金经理，听行业里的人怎么想问题。
 - **数量经济学** - 知乎/公众号. 偏学术向，计量经济学与金融实证方法，适合想打扎实理论基础的人。
-- **大邓和他的Python** - 知乎/B站. Python 量化编程教程，适合零基础入门。
 
 ### 社区与平台
 
 - 🌟 [聚宽 JoinQuant](https://www.joinquant.com) - 国内最大量化投研平台，免费数据、回测引擎、社区策略分享，入门首选。
+- [发明者量化 FMZ](https://www.fmz.com) - 数字货币/期货量化，支持多语言策略，社区活跃。
 - [米筐 RiceQuant](https://www.ricequant.com) - 专业量化研究平台，数据质量高，机构用户多。
 - [优矿 Uqer](https://uqer.datayes.com) - 通联数据旗下，数据全面，API 友好。
 - [QuantConnect](https://www.quantconnect.com) - 国际量化平台，Lean 引擎开源，支持多资产多市场。
-- [发明者量化 FMZ](https://www.fmz.com) - 数字货币/期货量化，支持多语言策略，社区活跃。
 - [知乎：量化交易](https://www.zhihu.com/topic/19815465) - 高质量问答和专栏，搜具体问题经常能找到好答案。
 - [经管之家](https://bbs.pinggu.org) - 老牌经济金融学术论坛，有不少历史沉淀的好帖。
 
@@ -517,16 +526,16 @@ QR 的核心是在不确定环境里反复**提出假设、验证信号、解释
 
 ### 面试备考
 
+> 如果英文题面读起来吃力，可以先在力扣中文站搜索同类原题，把题意和解法吃透，再回到英文材料练表达。
+
 - 🌟 [QuantGuide.io](https://www.quantguide.io) - 量化版 LeetCode，概率与数学题库
 - [Brainstellar](https://brainstellar.com) - 量化面试脑筋急转弯
-- [Jane Street Puzzles](https://www.janestreet.com/puzzles/) - 月度谜题，高于面试难度
-- [Zetamac](https://arithmetic.zetamac.com) - 心算速度训练，目标 50+
+- [Jane Street Puzzles](https://www.janestreet.com/puzzles/) - 简街（Jane Street）月度谜题，高于面试难度
 
 ### 竞赛
 
 - [Jane Street Kaggle](https://www.kaggle.com/c/jane-street-real-time-market-data-forecasting) - $100K 奖金，真实市场数据
 - [WorldQuant BRAIN](https://www.worldquantbrain.com) - 10万+ 用户，为 alpha 信号付费
-- [Citadel Datathon](https://www.citadel.com/careers/the-data-open/) - 直通面试
 
 ### 学术论文源
 
@@ -556,13 +565,15 @@ QR 的核心是在不确定环境里反复**提出假设、验证信号、解释
 
 **标准答案：**
 
-条件概率 $P(A|B) = P(AB) / P(B)$，表示在B已发生的条件下A发生的概率。
+条件概率表示在 B 已发生的条件下 A 发生的概率：
+
+$$P(A \mid B) = \frac{P(A \cap B)}{P(B)}$$
 
 贝叶斯公式：
 
-$$P(A|B) = \frac{P(B|A) \cdot P(A)}{P(B)}$$
+$$P(A \mid B) = \frac{P(B \mid A) \cdot P(A)}{P(B)}$$
 
-**直觉**：贝叶斯公式是"用新证据更新旧信念"的数学表达。$P(A)$ 是先验（你原来的判断），$P(B|A)$ 是似然（新证据在你判断下出现的可能性），$P(A|B)$ 是后验（看到证据后的新判断）。
+**直觉**：贝叶斯公式是"用新证据更新旧信念"的数学表达。这里 P(A) 是先验（你原来的判断），P(B|A) 是似然（新证据在你判断下出现的可能性），P(A|B) 是后验（看到证据后的新判断）。
 
 **量化应用**：贝叶斯方法在信号衰减判断、因子择时、Black-Litterman模型中被广泛使用。
 
@@ -616,7 +627,10 @@ $$P(A|B) = \frac{P(B|A) \cdot P(A)}{P(B)}$$
 
 **标准答案：**
 
-- **MLE**：寻找使观测数据出现概率最大的参数值。$\hat{\theta}_{MLE} = \arg\max_{\theta} \prod_{i} f(x_i | \theta)$
+- **MLE**：寻找使观测数据出现概率最大的参数值，常写作：
+
+  $$\hat{\theta}_{\mathrm{MLE}} = \arg\max_{\theta} \prod_i f(x_i \mid \theta)$$
+
 - **GMM（广义矩估计）**：利用总体矩条件与样本矩的匹配来估计参数，不需要假定完整的分布形式
 
 **核心区别**：MLE需要完整的分布假设，效率高但对错误假设敏感；GMM更灵活，只需要矩条件，是半参数方法。
@@ -636,7 +650,7 @@ p 值是**在零假设为真的前提下**，观测到当前统计量或更极�
 **量化应用中的陷阱**：
 - 策略回测中对数百个参数组合做假设检验，会出现**多重检验问题**（Multiple Testing）
 - 一个p < 0.05的策略，如果是从1000个策略中筛选出来的，真实显著性远低于5%
-- 修正方法：Bonferroni校正、Benjamini-Hochberg（FDR控制）、Bailey-López de Prado-Marcos的**"发夹弯"校正**
+- 修正方法：Bonferroni 校正、Benjamini-Hochberg（FDR 控制）、Bailey-López de Prado-Marcos 的 **Haircut（折减）校正**
 
 ---
 
@@ -665,8 +679,13 @@ p 值是**在零假设为真的前提下**，观测到当前统计量或更极�
 
 **标准答案：**
 
-- **EVD**：$A = P \Lambda P^{-1}$，仅适用于方阵。$\Lambda$ 是特征值对角阵。
-- **SVD**：$A = U \Sigma V^T$，适用于任意矩阵。$\Sigma$ 是奇异值对角阵。
+- **EVD**：仅适用于方阵，$\Lambda$ 是特征值对角阵：
+
+  $$A = P \Lambda P^{-1}$$
+
+- **SVD**：适用于任意矩阵，$\Sigma$ 是奇异值对角阵：
+
+  $$A = U \Sigma V^T$$
 
 对于对称半正定的协方差矩阵，EVD和SVD等价。
 
@@ -681,9 +700,19 @@ p 值是**在零假设为真的前提下**，观测到当前统计量或更极�
 
 **标准答案：**
 
-正定矩阵满足对任意非零向量 $x$，$x^T A x > 0$；半正定则 $\geq 0$。
+正定矩阵满足：对任意非零向量 x，都有
 
-协方差矩阵必须半正定，因为组合方差 $w^T \Sigma w$ 在物理意义上不能为负。如果估计出的协方差矩阵不是半正定的（如用不同时间窗口的数据拼接），需要做"最近半正定矩阵"投影（如Higham算法）。
+$$x^T A x > 0$$
+
+半正定则要求：
+
+$$x^T A x \ge 0$$
+
+协方差矩阵必须半正定，因为组合方差在物理意义上不能为负：
+
+$$w^T \Sigma w \ge 0$$
+
+如果估计出的协方差矩阵不是半正定的（如用不同时间窗口的数据拼接），需要做"最近半正定矩阵"投影（如Higham算法）。
 
 ---
 
@@ -1181,10 +1210,15 @@ $$r_i - r_f = \alpha_i + \beta_{i,MKT} \cdot (r_{MKT} - r_f) + \beta_{i,SMB} \cd
   - IC > 0.03 就算不错了
   - 更稳健的变体：RankIC、quantile-spread
 
-- **ICIR**：$ICIR = \frac{\overline{IC}}{\sigma_{IC}}$，即IC均值除以IC标准差。衡量因子的稳定性。
+- **ICIR**：IC 均值除以 IC 标准差，衡量因子的稳定性：
+
+  $$ICIR = \frac{\overline{IC}}{\sigma_{IC}}$$
+
   - ICIR > 0.5 通常认为是优秀因子
 
-- **IR（策略层面）**：$IR = \frac{\text{年化超额收益}}{\text{年化跟踪误差}}$。衡量策略承担主动风险的效率。
+- **IR（策略层面）**：年化超额收益除以年化跟踪误差，衡量策略承担主动风险的效率：
+
+  $$IR = \frac{\text{年化超额收益}}{\text{年化跟踪误差}}$$
 
 **基本定律（Fundamental Law of Active Management）**：
 
@@ -1252,7 +1286,10 @@ $$\min_w \frac{1}{2} w^T \Sigma w \quad \text{s.t.} \quad w^T \mu = \mu_{\text{t
 **改进方法**：
 - Black-Litterman模型（融入主观观点）
 - 加入正则化约束（如持仓上下限、换手约束）
-- 风险平价（Risk Parity）：$w_i \propto 1/\sigma_i$
+- 风险平价（Risk Parity）：权重与波动率近似成反比
+
+  $$w_i \propto \frac{1}{\sigma_i}$$
+
 - 最小方差组合（不需要估计期望收益率）
 - 收缩估计（Ledoit-Wolf）改进协方差矩阵输入
 
@@ -1264,9 +1301,13 @@ $$\min_w \frac{1}{2} w^T \Sigma w \quad \text{s.t.} \quad w^T \mu = \mu_{\text{t
 
 **风险平价**：使每个资产对组合总风险的贡献相等。
 
-资产i的风险贡献：$RC_i = w_i \cdot (\Sigma w)_i$
+资产 i 的风险贡献：
 
-风险平价要求：$RC_1 = RC_2 = \cdots = RC_N = \frac{w^T \Sigma w}{N}$
+$$RC_i = w_i \cdot (\Sigma w)_i$$
+
+风险平价要求：
+
+$$RC_1 = RC_2 = \cdots = RC_N = \frac{w^T \Sigma w}{N}$$
 
 **vs 等权**：等权是 $w_i = 1/N$（权重相等），风险平价是风险贡献相等。在波动率差异大的多资产组合中，等权会让高波动资产主导风险。
 
@@ -1310,7 +1351,11 @@ $$\min_w \frac{1}{2} w^T \Sigma w \quad \text{s.t.} \quad w^T \mu = \mu_{\text{t
 | **信息比率（IR）** | 超额收益 / 跟踪误差 | 依赖于基准选择 |
 
 **进阶指标**：
-- **t统计量**：$t = \frac{SR \times \sqrt{T}}{\text{correction}}$，检验夏普比率是否显著异于零
+
+- **t统计量**：检验夏普比率是否显著异于零
+
+  $$t = \frac{SR \times \sqrt{T}}{\text{correction}}$$
+
 - **Bailey-López de Prado建议**：至少需要 $t > 3$ 才可信（考虑多重检验后）
 
 ---
@@ -1351,7 +1396,7 @@ $$\min_w \frac{1}{2} w^T \Sigma w \quad \text{s.t.} \quad w^T \mu = \mu_{\text{t
 
 $$\text{Impact} = \sigma \cdot \gamma \cdot \left(\frac{V}{ADV}\right)^{\delta}$$
 
-其中 $V$ 是订单量，$ADV$ 是日均成交量，$\gamma$ 和 $\delta$ 是经验参数。
+其中 V 是订单量，ADV 是日均成交量，γ 和 δ 是经验参数。
 
 **平方根模型**（业界常用简化版）：
 
