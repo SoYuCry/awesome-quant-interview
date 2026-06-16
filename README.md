@@ -434,7 +434,7 @@ QR 的核心是在不确定环境里反复**提出假设、验证信号、解释
 
 | 书名 | 说明 |
 |------|------|
-| 🌟 《A Practical Guide to Quantitative Finance Interviews》(Xinfeng Zhou) | **绿皮书**，量化面试人手一本，概率/数学/脑筋急转弯全覆盖 |
+| 🌟 《A Practical Guide to Quantitative Finance Interviews》(Xinfeng Zhou) | **绿皮书**，量化面试人手一本；B站可看 [@数学的风](https://space.bilibili.com/37671712) 讲解，脑筋急转弯见[这部分](https://www.bilibili.com/video/BV1nD4y1K7cu/) |
 | 《Heard on the Street》(Timothy Crack) | 华尔街经典面试题集，偏概率和智力题 |
 | 《Quant Job Interview Questions and Answers》(Mark Joshi) | 偏衍生品定价方向，适合期权岗 |
 
@@ -526,8 +526,8 @@ QR 的核心是在不确定环境里反复**提出假设、验证信号、解释
 
 ### 面试备考
 
-- 🌟 [QuantGuide.io](https://www.quantguide.io) - 量化版 LeetCode，概率与数学题库；如果英文题面吃力，可以先在力扣中文站搜索同类原题，把题意和解法吃透，再回到英文材料练表达
-- [Brainstellar](https://brainstellar.com) - 量化面试脑筋急转弯；同类题优先刷绿皮书里的脑筋急转弯部分
+- 🌟 [QuantGuide.io](https://www.quantguide.io) - 量化版 LeetCode；英文吃力可先用力扣中文搜同类题
+- [Brainstellar](https://brainstellar.com) - 量化面试脑筋急转弯；优先刷绿皮书
 - [Jane Street Puzzles](https://www.janestreet.com/puzzles/) - 简街（Jane Street）月度谜题，高于面试难度
 
 ### 竞赛
@@ -625,7 +625,11 @@ $$P(A \mid B) = \frac{P(B \mid A) \cdot P(A)}{P(B)}$$
 
 **标准答案：**
 
-- **MLE**：寻找使观测数据出现概率最大的参数值，常写作：θ̂_MLE = arg max_θ ∏ᵢ f(xᵢ | θ)
+- **MLE**：寻找使观测数据出现概率最大的参数值，常写作：
+
+```math
+\hat{\theta}_{\mathrm{MLE}} = \arg\max_{\theta} \prod_i f(x_i \mid \theta)
+```
 
 - **GMM（广义矩估计）**：利用总体矩条件与样本矩的匹配来估计参数，不需要假定完整的分布形式
 
@@ -674,8 +678,18 @@ p 值是**在零假设为真的前提下**，观测到当前统计量或更极�
 ##### Q8：特征值分解（EVD）和奇异值分解（SVD）有什么区别？在量化中怎么用？
 
 **标准答案：**
-- **EVD**：A = PΛP⁻¹，仅适用于方阵。Λ 是特征值对角阵。
-- **SVD**：A = UΣVᵀ，适用于任意矩阵。Σ 是奇异值对角阵。
+
+- **EVD**：仅适用于方阵，Λ 是特征值对角阵：
+
+```math
+A = P \Lambda P^{-1}
+```
+
+- **SVD**：适用于任意矩阵，Σ 是奇异值对角阵：
+
+```math
+A = U \Sigma V^T
+```
 
 对于对称半正定的协方差矩阵，EVD和SVD等价。
 
