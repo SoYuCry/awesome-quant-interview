@@ -625,9 +625,9 @@ $$P(A \mid B) = \frac{P(B \mid A) \cdot P(A)}{P(B)}$$
 
 **标准答案：**
 
-**MLE**：寻找使观测数据出现概率最大的参数值，常写作：
+**MLE**：寻找使样本似然函数达到最大值的参数，常写作：
 
-$$\hat{\theta}_{MLE} = \arg \max_{\theta} \prod_{i=1}^{n} f(x_i \mid \theta)$$
+$$L(\theta_{\text{MLE}}) = \max_{\theta} L(\theta)$$
 
 **GMM（广义矩估计）**：利用总体矩条件与样本矩的匹配来估计参数，不需要假定完整的分布形式
 
