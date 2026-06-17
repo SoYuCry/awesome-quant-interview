@@ -207,7 +207,7 @@ QR 的核心是在不确定环境里反复**提出假设、验证信号、解释
 
 - 🌟 [Backtrader](https://github.com/mementum/backtrader) - 事件驱动回测框架，功能全面，支持实盘
 - 🌟 [NautilusTrader](https://github.com/nautechsystems/nautilus_trader) - 高性能事件驱动回测与实盘交易框架，Rust 内核 + Python API
-- [VectorBT](https://github.com/polakowo/vectorbt) - 向量化回测引擎，NumPy/Numba 加速，大规模参数扫描首选
+- [VectorBT](https://github.com/polakowo/vectorbt) - 向量化回测引擎，NumPy/Numba 加速，适合大规模参数扫描
 - [Zipline Reloaded](https://github.com/stefan-jansen/zipline-reloaded) - Quantopian 经典引擎的社区维护版
 
 ### 量化平台
@@ -354,7 +354,7 @@ QR 的核心是在不确定环境里反复**提出假设、验证信号、解释
 
 ### 期权与波动率
 
-> 不赌涨跌，赌波动率。利用期权的非线性特性和隐含波动率的错误定价获利。策略包括波动率套利、gamma scalping、dispersion trading、尾部对冲等。Black-Scholes 是起点，但真正赚钱靠的是对波动率曲面的理解——Gatheral 的书是业界圣经，粗糙波动率（Rough Vol）是近年最大的理论突破。
+> 不赌涨跌，赌波动率。利用期权的非线性特性和隐含波动率的错误定价获利。策略包括波动率套利、gamma scalping、dispersion trading、尾部对冲等。Black-Scholes 是起点，但真正赚钱靠的是对波动率曲面的理解——Gatheral 的书是业界常用参考，粗糙波动率（Rough Vol）是近年重要理论方向。
 
 - 🌟 Black & Scholes (1973). *The Pricing of Options and Corporate Liabilities.* JPE
 - 🌟 Heston (1993). *A Closed-Form Solution for Options with Stochastic Volatility.* RFS
@@ -434,7 +434,7 @@ QR 的核心是在不确定环境里反复**提出假设、验证信号、解释
 
 | 书名 | 说明 |
 |------|------|
-| 🌟 《A Practical Guide to Quantitative Finance Interviews》(Xinfeng Zhou) | **绿皮书**，量化面试人手一本；B站可看 [@数学的风](https://space.bilibili.com/37671712) 讲解，脑筋急转弯见[这部分](https://www.bilibili.com/video/BV1nD4y1K7cu/) |
+| 🌟 《A Practical Guide to Quantitative Finance Interviews》(Xinfeng Zhou) | **绿皮书**，量化面试高频参考书；B 站可看 [@数学的风](https://space.bilibili.com/37671712) 讲解，脑筋急转弯可看 [这部分](https://www.bilibili.com/video/BV1nD4y1K7cu/) |
 | 《Heard on the Street》(Timothy Crack) | 华尔街经典面试题集，偏概率和智力题 |
 | 《Quant Job Interview Questions and Answers》(Mark Joshi) | 偏衍生品定价方向，适合期权岗 |
 
@@ -463,8 +463,8 @@ QR 的核心是在不确定环境里反复**提出假设、验证信号、解释
 | 书名 | 说明 |
 |------|------|
 | 《Quantitative Equity Portfolio Management》(Chincarini & Kim) | 量化股票组合从因子到实盘的全流程 |
-| 🌟 《Advances in Financial Machine Learning》(de Prado) | 金融 ML 实战圣经，数据结构化/防过拟合/回测方法论，业界人手一本 |
-| 🌟 《Active Portfolio Management》(Grinold & Kahn) | 主动管理的理论框架，信息比率、alpha 转移，基金公司研究员必读 |
+| 🌟 《Advances in Financial Machine Learning》(de Prado) | 金融 ML 实战经典，数据结构化/防过拟合/回测方法论，引用很广 |
+| 🌟 《Active Portfolio Management》(Grinold & Kahn) | 主动管理的理论框架，信息比率、alpha 转移，适合基金公司研究员重点阅读 |
 | 《Options, Futures, and Other Derivatives》(Hull) | 衍生品入门标准教材，覆盖期货/互换/期权，适合建立全局观 |
 | 《Option Volatility and Pricing》(Natenberg) | 期权交易实战视角，Greeks 直觉讲得很好 |
 
@@ -472,7 +472,7 @@ QR 的核心是在不确定环境里反复**提出假设、验证信号、解释
 
 | 书名 | 说明 |
 |------|------|
-| 🌟 《The Elements of Statistical Learning》(Hastie et al.) | 统计学习理论经典，有免费 PDF，树模型/正则化/集成学习讲得最透彻 |
+| 🌟 《The Elements of Statistical Learning》(Hastie et al.) | 统计学习理论经典，有免费 PDF，树模型/正则化/集成学习讲得很系统 |
 | 《Deep Learning》(Goodfellow et al.) | "花书"，深度学习理论基础，CNN/RNN/GAN/优化全覆盖 |
 | 《Machine Learning for Asset Managers》(de Prado) | 资管视角的 ML，聚类/特征重要性/组合构建，薄但密度极高 |
 
@@ -480,21 +480,21 @@ QR 的核心是在不确定环境里反复**提出假设、验证信号、解释
 
 | 书名 | 说明 |
 |------|------|
-| 🌟 石川 等.《因子投资：方法与实践》 | 中文因子投资圣经，从因子定义到组合构建到陷阱规避，系统性最强 |
+| 🌟 石川 等.《因子投资：方法与实践》 | 中文因子投资经典，从因子定义到组合构建和陷阱规避，系统性较强 |
 | 丁鹏.《量化投资：策略与技术》 | 国内量化入门经典，适合建立全局认知 |
 | 杨博理 等.《量化投资：以Python为工具》 | Python 量化实操入门，有代码可跑 |
 
 ### 博主与公众号
 
-- 🌟 **石川 / 川总写量化** - [知乎](https://www.zhihu.com/people/shi-chuan-97) / 公众号. 国内因子投资写得最好的人，没有之一。每篇文章都有学术论文支撑，但写得让非科班也能看懂。做因子方向必须关注。
-- 🌟 **因子动物园 (Factor Zoo)** - 公众号. 石川团队出品，系统梳理学术因子文献，追踪前沿论文，比自己翻 SSRN 效率高十倍。
-- 🌟 **量化投资与机器学习 (QIML)** - 公众号. 国内最大的量化公众号，覆盖 ML 策略、因子研究、行业招聘动态，信息密度高。
-- **交易门** - 播客/公众号. 对话国内外顶尖交易员和量化基金经理，听行业里的人怎么想问题。
-- **数量经济学** - 知乎/公众号. 偏学术向，计量经济学与金融实证方法，适合想打扎实理论基础的人。
+- 🌟 **石川 / 川总写量化** - [知乎](https://www.zhihu.com/people/shi-chuan-97) / 公众号。因子投资内容系统，文章通常有学术论文支撑，也比较适合非科班读者。做因子方向建议关注。
+- 🌟 **因子动物园 (Factor Zoo)** - 公众号。石川团队出品，系统梳理学术因子文献，追踪前沿论文，适合做因子方向时集中查阅。
+- 🌟 **量化投资与机器学习 (QIML)** - 公众号。国内较活跃的量化公众号之一，覆盖 ML 策略、因子研究、行业招聘动态，信息密度高。
+- **交易门** - 播客/公众号。对话国内外交易员和量化基金经理，听行业里的人怎么想问题。
+- **数量经济学** - 知乎/公众号。偏学术向，计量经济学与金融实证方法，适合想打扎实理论基础的人。
 
 ### 社区与平台
 
-- 🌟 [聚宽 JoinQuant](https://www.joinquant.com) - 国内最大量化投研平台，免费数据、回测引擎、社区策略分享，入门首选。
+- 🌟 [聚宽 JoinQuant](https://www.joinquant.com) - 国内常用量化投研平台，免费数据、回测引擎、社区策略分享，适合入门。
 - [发明者量化 FMZ](https://www.fmz.com) - 数字货币/期货量化，支持多语言策略，社区活跃。
 - [米筐 RiceQuant](https://www.ricequant.com) - 专业量化研究平台，数据质量高，机构用户多。
 - [优矿 Uqer](https://uqer.datayes.com) - 通联数据旗下，数据全面，API 友好。
@@ -502,14 +502,14 @@ QR 的核心是在不确定环境里反复**提出假设、验证信号、解释
 - [知乎：量化交易](https://www.zhihu.com/topic/19815465) - 高质量问答和专栏，搜具体问题经常能找到好答案。
 - [经管之家](https://bbs.pinggu.org) - 老牌经济金融学术论坛，有不少历史沉淀的好帖。
 
-### A股数据源
+### A 股数据源
 
 | 数据源 | 类型 | 链接 |
 |--------|------|------|
 | 🌟 Tushare Pro | 免费，股票/基金/期货/可转债 | [tushare.pro](https://tushare.pro) |
 | 🌟 AKShare | 开源免费 | [akfamily/akshare](https://github.com/akfamily/akshare) |
 | BaoStock | 免费，日K/分钟K/财报 | [baostock.com](http://baostock.com) |
-| Wind 万得 | 机构级，最全（付费） | [wind.com.cn](https://www.wind.com.cn) |
+| Wind 万得 | 机构级，覆盖全面（付费） | [wind.com.cn](https://www.wind.com.cn) |
 | 东方财富 Choice | 机构级（付费） | [choice.eastmoney.com](https://choice.eastmoney.com) |
 | efinance | 开源爬虫 | [mpquant/efinance](https://github.com/mpquant/efinance) |
 
@@ -532,8 +532,8 @@ QR 的核心是在不确定环境里反复**提出假设、验证信号、解释
 
 ### 竞赛
 
-- [Jane Street Kaggle](https://www.kaggle.com/c/jane-street-real-time-market-data-forecasting) - $100K 奖金，真实市场数据
-- [WorldQuant BRAIN](https://www.worldquantbrain.com) - 10万+ 用户，为 alpha 信号付费
+- [Jane Street Kaggle](https://www.kaggle.com/competitions/jane-street-real-time-market-data-forecasting) - $100K 奖金，真实市场数据
+- [WorldQuant BRAIN](https://www.worldquantbrain.com) - 10 万+ 用户，为 alpha 信号付费
 
 ### 学术论文源
 
