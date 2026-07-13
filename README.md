@@ -1764,6 +1764,12 @@ $$\text{Input} \xrightarrow{\text{Encoder}} \text{Latent} \xrightarrow{\text{Dec
 
 ## Star History
 
-[![Star History Chart](https://api.star-history.com/chart?repos=SoYuCry/awesome-quant-interview&type=date&legend=top-left&sealed_token=XWse1w8rUIwmBb1V8jZ38P2mQYTknMFFLRVuaw4H5At9U9-nYZqfuP7Q8d5JordxnG0-2kOz3qlMy3MVDZPV0zUi5InUCSQRYy20dUae8TWKXddQJOFDmGSnVlaWaakyCR3ZY8-hsFofrugHC_b14CGAzz-QTj37PBno6l6kaf6hFTq0oLZ2hbWxCnMS)](https://www.star-history.com/?repos=SoYuCry%2Fawesome-quant-interview&type=date&legend=top-left)
+<a href="https://www.star-history.com/#SoYuCry/awesome-quant-interview&type=date&legend=top-left">
+ <picture>
+   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=SoYuCry/awesome-quant-interview&type=date&theme=dark&legend=top-left" />
+   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=SoYuCry/awesome-quant-interview&type=date&legend=top-left" />
+   <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=SoYuCry/awesome-quant-interview&type=date&legend=top-left" />
+ </picture>
+</a>
 
 </div>
