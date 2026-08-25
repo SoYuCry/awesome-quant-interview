@@ -527,6 +527,7 @@ QR 的核心是在不确定环境里反复**提出假设、验证信号、解释
 ### 面试备考
 
 - 🌟 [QuantGuide.io](https://www.quantguide.io) - 量化版 LeetCode；英文吃力可先用力扣中文搜同类题
+- [QuantVault](https://quantvault.org) - 海外量化求职题库，真题覆盖较广；部分免费，完整内容需订阅
 - [Brainstellar](https://brainstellar.com) - 量化面试脑筋急转弯；优先刷绿皮书
 - [Jane Street Puzzles](https://www.janestreet.com/puzzles/) - 简街（Jane Street）月度谜题，高于面试难度
 
