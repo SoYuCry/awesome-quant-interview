@@ -208,6 +208,7 @@ QR 的核心是在不确定环境里反复**提出假设、验证信号、解释
 - 🌟 [Backtrader](https://github.com/mementum/backtrader) - 事件驱动回测框架，功能全面，支持实盘
 - 🌟 [NautilusTrader](https://github.com/nautechsystems/nautilus_trader) - 高性能事件驱动回测与实盘交易框架，Rust 内核 + Python API
 - [VectorBT](https://github.com/polakowo/vectorbt) - 向量化回测引擎，NumPy/Numba 加速，适合大规模参数扫描
+- [ManifoldBT](https://github.com/manifoldbt/manifoldbt) - 基于 Rust 核心的高性能 Python 回测引擎：向量化信号、真实成交（费用/滑点/前视偏差）、参数扫描、walk-forward、蒙特卡洛
 - [Zipline Reloaded](https://github.com/stefan-jansen/zipline-reloaded) - Quantopian 经典引擎的社区维护版
 
 ### 量化平台
