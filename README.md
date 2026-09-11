@@ -530,6 +530,7 @@ QR 的核心是在不确定环境里反复**提出假设、验证信号、解释
 - [QuantVault](https://quantvault.org) - 海外量化求职题库，真题覆盖较广；部分免费，完整内容需订阅
 - [Brainstellar](https://brainstellar.com) - 量化面试脑筋急转弯；优先刷绿皮书
 - [Jane Street Puzzles](https://www.janestreet.com/puzzles/) - 简街（Jane Street）月度谜题，高于面试难度
+- [InterviewLegend](https://interviewlegend.com) - 按公司拆解的量化/交易公司面试指南（Jane Street、Citadel、HRT、Optiver 等），英文，免费阅读
 
 ### 竞赛
 
