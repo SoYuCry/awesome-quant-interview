@@ -240,6 +240,7 @@ QR 的核心是在不确定环境里反复**提出假设、验证信号、解释
 - 🌟 [quant-wiki](https://github.com/LLMQuant/quant-wiki) - 量化知识开源与汉化，打破国内外量化金融行业信息差
 - [awesome-ai-in-finance](https://github.com/georgezouq/awesome-ai-in-finance) - AI + 金融：LLM、深度学习策略、RL 交易
 - [awesome-systematic-trading](https://github.com/wangzhe3224/awesome-systematic-trading) - 系统化交易资源，覆盖期货/期权/外汇/加密
+- [AI Quant Nav（AI 量化导航）](https://aiquantnav.com/en) - 开源 AI/量化工具垂直目录，含回测框架、市场数据、LLM 交易 Agent 等免费对比页（中英双语）
 
 </details>
 
