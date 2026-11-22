@@ -1747,7 +1747,7 @@ $$\text{Input} \xrightarrow{\text{Encoder}} \text{Latent} \xrightarrow{\text{Dec
 
 **参与贡献**：欢迎补充 QR 面试题、论文路线、因子研究项目复盘、失效链接修复和表达建议。可直接开 [Issue](https://github.com/SoYuCry/awesome-quant-interview/issues) 或提交 [Pull Request](https://github.com/SoYuCry/awesome-quant-interview/pulls)。
 
-**联系咨询**：[@0xYuCry](https://x.com/0xYuCry)（X）· [0xyucry@gmail.com](mailto:0xyucry@gmail.com)
+如果你想交流 QR 求职或面试准备，欢迎通过 [邮件](mailto:0xyucry@gmail.com) 或 [X](https://x.com/0xYuCry) 联系我。
 
 ## 🛡️ 免责声明
 
