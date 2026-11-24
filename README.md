@@ -240,6 +240,7 @@ QR 的核心是在不确定环境里反复**提出假设、验证信号、解释
 - 🌟 [quant-wiki](https://github.com/LLMQuant/quant-wiki) - 量化知识开源与汉化，打破国内外量化金融行业信息差
 - [awesome-ai-in-finance](https://github.com/georgezouq/awesome-ai-in-finance) - AI + 金融：LLM、深度学习策略、RL 交易
 - [awesome-systematic-trading](https://github.com/wangzhe3224/awesome-systematic-trading) - 系统化交易资源，覆盖期货/期权/外汇/加密
+- [awesome-quant-competitions](https://github.com/KonstantinRogozhkin/awesome-quant-competitions) - 全球量化交易竞赛、金融机器学习基准、学生 Fellowship 与公开面试训练索引（CC0 开源）
 
 </details>
 
@@ -535,6 +536,7 @@ QR 的核心是在不确定环境里反复**提出假设、验证信号、解释
 
 - [Jane Street Kaggle](https://www.kaggle.com/competitions/jane-street-real-time-market-data-forecasting) - $100K 奖金，真实市场数据
 - [WorldQuant BRAIN](https://www.worldquantbrain.com) - 10 万+ 用户，为 alpha 信号付费
+- [Quant Challenges](https://quantchallenges.com/) - 全球量化竞赛目录与 .ics 截止日历、60 道精讲面试题，以及免费 80-in-8 心算 / 数列 / 做市面试训练
 
 ### 学术论文源
 
